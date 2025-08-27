@@ -28,3 +28,11 @@ p.subtitle {
 .contactInfo, .openingHours {
     font-size: 18px;
 }
+
+
+@media screen and (max-width: 600px){
+
+    .header {
+        width: 100%;
+    }
+}
