@@ -44,6 +44,18 @@ class TestHemsida(TestCase):
     def testPageText(self):
         self.browser.get(path.join(getcwd(), 'website/index.html'))
         self.assertIn("Välkommen", self.browser.page_source)
+    
+    def testPageText2(self):
+        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.assertIn("STÄNGT", self.browser.page_source)
+        
+    def testPageText3(self):
+        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.assertIn("32H", self.browser.page_source)
+    
+    def testPageText4(self):
+        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.assertIn("Öppet", self.browser.page_source)
 
 
 
