@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+p {
+    line-height: 5px;
+}
+
+p.subtitle {
+    font-size: 23px;
+    line-height: 20px;
+}
+
+.header {
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+
+.title {
+    font-size: 35px;
+}
+
+.contactInfo, .openingHours {
+    font-size: 18px;
+}
