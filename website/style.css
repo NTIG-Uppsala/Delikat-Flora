@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #EEF2F5;
 }
 
 p {
@@ -11,27 +12,58 @@ p {
 }
 
 p.subtitle {
-    font-size: 23px;
+    font-size: 30px;
     line-height: 20px;
 }
 
 .header {
     margin: auto;
+    padding: 8%;
     text-align: center;
     width: 70%;
+    background-color:#6FB684;
+    border-radius: 50px;
+}
+
+[textColor="light"] {
+    color: #EEF2F5;
 }
 
 .title {
-    font-size: 35px;
+    font-size: 45px;
 }
 
 .contactInfo, .openingHours {
-    font-size: 18px;
+    font-size: 23px;
+}
+
+@media screen and (max-width: 455px){
+
+    p.subtitle {
+        font-size: 23px;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .contactInfo, .openingHours {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 600px){
 
     .header {
         width: 100%;
+        padding: 5%;
+    }
+}
+
+@media screen and (min-width: 800px){
+
+    .header {
+        width: 560px;
+        padding: 64px;
     }
 }
