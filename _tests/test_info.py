@@ -43,7 +43,7 @@ class TestHemsida(TestCase):
     # HÄR BÖRJAR TESTERNA
     def testPageText(self):
         self.browser.get(path.join(getcwd(), 'website/index.html'))
-        self.assertIn("Välkommen", self.browser.page_source)
+        self.assertIn("DELIKAT", self.browser.page_source)
     
     def testPageText2(self):
         self.browser.get(path.join(getcwd(), 'website/index.html'))
@@ -65,6 +65,13 @@ class TestHemsida(TestCase):
         self.browser.get(path.join(getcwd(), 'website/index.html'))
         self.assertIn("12-18", self.browser.page_source)
 
+    def testCSSText7(self):
+        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.assertIn("Andra Tjänster", self.browser.page_source)
+        
+    def testPageText8(self):
+        self.browser.get(path.join(getcwd(), 'website/style.css'))
+        self.assertIn("Flower", self.browser.page_source)
 
 
 

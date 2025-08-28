@@ -13,6 +13,11 @@
     src: url("../fonts/Labrada/Labrada-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: "Flower";
+    src: url("../fonts/flower_mandala_monogram/Flower\ Mandala\ Monogram.ttf");
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -36,6 +41,8 @@ p.subtitle {
     width: 60%;
     height: 300%;
     padding: 3%;
+    outline: 2px solid black;
+    outline-offset: -2px;
 }
 
 .header {
@@ -43,25 +50,55 @@ p.subtitle {
     transform: translateX(-50%);
     position: fixed;
     margin: auto;
-    margin-top: -8.125%;
+    margin-top: -100px;
     padding: 3%;
-    padding-top: 9%;
+    padding-top: 120px;
     padding-bottom: 20px;
     text-align: center;
     width: 60%;
     background-color:#6FB684;
     border-radius: 50px;
+    justify-content: center;
+    outline: 2px solid black;
+    outline-offset: -2px;
+}
+
+.allServices {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+    font-size: 23px;
 }
 
 .title {
+    -webkit-transform: rotate(-2deg);
     font-size: 45px;
     line-height: 40px;
     font-family: "Labrada";
+    color:rgb(31, 31, 31);
+    text-shadow: rgb(39, 32, 32) 2px 2px 7px;
+    width: 100%;
 }
 
 .contactInfo, .openingHours {
     font-size: 20px;
     font-family: "Inter";
+    border: #38855C;
+    border-right: #EEF2F5;
+    border-left: #EEF2F5;
+    border-width: 2px;
+    border-style:solid;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.logo {
+    font-size: 100px;
+    font-family: "Flower";
+    color: #144723;
 }
 
 .openingHoursTable {
@@ -70,6 +107,8 @@ p.subtitle {
 }
 
 .bottomInfo {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #38855C;
     position: relative;
     text-align: center;
@@ -79,6 +118,9 @@ p.subtitle {
     padding-top: 20px;
     height: fit-content;
     left: -5%;
+    justify-content: center;
+    outline: 2px solid black;
+    outline-offset: -2px;
 }
 
 [openingHours] {
@@ -104,6 +146,10 @@ p.subtitle {
         font-size: 15px;
     }
 
+    .allServices {
+        font-size: 18px;
+    }
+
     .bottomInfo {
         bottom: -290vh;
     }
@@ -117,8 +163,8 @@ p.subtitle {
     }
 
     .header {
-        margin-top: -10%;
-        padding-top: 10%;
+        padding-top: 120px;
+        padding-bottom: 3%;
         border-radius: 0;
     }
 
@@ -130,5 +176,13 @@ p.subtitle {
 
     p.subtitle {
         line-height: 10px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    .contactInfo, .openingHours {
+        border: none;
+        margin: auto;
     }
 }
