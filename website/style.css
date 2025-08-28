@@ -25,16 +25,26 @@ p.subtitle {
     border-radius: 50px;
 }
 
-[textColor="light"] {
-    color: #EEF2F5;
-}
-
 .title {
     font-size: 45px;
 }
 
 .contactInfo, .openingHours {
     font-size: 23px;
+}
+
+.openingHoursTable {
+    margin: auto;
+    text-align: left;
+}
+
+[openingHours] {
+    padding-left: 20px;
+    text-align: center;
+}
+
+[textColor="light"] {
+    color: #EEF2F5;
 }
 
 @media screen and (max-width: 455px){
