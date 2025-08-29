@@ -18,6 +18,14 @@
     src: url("../fonts/flower_mandala_monogram/Flower\ Mandala\ Monogram.ttf");
 }
 
+.allServices a {
+    color: black;
+}
+
+.allServices a:hover {
+    text-decoration: none;
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -71,16 +79,22 @@ p.subtitle {
     gap: 30px;
     margin-top: 25px;
     font-size: 23px;
+    font-family: "Judson";
 }
 
-.title {
-    -webkit-transform: rotate(-2deg);
+a.title {
+    display: block;
+    -webkit-transform: rotate(-2deg);  
+    -moz-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    transform: rotate(-2deg);
     font-size: 45px;
     line-height: 40px;
     font-family: "Labrada";
-    color:rgb(31, 31, 31);
     text-shadow: rgb(39, 32, 32) 2px 2px 7px;
     width: 100%;
+    text-decoration: none;
 }
 
 .contactInfo, .openingHours {
@@ -99,6 +113,12 @@ p.subtitle {
     font-size: 100px;
     font-family: "Flower";
     color: #144723;
+}
+
+.header .logo{
+    position: fixed;
+    right: 30px;
+    top: 110px;
 }
 
 .openingHoursTable {
@@ -128,6 +148,10 @@ p.subtitle {
     text-align: center;
 }
 
+[textColor="dark"] {
+    color: rgb(39, 32, 32);
+}
+
 [textColor="light"] {
     color: #EEF2F5;
 }
@@ -138,7 +162,7 @@ p.subtitle {
         font-size: 23px;
     }
 
-    .title {
+    a.title {
         font-size: 35px;
     }
 
@@ -148,6 +172,10 @@ p.subtitle {
 
     .allServices {
         font-size: 18px;
+    }
+
+    .logo {
+        font-size: 70px;
     }
 
     .bottomInfo {
@@ -184,5 +212,13 @@ p.subtitle {
     .contactInfo, .openingHours {
         border: none;
         margin: auto;
+    }
+
+    .header .logo {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-top: 10px;
+        margin-bottom: -25px;
     }
 }
