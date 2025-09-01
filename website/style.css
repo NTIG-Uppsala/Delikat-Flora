@@ -23,7 +23,7 @@ div {
     font-family: Inter;
 }
 
-.allServices a:hover {
+a:hover {
     text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ p.subtitle {
     justify-content: center;
 }
 
-.productsPage, .servicesPage {
+.productsPage, .servicesPage, .staffPage {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -91,14 +91,25 @@ p.subtitle {
     border-radius: 60px;
 }
 
-.product, .service {
+.staffPage img {
+    width: 300px;
+}
+
+.product, .service, .staffMember {
     display: flex;
     flex-direction: column;
+    gap: 3px;
+}
+
+.service, .staffMember {
+    text-align: center;
+}
+
+.staffMember p {
+    margin: 10px;
 }
 
 .service {
-    text-align: center;
-    gap: 3px;
     width: 500px;
 }
 
@@ -158,12 +169,12 @@ a.title {
     transform: rotate(-2deg);
     line-height: 40px;
     font-family: Labrada;
-    text-shadow: rgb(39, 32, 32) 2px 2px 7px;
+    text-shadow: rgb(39, 32, 32) 2px 2px 4px;
     width: 100%;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
-.contactInfo, .openingHours {
+.contactInfo, .openingHours, .aboutUs {
     font-family: Inter;
     border: #38855C;
     border-right: #EEF2F5;
@@ -172,6 +183,10 @@ a.title {
     border-style:solid;
     padding-right: 20px;
     padding-left: 20px;
+}
+
+.aboutUs a {
+    color: #EEF2F5;
 }
 
 .logo {
@@ -241,7 +256,7 @@ a.title {
 
 @media screen and (max-width: 1100px) {
 
-    .contactInfo, .openingHours {
+    .contactInfo, .openingHours, .aboutUs {
         border: none;
         margin: auto;
     }
@@ -279,8 +294,18 @@ a.title {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .staffPage img {
+        width: 250px;
+    }
+}
+
 @media screen and (max-width: 850px){
     .productsPage img {
+        width: 200px;
+    }
+
+    .staffPage img {
         width: 200px;
     }
 
@@ -319,7 +344,7 @@ a.title {
     }
 
     .service, .servicesPage img {
-    width: 300px;
+        width: 300px;
     }
 
     .servicesPage img {
@@ -335,6 +360,10 @@ a.title {
 
     .centerInfo {
         padding-top: 200px;
+    }
+
+    .staffMember p {
+        margin: 6px;
     }
 
     [textSize="small"] {
