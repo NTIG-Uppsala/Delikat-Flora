@@ -1,26 +1,26 @@
 @font-face {
-    font-family: "Inter";
+    font-family: Inter;
     src: url("../fonts/inter/Inter-VariableFont_opsz\,wght.ttf");
 }
 
 @font-face {
-    font-family: "Judson";
+    font-family: Judson;
     src: url("../fonts/judson/Judson-Regular.ttf");
 
 }
 
 @font-face {
-    font-family: "Labrada";
+    font-family: Labrada;
     src: url("../fonts/labrada/Labrada-VariableFont_wght.ttf");
 }
 
 @font-face {
-    font-family: "Swirl";
+    font-family: Swirl;
     src: url("../fonts/Swirl_Leaf_Monogram/Swirl\ Leaf\ Monogram.ttf");
 }
 
 div {
-    font-family: "Inter";
+    font-family: Inter;
 }
 
 .allServices a:hover {
@@ -28,7 +28,7 @@ div {
 }
 
 .products {
-    font-family: "Judson";
+    font-family: Judson;
 }
 
 body {
@@ -44,7 +44,7 @@ p {
 p.subtitle {
     font-size: 30px;
     line-height: 20px;
-    font-family: "Judson";
+    font-family: Judson;
     text-decoration-line: underline;
 }
 
@@ -123,14 +123,14 @@ p.subtitle {
     gap: 30px;
     margin-top: 25px;
     font-size: 23px;
-    font-family: "Judson";
+    font-family: Judson;
 }
 
 .welcomeMessage {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 20px;
-    font-family: "Labrada";
+    font-family: Labrada;
     font-size: 30px;
 }
 
@@ -143,7 +143,7 @@ a.title {
     transform: rotate(-2deg);
     font-size: 45px;
     line-height: 40px;
-    font-family: "Labrada";
+    font-family: Labrada;
     text-shadow: rgb(39, 32, 32) 2px 2px 7px;
     width: 100%;
     text-decoration: none;
@@ -151,7 +151,7 @@ a.title {
 
 .contactInfo, .openingHours {
     font-size: 20px;
-    font-family: "Inter";
+    font-family: Inter;
     border: #38855C;
     border-right: #EEF2F5;
     border-left: #EEF2F5;
@@ -163,7 +163,7 @@ a.title {
 
 .logo {
     font-size: 45px;
-    font-family: "Swirl";
+    font-family: Swirl;
     color: #144723;
 }
 
@@ -210,11 +210,15 @@ a.title {
     color: #EEF2F5;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1100px) {
 
     .contactInfo, .openingHours {
         border: none;
         margin: auto;
+    }
+
+    .bottomInfo {
+        flex-direction: column;
     }
 
     .header {
