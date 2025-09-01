@@ -1,17 +1,17 @@
 @font-face {
     font-family: Inter;
-    src: url("../fonts/inter/Inter-VariableFont_opsz\,wght.ttf");
+    src: url("../fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
 }
 
 @font-face {
     font-family: Judson;
-    src: url("../fonts/judson/Judson-Regular.ttf");
+    src: url("../fonts/Judson/Judson-Regular.ttf");
 
 }
 
 @font-face {
     font-family: Labrada;
-    src: url("../fonts/labrada/Labrada-VariableFont_wght.ttf");
+    src: url("../fonts/Labrada/Labrada-VariableFont_wght.ttf");
 }
 
 @font-face {
@@ -27,7 +27,7 @@ div {
     text-decoration: none;
 }
 
-.products {
+.products, .otherServices {
     font-family: Judson;
 }
 
@@ -42,7 +42,6 @@ p {
 }
 
 p.subtitle {
-    font-size: 30px;
     line-height: 20px;
     font-family: Judson;
     text-decoration-line: underline;
@@ -68,7 +67,7 @@ p.subtitle {
     justify-content: center;
 }
 
-.productsPage {
+.productsPage, .servicesPage {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -87,10 +86,28 @@ p.subtitle {
     width: 250px;
 }
 
-.product {
+.servicesPage img {
+    width: 500px;
+    border-radius: 60px;
+}
+
+.product, .service {
     display: flex;
     flex-direction: column;
 }
+
+.service {
+    text-align: center;
+    gap: 3px;
+    width: 500px;
+}
+
+.serviceName {
+    font-family: Judson;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
 .priceTag {
     display: flex;
     flex-direction: row;
@@ -122,7 +139,6 @@ p.subtitle {
     justify-content: center;
     gap: 30px;
     margin-top: 25px;
-    font-size: 23px;
     font-family: Judson;
 }
 
@@ -131,7 +147,6 @@ p.subtitle {
     margin-top: 5px;
     margin-bottom: 20px;
     font-family: Labrada;
-    font-size: 30px;
 }
 
 a.title {
@@ -141,7 +156,6 @@ a.title {
     -ms-transform: rotate(-2deg);
     -o-transform: rotate(-2deg);
     transform: rotate(-2deg);
-    font-size: 45px;
     line-height: 40px;
     font-family: Labrada;
     text-shadow: rgb(39, 32, 32) 2px 2px 7px;
@@ -150,7 +164,6 @@ a.title {
 }
 
 .contactInfo, .openingHours {
-    font-size: 20px;
     font-family: Inter;
     border: #38855C;
     border-right: #EEF2F5;
@@ -162,7 +175,6 @@ a.title {
 }
 
 .logo {
-    font-size: 45px;
     font-family: Swirl;
     color: #144723;
 }
@@ -196,6 +208,23 @@ a.title {
 [openingHours] {
     padding-left: 20px;
     text-align: center;
+}
+
+[centered] {
+    justify-content: center;
+    text-align: center;
+}
+
+[textSize="small"] {
+    font-size: 20px;
+}
+
+[textSize="medium"] {
+    font-size: 28px;
+}
+
+[textSize="large"] {
+    font-size: 45px;
 }
 
 [textColor="dark"] {
@@ -236,6 +265,18 @@ a.title {
     .centerInfo {
         padding-top: 240px;
     }
+
+    .service, .servicesPage img {
+        width: 400px;
+    }
+
+    .servicesPage img {
+        border-radius: 45px;
+    }
+
+    .productsPage .productDescription, .productsPage .priceTag {
+        margin-left: 40px;
+    }
 }
 
 @media screen and (max-width: 850px){
@@ -244,7 +285,7 @@ a.title {
     }
 
     .productsPage .productDescription, .productsPage .priceTag {
-        margin-left: 40px;
+        margin-left: 20px;
     }
 }
 
@@ -277,6 +318,14 @@ a.title {
         width: 140px;
     }
 
+    .service, .servicesPage img {
+    width: 300px;
+    }
+
+    .servicesPage img {
+        border-radius: 35px;
+    }
+
     .productsPage .productDescription, .productsPage .priceTag {
         margin-left: 0;
     }
@@ -284,27 +333,19 @@ a.title {
 
 @media screen and (max-width: 455px){
 
-    p.subtitle {
-        font-size: 23px;
+    .centerInfo {
+        padding-top: 200px;
     }
 
-    a.title {
-        font-size: 35px;
-    }
-
-    .contactInfo, .openingHours {
+    [textSize="small"] {
         font-size: 15px;
     }
 
-    .allServices {
-        font-size: 18px;
+    [textSize="medium"] {
+        font-size: 23px;
     }
 
-    .logo {
+    [textSize="large"] {
         font-size: 35px;
-    }
-
-    .centerInfo {
-        padding-top: 200px;
     }
 }

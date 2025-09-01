@@ -69,7 +69,40 @@ class TestHemsida(TestCase):
     def testPageText7(self):
         self.browser.get(path.join(getcwd(), 'website/index.html'))
         self.assertIn("Andra Tjänster", self.browser.page_source)
+    
+    def testVATdefault(self):
+        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.assertIn("99 kr", self.browser.page_source)
+        self.assertNotIn("79,2 kr", self.browser.page_source)
+
+    
+    
+    def testVATbutton(self):
+        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "button#VAT-btn")
+        VATbutton.click()
+        self.assertIn("79,2 kr", self.browser.page_source)
+        self.assertNotIn("99 kr", self.browser.page_source)
+
         
+    def testVATbuttonTwice(self):
+        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "button#VAT-btn")
+        VATbutton.click()
+        VATbutton.click()
+        self.assertIn("99 kr", self.browser.page_source)
+        self.assertNotIn("79,2 kr", self.browser.page_source)
+        
+    def testVATRemember(self):
+        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "button#VAT-btn")
+        body = self.browser.find_element(By.CSS_SELECTOR, "body")
+        VATbutton.click()
+        self.assertIn("79,2 kr", body)
+        self.assertNotIn("99 kr", self.browser.page_source)
+        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.assertIn("79,2 kr", self.browser.page_source)
+        self.assertNotIn("99 kr", self.browser.page_source)
         
     #CSS File
     def testCSSText(self):
