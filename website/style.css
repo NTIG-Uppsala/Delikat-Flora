@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: Judson;
-    src: url("../fonts/Judson/Judson-Regular.ttf");
+    font-family: Proza;
+    src: url("../fonts/Proza_Libre/ProzaLibre-Regular.ttf");
 
 }
 
@@ -19,16 +19,12 @@
     src: url("../fonts/Swirl_Leaf_Monogram/Swirl\ Leaf\ Monogram.ttf");
 }
 
-div {
-    font-family: Inter;
-}
-
 a:hover {
     text-decoration: none;
 }
 
-.products, .otherServices {
-    font-family: Judson;
+.allServices a {
+    color: black;
 }
 
 body {
@@ -41,10 +37,9 @@ p {
     line-height: 5px;
 }
 
-p.subtitle {
-    line-height: 20px;
-    font-family: Judson;
-    text-decoration-line: underline;
+.subtitle {
+    line-height: 50px;
+    font-weight: bold;
 }
 
 .mainInfo {
@@ -56,8 +51,8 @@ p.subtitle {
     width: 66%;
     height: max-content;
     padding-top: 0;
-    outline: 2px solid black;
-    outline-offset: -2px;
+    outline: 1px solid black;
+    outline-offset: -1px;
 }
 
 .centerInfo {
@@ -116,7 +111,6 @@ p.subtitle {
 }
 
 .serviceName {
-    font-family: Judson;
     text-decoration: underline;
     margin-bottom: 10px;
 }
@@ -136,14 +130,14 @@ p.subtitle {
     margin-top: -100px;
     padding: 3%;
     padding-top: 120px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     text-align: center;
     width: 60%;
     background-color:#6FB684;
     border-radius: 50px;
     justify-content: center;
-    outline: 2px solid black;
-    outline-offset: -2px;
+    outline: 1px solid black;
+    outline-offset: -1px;
 }
 
 .allServices {
@@ -153,14 +147,12 @@ p.subtitle {
     justify-content: center;
     gap: 30px;
     margin-top: 25px;
-    font-family: Judson;
 }
 
 .welcomeMessage {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 20px;
-    font-family: Labrada;
 }
 
 a.title {
@@ -172,30 +164,23 @@ a.title {
     -o-transform: rotate(-2deg);
     transform: rotate(-2deg);
     line-height: 40px;
-    font-family: Labrada;
     text-shadow: rgb(39, 32, 32) 2px 2px 4px;
     width: 100%;
     text-decoration: underline;
 }
 
-.contactInfo, .openingHours, .aboutUs {
-    font-family: Inter;
+.contactInfo, .openingHoursInfo, .aboutUsInfo {
     border: #38855C;
     border-right: #EEF2F5;
     border-left: #EEF2F5;
     border-width: 2px;
-    border-style:solid;
+    border-style: solid;
     padding-right: 20px;
     padding-left: 20px;
 }
 
-.aboutUs a {
+.aboutUsInfo a {
     color: #EEF2F5;
-}
-
-.logo {
-    font-family: Swirl;
-    color: #144723;
 }
 
 .header .logo{
@@ -216,47 +201,57 @@ a.title {
     position: relative;
     text-align: center;
     width: 100%;
-    padding: 5%;
+    padding: 2%;
     padding-top: 20px;
+    padding-bottom: 20px;
     height: fit-content;
     justify-content: center;
-    outline: 2px solid black;
-    outline-offset: -2px;
+    outline: 1px solid black;
+    outline-offset: -1px;
 }
 
-[openingHours] {
+.openingHoursTable td:nth-of-type(2), .openingHoursTable th:nth-of-type(2){
     padding-left: 20px;
     text-align: center;
 }
 
-[textSize="small"] {
+.textSmall {
     font-size: 20px;
+    font-family: Inter;
 }
 
-[textSize="medium"] {
+.textMedium {
     font-size: 28px;
+    font-family: Proza;
 }
 
-[textSize="large"] {
+.textLarge {
     font-size: 45px;
+    font-family: Labrada;
 }
 
-[textColor="dark"] {
+.textDark {
     color: rgb(39, 32, 32);
 }
 
-[textColor="greyish"] {
+.textGreyish {
     color: #8C8C8C;
 }
 
-[textColor="light"] {
+.textLight {
     color: #EEF2F5;
+}
+
+.logo {
+    font-family: Swirl;
+    color: #144723;
 }
 
 @media screen and (max-width: 1100px) {
 
-    .contactInfo, .openingHours, .aboutUs {
-        border: none;
+    .contactInfo, .openingHoursInfo, .aboutUsInfo {
+        border-left: none;
+        border-right: none;
         margin: auto;
     }
 
@@ -326,8 +321,8 @@ a.title {
         padding-bottom: 2%;
     }
 
-    p.subtitle {
-        line-height: 10px;
+    .subtitle {
+        line-height: 40px;
     }
 }
 
@@ -356,15 +351,15 @@ a.title {
         margin: 6px;
     }
 
-    [textSize="small"] {
+    .textSmall {
         font-size: 15px;
     }
 
-    [textSize="medium"] {
-        font-size: 23px;
+    .textMedium {
+        font-size: 22px;
     }
 
-    [textSize="large"] {
+    .textLarge {
         font-size: 35px;
     }
 }
