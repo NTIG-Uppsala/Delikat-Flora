@@ -78,8 +78,8 @@ p.subtitle {
     margin-right: 10px;
 }
 
-.productsPage .productDescription, .productsPage .priceTag {
-    margin-left: 50px;
+.productsPage img, .staffPage img {
+    border-radius: 50%;
 }
 
 .productsPage img {
@@ -99,6 +99,8 @@ p.subtitle {
     display: flex;
     flex-direction: column;
     gap: 3px;
+    text-align: center;
+    align-items: center;
 }
 
 .service, .staffMember {
@@ -122,6 +124,7 @@ p.subtitle {
 .priceTag {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -162,6 +165,7 @@ p.subtitle {
 
 a.title {
     display: block;
+    /* Rotates the title in the header */
     -webkit-transform: rotate(-2deg);  
     -moz-transform: rotate(-2deg);
     -ms-transform: rotate(-2deg);
@@ -225,11 +229,6 @@ a.title {
     text-align: center;
 }
 
-[centered] {
-    justify-content: center;
-    text-align: center;
-}
-
 [textSize="small"] {
     font-size: 20px;
 }
@@ -288,29 +287,23 @@ a.title {
     .servicesPage img {
         border-radius: 45px;
     }
-
-    .productsPage .productDescription, .productsPage .priceTag {
-        margin-left: 40px;
-    }
 }
 
 @media screen and (max-width: 1000px) {
+
     .staffPage img {
         width: 250px;
     }
 }
 
 @media screen and (max-width: 850px){
+
     .productsPage img {
         width: 200px;
     }
 
     .staffPage img {
         width: 200px;
-    }
-
-    .productsPage .productDescription, .productsPage .priceTag {
-        margin-left: 20px;
     }
 }
 
@@ -339,6 +332,7 @@ a.title {
 }
 
 @media screen and (max-width: 500px){
+
     .productsPage img {
         width: 140px;
     }
@@ -349,10 +343,6 @@ a.title {
 
     .servicesPage img {
         border-radius: 35px;
-    }
-
-    .productsPage .productDescription, .productsPage .priceTag {
-        margin-left: 0;
     }
 }
 

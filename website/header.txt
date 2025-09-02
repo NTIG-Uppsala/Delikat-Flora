@@ -1,0 +1,16 @@
+<div class="header">
+    <a href="index.html" class="title" textColor="light" textSize ="large">
+        DELIKAT FLORA
+    </a>
+    <div class="logo" textSize ="large">
+        F
+    </div>
+    <div class="allServices" textSize ="medium">
+        <a href="products.html" class="products" textColor="dark"> 
+            Produkter
+        </a>
+        <a href="other_services.html" class="otherServices" textColor="dark">
+            Andra Tjänster
+        </a>
+    </div>
+</div>
