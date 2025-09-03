@@ -4,7 +4,6 @@ TE4 Project för florist hemsida
 Länk till hemsida: (https://ntig-uppsala.github.io/Delikat-Flora/website/)
 
 Länk till samtliga Google docs:
-
 Automatiserad testningssystem (https://docs.google.com/document/d/1xpMVnxPioFDzm0qiTA5Q_vpLZHqOTG7jStPa3p3nha0/edit?usp=sharing)
 Definition of Done (https://docs.google.com/document/d/1bb9zMPvHEKfGaUDgJ7R6bR2cTF_MmLuig9X6VnaRME8/edit?usp=sharing)
 Kodningsstandard (https://docs.google.com/document/d/1c5YXm55XQ7K4fNd9AMTNPCG8DQhdLiUGrASrSQ5tVGE/edit?usp=sharing)
