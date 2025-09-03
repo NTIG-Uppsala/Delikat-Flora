@@ -1,10 +1,10 @@
-# How to make commits:
+# Hur man gör commits:
 
-- Clone repository to Github Desktop
-- Create new “Feature” branch from main
-- Open in VS Code
-- Fix what you want to test inside Feature branch
-- Test Feature branch
-- If testing doesn't succeed: go back to step 4
-- If testing succeeds: check with the rest of the team members
-- Push Feature branch to main
+- Klona repot till Github Desktop
+- Skapa en ny “Feature”-branch från main
+- Öppna i VS Code
+- Fixa det du vill testa i Feature-branchen
+- Testa Feature-branchen
+- Om testningen misslyckas: gå tillbaka till steg 4
+- Om testningen lyckas: kontrollera med resten av teammedlemmarna
+- Pusha Feature-branchen till main
