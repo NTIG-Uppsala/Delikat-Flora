@@ -1,4 +1,4 @@
-# Utvecklingsmiljö Standard
+# Development Enviorment Standard
 
 ## Project in the Github organization [NTIG-Uppsala Delikat Flora](https://github.com/NTIG-Uppsala/Delikat-Flora/)
 ## We are using visual studio code version 1.103.2 
@@ -16,3 +16,4 @@ Push Feature branch to main
 ## List of extensions for visual studio code
 
 Live preview
+
