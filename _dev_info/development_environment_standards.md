@@ -1,19 +1,8 @@
-# Development Enviorment Standard
+# Standard för Utvecklingsmiljö
 
-## Project in the Github organization [NTIG-Uppsala Delikat Flora](https://github.com/NTIG-Uppsala/Delikat-Flora/)
-## We are using visual studio code version 1.103.2 
-## How to make commits:
+## Projektet finns i Github-organisationen [NTIG-Uppsala Delikat Flora](https://github.com/NTIG-Uppsala/Delikat-Flora/)  
+## Vi använder Visual Studio Code version 1.103.2  
 
-Clone repository to Github Desktop
-Create new “Feature” branch from main
-Open in VS Code
-Fix what you want to test inside Feature branch
-Test Feature branch
-If testing doesn't work: go back to step 4
-If testing works: Check with the rest of the team members
-Push Feature branch to main
+## Lista över tillägg för Visual Studio Code
 
-## List of extensions for visual studio code
-
-Live preview
-
+- Live preview
