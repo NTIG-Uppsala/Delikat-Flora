@@ -6,7 +6,6 @@
 @font-face {
     font-family: Proza;
     src: url("../fonts/Proza_Libre/ProzaLibre-Regular.ttf");
-
 }
 
 @font-face {
@@ -39,7 +38,6 @@ p {
 
 .subtitle {
     line-height: 50px;
-    font-weight: bold;
 }
 
 .mainInfo {
@@ -49,8 +47,6 @@ p {
     background-color: #EEF2F5;
     margin: auto;
     width: 66%;
-    height: max-content;
-    padding-top: 0;
     outline: 1px solid black;
     outline-offset: -1px;
 }
@@ -59,7 +55,6 @@ p {
     padding-top: 140px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .productsPage, .servicesPage, .staffPage {
@@ -78,16 +73,16 @@ p {
 }
 
 .productsPage img {
-    width: 200px;
+    width: 150px;
 }
 
 .servicesPage img {
-    width: 500px;
+    width: 400px;
     border-radius: 60px;
 }
 
 .staffPage img {
-    width: 225px;
+    width: 175px;
 }
 
 .product, .service, .staffMember {
@@ -104,18 +99,11 @@ p {
 }
 
 .service {
-    width: 500px;
-}
-
-.serviceName {
-    font-weight: bold;
-    margin-bottom: 10px;
+    width: 400px;
 }
 
 .priceTag {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     gap: 10px;
 }
 
@@ -123,7 +111,6 @@ p {
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
-    margin: auto;
     margin-top: -100px;
     padding: 3%;
     padding-top: 120px;
@@ -132,15 +119,12 @@ p {
     width: 60%;
     background-color:#6FB684;
     border-radius: 50px;
-    justify-content: center;
     outline: 1px solid black;
     outline-offset: -1px;
 }
 
 .allServices {
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     margin-top: 25px;
@@ -162,8 +146,6 @@ a.title {
     transform: rotate(-2deg);
     line-height: 40px;
     text-shadow: rgb(39, 32, 32) 2px 2px 4px;
-    width: 100%;
-    text-decoration: underline;
 }
 
 .contactInfo, .openingHoursInfo, .aboutUsInfo {
@@ -176,18 +158,17 @@ a.title {
     padding-left: 20px;
 }
 
-.aboutUsInfo a {
+.bottomInfo a {
     color: #EEF2F5;
 }
 
 .header .logo{
     position: fixed;
     right: 30px;
-    top: 110px;
+    top: 120px;
 }
 
 .openingHoursTable {
-    margin: auto;
     text-align: left;
 }
 
@@ -220,11 +201,17 @@ a.title {
 .textMedium {
     font-size: 28px;
     font-family: Proza;
+    font-weight: bold;
 }
 
 .textLarge {
-    font-size: 50px;
+    font-size: 45px;
     font-family: Labrada;
+}
+
+.logo {
+    font-family: Swirl;
+    color: #144723;
 }
 
 .textDark {
@@ -239,11 +226,6 @@ a.title {
     color: #EEF2F5;
 }
 
-.logo {
-    font-family: Swirl;
-    color: #144723;
-}
-
 @media screen and (max-width: 1100px) {
 
     .contactInfo, .openingHoursInfo, .aboutUsInfo {
@@ -256,24 +238,12 @@ a.title {
         flex-direction: column;
     }
 
-    .header {
-        top: 0px;
-    }
-
     .header .logo {
-        position: relative;
-        right: 0;
-        top: 0;
-        margin-top: 10px;
-        margin-bottom: -25px;
-    }
-
-    .centerInfo {
-        padding-top: 240px;
+        display: none;
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px){
 
     .product, .staffMember {
         width: 40%
@@ -286,47 +256,28 @@ a.title {
     .productsPage img, .servicesPage img, .staffPage img {
         width: 100%;
     }
-}
-
-@media screen and (max-width: 700px){
 
     .header, .mainInfo, .bottomInfo {
         width: 100%;
-        padding: 0;
     }
 
     .header {
-        padding-top: 120px;
-        padding-bottom: 3%;
-        border-radius: 0;
-    }
-
-    .bottomInfo {
-        left: 0;
-        padding-top: 2%;
         padding-bottom: 2%;
-    }
-
-    .subtitle {
-        line-height: 40px;
+        border-radius: 0;
     }
 }
 
 @media screen and (max-width: 455px){
-
-    .centerInfo {
-        padding-top: 230px;
-    }
 
     .textSmall {
         font-size: clamp(1rem, 1vw, 4rem);
     }
 
     .textMedium {
-        font-size: clamp(1.5rem, 2vw, 4rem);
+        font-size: clamp(1.4rem, 2vw, 4rem);
     }
 
     .textLarge {
-        font-size: clamp(2.6rem, 3.3vw, 4rem);
+        font-size: clamp(2.4rem, 3.3vw, 4rem);
     }
 }
