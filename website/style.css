@@ -78,7 +78,7 @@ p {
 }
 
 .productsPage img {
-    width: 250px;
+    width: 200px;
 }
 
 .servicesPage img {
@@ -87,7 +87,7 @@ p {
 }
 
 .staffPage img {
-    width: 300px;
+    width: 225px;
 }
 
 .product, .service, .staffMember {
@@ -98,12 +98,9 @@ p {
     align-items: center;
 }
 
-.service, .staffMember {
-    text-align: center;
-}
-
 .staffMember p {
-    margin: 10px;
+    line-height: 2ch;
+    margin: 0;
 }
 
 .service {
@@ -111,7 +108,7 @@ p {
 }
 
 .serviceName {
-    text-decoration: underline;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -226,7 +223,7 @@ a.title {
 }
 
 .textLarge {
-    font-size: 45px;
+    font-size: 50px;
     font-family: Labrada;
 }
 
@@ -274,31 +271,20 @@ a.title {
     .centerInfo {
         padding-top: 240px;
     }
-
-    .service, .servicesPage img {
-        width: 400px;
-    }
-
-    .servicesPage img {
-        border-radius: 45px;
-    }
 }
 
 @media screen and (max-width: 1000px) {
 
-    .staffPage img {
-        width: 250px;
+    .product, .staffMember {
+        width: 40%
     }
-}
-
-@media screen and (max-width: 850px){
-
-    .productsPage img {
-        width: 200px;
+    
+    .service {
+        width: 80%;
     }
 
-    .staffPage img {
-        width: 200px;
+    .productsPage img, .servicesPage img, .staffPage img {
+        width: 100%;
     }
 }
 
@@ -326,40 +312,21 @@ a.title {
     }
 }
 
-@media screen and (max-width: 500px){
-
-    .productsPage img {
-        width: 140px;
-    }
-
-    .service, .servicesPage img {
-        width: 300px;
-    }
-
-    .servicesPage img {
-        border-radius: 35px;
-    }
-}
-
 @media screen and (max-width: 455px){
 
     .centerInfo {
-        padding-top: 200px;
-    }
-
-    .staffMember p {
-        margin: 6px;
+        padding-top: 230px;
     }
 
     .textSmall {
-        font-size: 15px;
+        font-size: clamp(1rem, 1vw, 4rem);
     }
 
     .textMedium {
-        font-size: 22px;
+        font-size: clamp(1.5rem, 2vw, 4rem);
     }
 
     .textLarge {
-        font-size: 35px;
+        font-size: clamp(2.6rem, 3.3vw, 4rem);
     }
 }
