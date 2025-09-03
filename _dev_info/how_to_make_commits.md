@@ -1,4 +1,4 @@
-## How to make commits:
+### How to make commits:
 
 - Clone repository to Github Desktop
 - Create new “Feature” branch from main
