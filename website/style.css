@@ -57,7 +57,7 @@ header {
 header .logo{
     position: fixed;
     right: 30px;
-    top: 120px;
+    top: 110px;
 }
 
 a.title {
@@ -102,6 +102,9 @@ main {
 
 .centerInfo {
     padding-top: 140px;
+}
+
+.sortingOptions {
     display: flex;
     flex-wrap: wrap;
 }
@@ -110,6 +113,15 @@ main {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 20px;
+}
+
+.momsButton {
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+.momsCheckbox {
+    scale: 1.6;
 }
 
 .productsPage, .servicesPage, .staffPage {
@@ -128,7 +140,7 @@ main {
 }
 
 .productsPage img {
-    width: 150px;
+    width: 170px;
 }
 
 .servicesPage img {
@@ -183,11 +195,8 @@ footer a {
 }
 
 .contactInfo, .openingHoursInfo, .aboutUsInfo {
-    border: #38855C;
-    border-right: #EEF2F5;
-    border-left: #EEF2F5;
-    border-width: 2px;
-    border-style: solid;
+    border-right: 2px solid var(--color-light);
+    border-left: 2px solid var(--color-light);
     padding-right: 20px;
     padding-left: 20px;
 }
@@ -198,6 +207,11 @@ footer a {
 
 .openingHoursTable td:nth-of-type(2), .openingHoursTable th:nth-of-type(2){
     padding-left: 20px;
+}
+
+.textExtraSmall {
+    font-size: 15px;
+    font-family: Inter;
 }
 
 .textSmall {
@@ -233,7 +247,7 @@ footer a {
     color: var(--color-light)
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1350px) {
 
     header .logo {
         display: none;
@@ -241,12 +255,19 @@ footer a {
 
     footer {
         flex-direction: column;
+        gap: 10px;
     }
 
     .contactInfo, .openingHoursInfo, .aboutUsInfo {
-        border-left: none;
-        border-right: none;
+        border: none;
         margin: auto;
+    }
+
+    .divider {
+        align-self: center;
+        width: 250px;
+        height: 2px;
+        background-color: var(--color-light);
     }
 }
 
@@ -275,6 +296,10 @@ footer a {
 }
 
 @media screen and (max-width: 455px){
+
+    .textExtraSmall {
+        font-size: clamp(0.8rem, 0.8vw, 4rem);
+    }
 
     .textSmall {
         font-size: clamp(1rem, 1vw, 4rem);

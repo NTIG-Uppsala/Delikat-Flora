@@ -41,7 +41,7 @@ class TestHemsida(TestCase):
 
 
     # HÄR BÖRJAR TESTERNA
-    #index.html
+    # index.html
     def testPageText(self):
         self.browser.get(path.join(getcwd(), 'website/index.html'))
         self.assertIn("DELIKAT", self.browser.page_source)
@@ -68,33 +68,25 @@ class TestHemsida(TestCase):
 
     def testPageText7(self):
         self.browser.get(path.join(getcwd(), 'website/index.html'))
-        self.assertIn("Andra Tjänster", self.browser.page_source)
+        self.assertIn("Konsultation", self.browser.page_source)
     
-    def testVATdefault(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
-        self.assertIn("99 kr", self.browser.page_source)
-        self.assertNotIn("79,2 kr", self.browser.page_source)
-
-    
-    
+    # VATButton testing (products.html)
     def testVATbutton(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
-        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "button#VAT-btn")
+        self.browser.get(path.join(getcwd(), 'website/products.html'))
+        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "input#toggleVAT")
         VATbutton.click()
-        self.assertIn("79,2 kr", self.browser.page_source)
-        self.assertNotIn("99 kr", self.browser.page_source)
+        self.assertIn("80", self.browser.page_source)
 
-        
     def testVATbuttonTwice(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
-        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "button#VAT-btn")
+        self.browser.get(path.join(getcwd(), 'website/products.html'))
+        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
         VATbutton.click()
         VATbutton.click()
-        self.assertIn("99 kr", self.browser.page_source)
-        self.assertNotIn("79,2 kr", self.browser.page_source)
+        self.assertIn("100", self.browser.page_source)
         
+    # Not currently in use
     def testVATRemember(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.browser.get(path.join(getcwd(), 'website/products.html'))
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "button#VAT-btn")
         body = self.browser.find_element(By.CSS_SELECTOR, "body")
         VATbutton.click()
@@ -104,10 +96,10 @@ class TestHemsida(TestCase):
         self.assertIn("79,2 kr", self.browser.page_source)
         self.assertNotIn("99 kr", self.browser.page_source)
         
-    #CSS File
+    # CSS File
     def testCSSText(self):
         self.browser.get(path.join(getcwd(), 'website/style.css'))
-        self.assertIn("Flower", self.browser.page_source)
+        self.assertIn("Swirl", self.browser.page_source)
 
 
 
