@@ -75,14 +75,15 @@ class TestHemsida(TestCase):
         self.browser.get(path.join(getcwd(), 'website/products.html'))
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "input#toggleVAT")
         VATbutton.click()
-        self.assertIn("80", self.browser.page_source)
+        self.assertIn("320", self.browser.page_source)
 
     def testVATbuttonTwice(self):
         self.browser.get(path.join(getcwd(), 'website/products.html'))
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
         VATbutton.click()
         VATbutton.click()
-        self.assertIn("100", self.browser.page_source)
+        self.assertIn("400", self.browser.page_source)
+        self.assertNotIn("320", self.browser.page_source)
         
     # Not currently in use
     def testVATRemember(self):
