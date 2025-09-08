@@ -2,6 +2,7 @@ from unittest import TestCase, main
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+import time
 
 from os import path, getcwd
 
@@ -108,7 +109,6 @@ class TestHemsida(TestCase):
         self.assertIn("320", self.browser.page_source)
         self.browser.get("http://localhost:8000/website/index.html")
         self.browser.get("http://localhost:8000/website/products.html")
-        import time
         time.sleep(1)
         self.assertIn("320", self.browser.page_source)
         
