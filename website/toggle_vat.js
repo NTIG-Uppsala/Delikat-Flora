@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     let priceWithoutVAT = (originalPrice / (1 + VAT_RATE)).toFixed(0);
                     span.textContent = priceWithoutVAT;
                     document.cookie = "1";
-                    console.log("COOKIE ON")
                 }
                 
                 else {
