@@ -85,17 +85,32 @@ class TestHemsida(TestCase):
         self.assertIn("400", self.browser.page_source)
         self.assertNotIn("320", self.browser.page_source)
         
+    def testVATbutton201(self):
+        self.browser.get(path.join(getcwd(), 'website/products.html'))
+        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
+        for i in range(201):
+            VATbutton.click()
+        self.assertIn("320", self.browser.page_source)
+        
+    def testVATbutton200(self):
+        self.browser.get(path.join(getcwd(), 'website/products.html'))
+        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
+        for i in range(200):
+            VATbutton.click()
+        self.assertIn("400", self.browser.page_source)
+        self.assertNotIn("320", self.browser.page_source)
+        
     # Not currently in use
     def testVATRemember(self):
-        self.browser.get(path.join(getcwd(), 'website/products.html'))
-        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "button#VAT-btn")
-        body = self.browser.find_element(By.CSS_SELECTOR, "body")
+        self.browser.get("http://localhost:8000/website/products.html")
+        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
         VATbutton.click()
-        self.assertIn("79,2 kr", body)
-        self.assertNotIn("99 kr", self.browser.page_source)
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
-        self.assertIn("79,2 kr", self.browser.page_source)
-        self.assertNotIn("99 kr", self.browser.page_source)
+        self.assertIn("320", self.browser.page_source)
+        self.browser.get("http://localhost:8000/website/index.html")
+        self.browser.get("http://localhost:8000/website/products.html")
+        import time
+        time.sleep(1)
+        self.assertIn("320", self.browser.page_source)
         
     # CSS File
     def testCSSText(self):
