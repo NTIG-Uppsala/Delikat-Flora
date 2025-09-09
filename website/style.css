@@ -18,6 +18,7 @@
     src: url("fonts/Swirl_Leaf_Monogram/Swirl\ Leaf\ Monogram.ttf");
 }
 
+/* variables */
 :root {
     --color-green1: #38855C;
     --color-green2: #6FB684;
