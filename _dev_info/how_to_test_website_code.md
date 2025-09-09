@@ -2,9 +2,9 @@
 
 1. Open cmd
 2. Change directory to the repository directory
-    * cd documents
-    * cd github
-    * cd muppet-code
+    1. cd documents
+    2. cd github
+    3. cd muppet-code
 4. Enter following: py -m http.server
 5. Run tests
 6. Make sure tests fail
