@@ -1,10 +1,10 @@
 # Definition of Done
 
-## Innan något kan markeras som klart (flytta post-it), måste följande krav vara uppfyllda:
+## Before something can be marked as finished (move post-it), the following requirements must be met:
 
-- Allt som fungerar är dokumenterat skriftligt.  
-- All debug-kod är borttagen.  
-- Allt använt material finns på driven.  
-- Feedback från AI.  
-- All kod måste vara godkänd av [Whatwg Validator](https://whatwg.org/validator/)  
-- Alla som är närvarande i gruppen måste granska koden, se till att de förstår den och säkerställa att den följer våra kodstandarder.  
+- Everything that works is documented in writing.  
+- All debug code is removed.  
+- All used material is stored on the drive.  
+- Feedback from AI.  
+- All code must be approved by [Whatwg Validator](https://whatwg.org/validator/)  
+- Everyone present in the group must review the code, make sure they understand it, and ensure that it follows our coding standards.  

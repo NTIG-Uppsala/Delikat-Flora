@@ -1,7 +1,8 @@
-# Kodstandard
+# Code Standards
 
-- All kod skrivs på engelska  
-- Alla filnamn skrivs i snake_case  
-- Variabel- och klassnamn skrivs i camelCase
-- Konstanter är skrivna i UPPER_CASE
-- Fonter är undantagna från kodstandarden
+- All code is written in English  
+- All filenames are written in snake_case  
+- Variable and class names are written in camelCase  
+- Constants are written in UPPER_CASE  
+- Fonts are exempt from the code standard
+
