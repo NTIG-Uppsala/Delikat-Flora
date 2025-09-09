@@ -1,7 +1,7 @@
 # Delikat-Flora
 ## TE4 Project for florist website
 
-## Link to website: (https://ntig-uppsala.github.io/Delikat-Flora/website/)
+## Link to website: https://ntig-uppsala.github.io/Delikat-Flora/website/
 
 ## Licenses:
 
