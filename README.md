@@ -3,6 +3,9 @@
 
 ## Link to website: https://ntig-uppsala.github.io/Delikat-Flora/website/
 
+## Links to dev imfo docs
+- [coding standars](docs/coding_standards.md)
+
 ## Licenses:
 
 ### Fonts:
