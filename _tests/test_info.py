@@ -44,42 +44,42 @@ class TestWebsite(TestCase):
     # HERE THE TESTS BEGINS
     # index.html
     def testPageText(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.browser.get("http://localhost:8000/website/index.html")
         self.assertIn("DELIKAT", self.browser.page_source)
     
     def testPageText2(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.browser.get("http://localhost:8000/website/index.html")
         self.assertIn("STÄNGT", self.browser.page_source)
         
     def testPageText3(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.browser.get("http://localhost:8000/website/index.html")
         self.assertIn("32H", self.browser.page_source)
     
     def testPageText4(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.browser.get("http://localhost:8000/website/index.html")
         self.assertIn("Öppet", self.browser.page_source)
         
     def testPageText5(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.browser.get("http://localhost:8000/website/index.html")
         self.assertIn("Måndag", self.browser.page_source)
         
     def testPageText6(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.browser.get("http://localhost:8000/website/index.html")
         self.assertIn("12-18", self.browser.page_source)
 
     def testPageText7(self):
-        self.browser.get(path.join(getcwd(), 'website/index.html'))
+        self.browser.get("http://localhost:8000/website/index.html")
         self.assertIn("Konsultation", self.browser.page_source)
     
     # VATButton testing (products.html)
     def testVATbutton(self):
-        self.browser.get(path.join(getcwd(), 'website/products.html'))
+        self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "input#toggleVAT")
         VATbutton.click()
         self.assertIn("320", self.browser.page_source)
 
     def testVATbuttonTwice(self):
-        self.browser.get(path.join(getcwd(), 'website/products.html'))
+        self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
         VATbutton.click()
         VATbutton.click()
@@ -87,14 +87,14 @@ class TestWebsite(TestCase):
         self.assertNotIn("320", self.browser.page_source)
         
     def testVATbutton201(self):
-        self.browser.get(path.join(getcwd(), 'website/products.html'))
+        self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
         for i in range(201):
             VATbutton.click()
         self.assertIn("320", self.browser.page_source)
         
     def testVATbutton200(self):
-        self.browser.get(path.join(getcwd(), 'website/products.html'))
+        self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
         for i in range(200):
             VATbutton.click()
@@ -114,7 +114,7 @@ class TestWebsite(TestCase):
         
     # CSS File
     def testCSSText(self):
-        self.browser.get(path.join(getcwd(), 'website/style.css'))
+        self.browser.get("http://localhost:8000/website/style.css")
         self.assertIn("Swirl", self.browser.page_source)
 
 
