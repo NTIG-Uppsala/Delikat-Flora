@@ -1,21 +1,21 @@
 @font-face {
     font-family: Inter;
-    src: url("../fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
+    src: url("fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
 }
 
 @font-face {
     font-family: Proza;
-    src: url("../fonts/Proza_Libre/ProzaLibre-Regular.ttf");
+    src: url("fonts/Proza_Libre/ProzaLibre-Regular.ttf");
 }
 
 @font-face {
     font-family: Labrada;
-    src: url("../fonts/Labrada/Labrada-VariableFont_wght.ttf");
+    src: url("fonts/Labrada/Labrada-VariableFont_wght.ttf");
 }
 
 @font-face {
     font-family: Swirl;
-    src: url("../fonts/Swirl_Leaf_Monogram/Swirl\ Leaf\ Monogram.ttf");
+    src: url("fonts/Swirl_Leaf_Monogram/Swirl\ Leaf\ Monogram.ttf");
 }
 
 :root {
