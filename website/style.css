@@ -224,8 +224,13 @@ footer a {
 }
 
 .textSmall {
-    font-size: 20px;
+    font-size: 18px;
     font-family: Inter;
+}
+
+.textMediumSmall{
+    font-size: 22px;
+    font-family: Proza;
 }
 
 .textMedium {
@@ -320,9 +325,12 @@ footer a {
     }
 
     .textSmall {
-        font-size: clamp(1rem, 1vw, 4rem);
+        font-size: clamp(0.9rem, 0.9vw, 4rem);
     }
 
+    .textMediumSmall {
+        font-size: clamp(1.1rem, 1.3vw, 4rem)
+    }
     .textMedium {
         font-size: clamp(1.4rem, 2vw, 4rem);
     }

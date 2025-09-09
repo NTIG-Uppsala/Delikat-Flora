@@ -1,11 +1,12 @@
 import os
-
+ 
 # List of page templates
 pageTemplateList = [
     ["_templates/pages/index.html", "index.html"],
     ["_templates/pages/about_us.html", "about_us.html"],
     ["_templates/pages/consultation.html", "consultation.html"],
     ["_templates/pages/products.html", "products.html"],
+    ["_templates/pages/flowergram.html", "flowergram.html"],
     ]
 
 # List of module templates
