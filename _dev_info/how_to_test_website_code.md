@@ -1,12 +1,12 @@
 # How to test website code
 
-- Open cmd
-- Change directory to the repository directory
-      - cd documents
-      - cd github
-      - cd muppet-code
-- Enter following: py -m http.server
-- Run tests
-- Make sure tests fail
-- Make changes so the tests succeed
-- Done
+1. Open cmd
+2. Change directory to the repository directory
+    1. cd documents
+    2. cd github
+    3. cd muppet-code
+4. Enter following: py -m http.server
+5. Run tests
+6. Make sure tests fail
+7. Make changes so the tests succeed
+8. Done
