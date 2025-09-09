@@ -8,40 +8,40 @@ from os import path, getcwd
 
 
 
-class TestHemsida(TestCase):
+class TestWebsite(TestCase):
 
-    # inställningar för hur testerna körs
-    stangintebrowsern = False  # om True så hålls webbläsaren öppen efter testerna är klara, annars stängs den
-    gomfonstret = True  # visar webbläsaren medan testerna körs
+    # Settings for how testing runs
+    dontclosebrowser = False  # if true then the browser is kept open after the tests are finished, otherwise it is closed
+    hidewindow = True  # displays the browser while the tests are running
 
-    # setUpClass körs INNAN FÖRSTA testet
+    # setUpClass is run BEFORE the FIRST test
     @classmethod
     def setUpClass(cls):
         chr_options = Options()
 
-        if cls.stangintebrowsern:
+        if cls.dontclosebrowser:
             chr_options.add_experimental_option("detach", True)
 
-        if cls.gomfonstret:
+        if cls.hidewindow:
             chr_options.add_argument("--headless")
 
         cls.browser = webdriver.Chrome(options=chr_options)
 
-    # tearDownClass körs EFTER SISTA testet
+    # tearDownClass is run AFTER the LAST test
     @classmethod
     def tearDownClass(cls):
-        pass  # gör ingenting
+        pass  # Do nothing
 
-    # setUp körs INNAN VARJE TEST
+    # setUp is run BEFORE EVERY TEST
     def setUp(self):
-        pass  # gör ingenting
+        pass  # Do nothing
 
-    # tearDown körs EFTER VARJE TEST
+    # tearDown is run AFTER EACH TEST
     def tearDown(self):
-        self.browser.get('about:blank')  # gå till en tom sida för att undvika att tidigare test påverkar senare
+        self.browser.get('about:blank')  # go to a blank page to avoid previous tests affecting later ones
 
 
-    # HÄR BÖRJAR TESTERNA
+    # HERE THE TESTS BEGINS
     # index.html
     def testPageText(self):
         self.browser.get(path.join(getcwd(), 'website/index.html'))
@@ -120,6 +120,6 @@ class TestHemsida(TestCase):
 
 
 
-# denna bit finns här så att testerna körs om filen körs som vanligt python-program
+# this bit is here so that the tests run if the file is run as a regular python program
 if __name__ == '__main__':
     main(verbosity=2)
