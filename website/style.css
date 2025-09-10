@@ -20,14 +20,14 @@
 
 /* variables */
 :root {
-    --color-green1: #38855C;
-    --color-green2: #6FB684;
-    --color-green3: #58997D;
-    --color-green4: #8FC28D;
-    --color-light: #EEF2F5;
-    --color-dark: #272020;
-    --color-grey: #8C8C8C;
-    --color-logo: #144723;
+    --colorGreen1: #38855C;
+    --colorGreen2: #6FB684;
+    --colorGreen3: #58997D;
+    --colorGreen4: #8FC28D;
+    --colorLight: #EEF2F5;
+    --colorDark: #272020;
+    --colorGrey: #8C8C8C;
+    --colorDarkGreen: #144723;
 }
 
 a:hover {
@@ -48,14 +48,14 @@ header {
     padding-bottom: 5px;
     text-align: center;
     width: 60%;
-    background-color: var(--color-green2);
+    background-color: var(--colorGreen2);
     border-radius: 50px;
     outline: 1px solid black;
     outline-offset: -1px;
     z-index: 100;
 }
 
-header .logo {
+header .textLogo {
     position: fixed;
     right: 30px;
     top: 110px;
@@ -70,7 +70,7 @@ a.title {
     -o-transform: rotate(-2deg);
     transform: rotate(-2deg);
     line-height: 40px;
-    text-shadow: var(--color-dark) 2px 2px 4px;
+    text-shadow: var(--colorDark) 2px 2px 4px;
     margin: auto;
     margin-bottom: 15px;
     margin-top: -15px;
@@ -88,11 +88,11 @@ a.title {
     width: 30px;
     height: 30px;
     margin-left: auto;
-    background-color:var(--color-green2);
+    background-color:var(--colorGreen2);
     border: none;
-    outline: 2px solid var(--color-light);
+    outline: 2px solid var(--colorLight);
     border-radius: 20%;
-    box-shadow: var(--color-dark) 2px 2px 4px;
+    box-shadow: var(--colorDark) 2px 2px 4px;
 }
 
 .dropButton:hover {
@@ -107,8 +107,8 @@ a.title {
     transform: translateY(-10px);
     display: flex;
     flex-direction: column;
-    background-color: var(--color-green2);
-    outline: 1px solid var(--color-dark);
+    background-color: var(--colorGreen2);
+    outline: 1px solid var(--colorDark);
     margin-top: 5px;
     margin-right: -8px;
     gap: 5px;
@@ -125,7 +125,7 @@ a.title {
 .smallDivider {
     width: 20px;
     height: 2px;
-    background-color: var(--color-light);
+    background-color: var(--colorLight);
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: -1px;
@@ -147,10 +147,10 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: var(--color-light);
+    background-color: var(--colorLight);
     margin: auto;
     width: 66%;
-    outline: 1px solid var(--color-dark);
+    outline: 1px solid var(--colorDark);
     outline-offset: -1px;
     padding-top: 110px;
 }
@@ -233,7 +233,7 @@ main {
 footer {
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--color-green1);
+    background-color: var(--colorGreen1);
     position: relative;
     text-align: center;
     width: 100%;
@@ -242,20 +242,20 @@ footer {
     padding-bottom: 20px;
     height: fit-content;
     justify-content: center;
-    outline: 1px solid var(--color-dark);
+    outline: 1px solid var(--colorDark);
     outline-offset: -1px;
     gap: 20px;
 }
 
 footer a {
-    color: var(--color-light)
+    color: var(--colorLight)
 }
 
 .divider {
     align-self: center;
     width: 2px;
     height: 200px;
-    background-color: var(--color-light);
+    background-color: var(--colorLight);
 }
 
 
@@ -270,57 +270,32 @@ footer a {
     padding-left: 20px;
 }
 
-.textExtraSmall {
-    font-size: 15px;
-    font-family: Inter;
-}
+.textExtraSmall {font-size: 15px;}
+.textSmall {font-size: 18px;}
+.textMediumSmall{font-size: 22px;}
+.textMedium {font-size: 28px;}
+.textMediumLarge {font-size: 37px;}
+.textLarge {font-size: 45px;}
 
-.textSmall {
-    font-size: 18px;
-    font-family: Inter;
-}
+.fontBold {font-weight: bold;}
 
-.textMediumSmall{
-    font-size: 22px;
-    font-family: Proza;
-}
+.fontInter {font-family: Inter;}
+.fontProza {font-family: Proza;}
+.fontLabrada {font-family: Labrada;}
 
-.textMedium {
-    font-size: 28px;
-    font-family: Proza;
-    font-weight: bold;
-}
+.textDark {color: var(--colorDark)}
+.textGreyish {color: var(--colorGrey)}
+.textLight {color: var(--colorLight)}
 
-.textMediumLarge {
-    font-size: 37px;
-}
-
-.textLarge {
-    font-size: 45px;
-    font-family: Labrada;
-}
-
-.logo {
+.textLogo {
+    color: var(--colorDarkGreen);
     font-family: Swirl;
-    color: var(--color-logo)
-}
-
-.textDark {
-    color: var(--color-dark)
-}
-
-.textGreyish {
-    color: var(--color-grey)
-}
-
-.textLight {
-    color: var(--color-light)
 }
 
 /* following is used at screen widths below 1350px */
 @media screen and (max-width: 1350px) {
 
-    header .logo {
+    header .textLogo {
         display: none;
     }
 
@@ -339,7 +314,6 @@ footer a {
         align-self: center;
         width: 250px;
         height: 2px;
-        background-color: var(--color-light);
     }
 }
 
@@ -411,27 +385,10 @@ footer a {
         margin-left: -2px;
     }
 
-    .textExtraSmall {
-        font-size: clamp(0.6rem, 3vw, 4rem);
-    }
-
-    .textSmall {
-        font-size: clamp(0.7rem, 3.5vw, 4rem);
-    }
-
-    .textMediumSmall {
-        font-size: clamp(0.9rem, 3.9vw, 4rem)
-    }
-
-    .textMedium {
-        font-size: clamp(1.2rem, 6.1vw, 4rem);
-    }
-    
-    .textMediumLarge {
-        font-size: clamp(1.7rem, 7.3vw, 4rem);
-    }
-
-    .textLarge {
-        font-size: clamp(2rem, 8.5vw, 4rem);
-    }
+    .textExtraSmall {font-size: clamp(0.6rem, 3vw, 4rem)}
+    .textSmall {font-size: clamp(0.7rem, 3.5vw, 4rem)}
+    .textMediumSmall {font-size: clamp(0.9rem, 3.9vw, 4rem)}
+    .textMedium {font-size: clamp(1.2rem, 6.1vw, 4rem)}
+    .textMediumLarge {font-size: clamp(1.7rem, 7.3vw, 4rem)}
+    .textLarge {font-size: clamp(2rem, 8.5vw, 4rem)}
 }
