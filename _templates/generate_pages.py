@@ -13,6 +13,7 @@ pageTemplateList = [
 moduleTemplateList = [
     ["_templates/modules/footer.html", "!!!FOOTER!!!"],
     ["_templates/modules/header.html", "!!!HEADER!!!"],
+    ["_templates/modules/global_js.html", "!!!JS!!!"],
 ]
 
 outputFolder = "website"

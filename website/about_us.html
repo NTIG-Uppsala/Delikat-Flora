@@ -13,17 +13,36 @@
         <a href="index.html" class="title textLarge textLight">
             DELIKAT FLORA
         </a>
-        <div class="logo textLarge">
+        <div class="logo textMediumLarge">
             F
         </div>
-        <div class="allServices textMedium textDark">
-            <a href="products.html" class="products">
+        <div class="dropDown">
+            <button onclick="onDropDownButtonClick()" class="dropButton">
+                <div class="smallDivider"></div>
+                <div class="smallDivider"></div>
+                <div class="smallDivider"></div>
+            </button>
+            <div class="dropDownMenu">
+                <a href="products.html" class="products textSmall textLight">
+                    Produkter
+                </a>
+                <a href="consultation.html" class="consultation textSmall textLight">
+                    Konsultation
+                </a>
+                <a href="flowergram.html" class="flowergram textSmall textLight">
+                    Blommogram
+                </a>
+            </div>
+        </div>
+        
+        <div class="allServices textMedium">
+            <a href="products.html" class="products textDark">
                 Produkter
             </a>
-            <a href="consultation.html" class="consultation">
+            <a href="consultation.html" class="consultation textDark">
                 Konsultation
             </a>
-            <a href="flowergram.html" class="flowergram">
+            <a href="flowergram.html" class="flowergram textDark">
                 Blommogram
             </a>
         </div>
@@ -144,12 +163,14 @@
                         Fjällgatan 32H 981 39 Finspång
                     </a>
                 </p>
-                <div class="logo textLarge">
+                <div class="logo textMediumLarge">
                     F
                 </div>
             </div>
         </footer>
     </main>
+        <script src="drop_down_button.js"></script>
+
 </body>
 
 </html>
