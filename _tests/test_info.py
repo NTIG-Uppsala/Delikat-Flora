@@ -101,7 +101,6 @@ class TestWebsite(TestCase):
         self.assertIn("400", self.browser.page_source)
         self.assertNotIn("320", self.browser.page_source)
         
-    # Not currently in use
     def testVATRemember(self):
         self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
@@ -112,6 +111,9 @@ class TestWebsite(TestCase):
         time.sleep(1)
         self.assertIn("320", self.browser.page_source)
         
+    def testPostalCodeCorrect(self):
+        self.browser.get("http://localhost:8000/website/flowergram.html")
+
     # CSS File
     def testCSSText(self):
         self.browser.get("http://localhost:8000/website/style.css")
