@@ -188,6 +188,20 @@ main {
     margin-right: 10px;
 }
 
+.product,
+.service,
+.staffMember {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-align: center;
+    align-items: center;
+}
+
+.service {
+    width: 400px;
+}
+
 .productsPage img,
 .staffPage img {
     border-radius: 50%;
@@ -206,14 +220,25 @@ main {
     width: 175px;
 }
 
-.product,
-.service,
-.staffMember {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+.postalCodeInput {
+    border-radius: 10px;
     text-align: center;
-    align-items: center;
+    width: 250px;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.confirmButton {
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.confirmButton:hover {
+    background-color: var(--colorGreen2);
+    transition: all 0.2s ease;
 }
 
 .staffMember p {
@@ -221,9 +246,7 @@ main {
     margin: 0;
 }
 
-.service {
-    width: 400px;
-}
+
 
 .priceTag {
     display: flex;
@@ -383,6 +406,11 @@ footer a {
         margin-top: 3px;
         margin-bottom: 3px;
         margin-left: -2px;
+    }
+
+    .postalCodeInput {
+        width: 65%;
+        height: 20px;
     }
 
     .textExtraSmall {font-size: clamp(0.6rem, 3vw, 4rem)}
