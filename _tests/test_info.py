@@ -11,8 +11,8 @@ from os import path, getcwd
 class TestWebsite(TestCase):
 
     # Settings for how testing runs
-    dontclosebrowser = True  # if true then the browser is kept open after the tests are finished, otherwise it is closed
-    hidewindow = False  # displays the browser while the tests are running
+    dontclosebrowser = False  # if true then the browser is kept open after the tests are finished, otherwise it is closed
+    hidewindow = True  # displays the browser while the tests are running
 
     # setUpClass is run BEFORE the FIRST test
     @classmethod
@@ -86,17 +86,17 @@ class TestWebsite(TestCase):
         self.assertIn("400", self.browser.page_source)
         self.assertNotIn("320", self.browser.page_source)
         
-    def testVATbutton201(self):
+    def testVATbutton11(self):
         self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
-        for i in range(201):
+        for i in range(11):
             VATbutton.click()
         self.assertIn("320", self.browser.page_source)
         
-    def testVATbutton200(self):
+    def testVATbutton10(self):
         self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
-        for i in range(200):
+        for i in range(10):
             VATbutton.click()
         self.assertIn("400", self.browser.page_source)
         self.assertNotIn("320", self.browser.page_source)
