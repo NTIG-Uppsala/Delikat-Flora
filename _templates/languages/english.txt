@@ -20,7 +20,8 @@
 !!!SATURDAY!!! Saturday
 !!!SUNDAY!!! Sunday
 !!!CLOSED!!! CLOSED
-!!!ABOUT_US_LINK!!! <a href="about_us_english.html">About us</a>
+!!!ABOUT_US_LINK!!! about_us_english.html
+!!!ABOUT_US!!! About us
 !!!CONTACT_INFORMATION!!! Contact information
 
 #Page Templates

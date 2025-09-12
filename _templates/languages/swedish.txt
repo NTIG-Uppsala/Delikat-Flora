@@ -20,7 +20,8 @@
 !!!SATURDAY!!! Lördag
 !!!SUNDAY!!! Söndag
 !!!CLOSED!!! STÄNGT
-!!!ABOUT_US_LINK!!! <a href="about_us.html">Om oss</a>
+!!!ABOUT_US_LINK!!! about_us.html
+!!!ABOUT_US!!! Om oss
 !!!CONTACT_INFORMATION!!! Kontaktinformation
 
 #Page Templates
