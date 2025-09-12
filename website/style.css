@@ -112,6 +112,10 @@ a.title {
     box-shadow: none;
 }
 
+.dropDownLabel img {
+    width: 30px;
+}
+
 .dropButton {
     display: none;
 }
@@ -137,15 +141,6 @@ a.title {
     opacity: 1;
     transform: translateY(0);
     padding: 10px;
-}
-
-.smallDivider {
-    width: 20px;
-    height: 2px;
-    background-color: var(--colorLight);
-    margin-top: 6px;
-    margin-bottom: 5px;
-    margin-left: 5px;
 }
 
 .allServices {
@@ -426,6 +421,10 @@ footer a {
     .dropDownLabel {
         width: 20px;
         height: 20px;
+    }
+
+    .dropDownLabel img {
+        width: 20px;
     }
 
     .smallDivider {

@@ -1,6 +1,7 @@
 import os
 import re
 
+# List of language templates
 languageTemplateList = [
     "_templates/languages/swedish.txt",
     "_templates/languages/english.txt",
@@ -49,27 +50,30 @@ for languageTemplate in languageTemplateList:
     pageNumber = 0
 
     for page in pageList:
+        # Sets the output file depending on both pageTemplate and languageTemplate
         outputFile = os.path.join(outputFolder, pageTemplateList[pageNumber][languageIndex])
         pageNumber +=1
     
         with open(languageTemplate, encoding="utf-8") as l:
 
             for count, line in enumerate(l):
+                # Checks if the line contains a hashtag and decides if it's a comment or not
                 if re.findall("^#", line) == []:
                     isNotIgnored = True
                 else:
                     isNotIgnored = False
+                # Checks if the line contains nothing at all and decides if it's empty or not
                 if re.findall("^$", line) == []:
                     isNotEmpty = True
                 else:
                     isNotEmpty = False
                 
                 if isNotIgnored and isNotEmpty:
+                    # Splits the line into two separate strings where the first one contains 
+                    # the replace keyword and the second contains the main content
                     lineInfo = line.split(" ", 1)
                     lineContent = lineInfo[1].split("\n")
                     page = page.replace(lineInfo[0], lineContent[0])
-                    print(lineInfo)
-                    print("---------")
 
             # Create new complete file
             with open(outputFile, "w", encoding="utf-8") as f:

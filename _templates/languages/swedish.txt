@@ -46,7 +46,10 @@
 #Flowergram
 !!!FLOWERGRAM!!! Blommogram
 !!!SEND_FLOWERS!!! Skicka blombuketter med vår blommogramtjänst
+!!!POSTAL_CODE!!! Postnummer
+!!!CHECK_POSTAL_CODE!!! Kolla postnummer
 !!!FLOWERGRAM_DESCRIPTION!!! Med vår blommogram-tjänst kan du enkelt överraska någon med vackra blommor, levererade direkt till dörren. Välj bukett, skriv en personlig hälsning, så sköter vi resten. Perfekt för födelsedagar, högtider eller vardagsglädje.
+!!!CHECK_POSTAL_CODE_JS!!! postal_code_check_swedish.js
 
 #About Us
 !!!OWNER!!! Ägare

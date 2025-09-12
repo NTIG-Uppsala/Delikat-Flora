@@ -22,17 +22,17 @@ function postalCodeCheck() {
             return;
         }    
         if (isInvalidPostalCode(enteredCode)) {
-                POSTAL_CODE_OUTPUT.textContent = "Detta är inte ett giltigt postnummer. Försök igen";
-                return;
+            POSTAL_CODE_OUTPUT.textContent = "Detta är inte ett giltigt postnummer. Försök igen";
+            return;
         }
         let match = postalCodeArray.find(entry => entry[0] === enteredCode);
         if (match) { // if match is found
-                    POSTAL_CODE_OUTPUT.textContent = "Ja, detta postnummer kan vi leverera till! Priset för din leverans är " + match[1];
-                    return;
+            POSTAL_CODE_OUTPUT.textContent = "Ja, detta postnummer kan vi leverera till! Priset för din leverans är " + match[1];
+            return;
         }               
         else {
-                    POSTAL_CODE_OUTPUT.textContent = "Tyvärr, vi levererar inte till detta postnummer.";
-                    return;
+            POSTAL_CODE_OUTPUT.textContent = "Tyvärr, vi levererar inte till detta postnummer";
+            return;
         }
           
 }

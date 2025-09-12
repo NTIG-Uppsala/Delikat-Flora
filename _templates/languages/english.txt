@@ -46,7 +46,10 @@
 #Flowergram
 !!!FLOWERGRAM!!! Flowergram
 !!!SEND_FLOWERS!!! Send flower bouquets with our flower delivery service.
+!!!POSTAL_CODE!!! Postal code
+!!!CHECK_POSTAL_CODE!!! Check postal code
 !!!FLOWERGRAM_DESCRIPTION!!! With our flower delivery service, you can easily surprise someone with beautiful flowers delivered right to their door. Choose a bouquet, write a personal message, and we’ll take care of the rest. Perfect for birthdays, holidays, or everyday joy.
+!!!CHECK_POSTAL_CODE_JS!!! postal_code_check_english.js
 
 #About Us
 !!!OWNER!!! Owner
