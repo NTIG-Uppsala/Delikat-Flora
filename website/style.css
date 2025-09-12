@@ -61,6 +61,19 @@ header .textLogo {
     top: 110px;
 }
 
+.languageSelection {
+    display: flex; 
+    gap: 5px;
+    position: absolute;
+    margin-left: -5px;
+    margin-top: -15px;
+}
+
+.languageSelection img {
+    width: 40px;
+    border-radius: 5px;
+}
+
 a.title {
     display: block;
     /* Rotates the title in the header */
@@ -349,6 +362,16 @@ footer a {
     header {
         display: flex;
     }
+
+    .languageSelection {
+        flex-direction: column;
+        margin-left: 5px;
+        gap: none;
+    }
+
+    .languageSelection img {
+        width: 30px;
+    }
     
     .allServices {
         display: none;
@@ -422,5 +445,5 @@ footer a {
     .textMediumSmall {font-size: clamp(0.9rem, 3.9vw, 4rem)}
     .textMedium {font-size: clamp(1.2rem, 6.1vw, 4rem)}
     .textMediumLarge {font-size: clamp(1.7rem, 7.3vw, 4rem)}
-    .textLarge {font-size: clamp(2rem, 8.5vw, 4rem)}
+    .textLarge {font-size: clamp(1.7rem, 8.5vw, 4rem)}
 }

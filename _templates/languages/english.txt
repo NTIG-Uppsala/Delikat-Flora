@@ -1,9 +1,13 @@
 #Module Templates
 
 #Header
-!!!PRODUCTS!!! <a href="products_english.html" class="products textSmall textLight fontInter">Products</a>
-!!!CONSULTATION!!! <a href="consultation_english.html" class="consultation textSmall textLight fontInter">Consultation</a>
-!!!FLOWERGRAM!!! <a href="flowergram_english.html" class="flowergram textSmall textLight fontInter">Flowergram</a>
+!!!INDEX_LINK!!! index_english.html
+!!!PRODUCTS_LINK!!! products_english.html
+!!!CONSULTATION_LINK!!! consultation_english.html
+!!!FLOWERGRAM_LINK!!! flowergram_english.html
+!!!PRODUCTS!!! Products
+!!!CONSULTATION!!! Consultation
+!!!FLOWERGRAM!!! Flowergram
 
 #Footer
 !!!DAY!!! Day
@@ -15,7 +19,7 @@
 !!!FRIDAY!!! Friday
 !!!SATURDAY!!! Saturday
 !!!SUNDAY!!! Sunday
-!!!CLOSED!!! Closed
+!!!CLOSED!!! CLOSED
 !!!ABOUT_US_LINK!!! <a href="about_us_english.html">About us</a>
 !!!CONTACT_INFORMATION!!! Contact information
 
@@ -26,7 +30,7 @@
 
 #Products
 !!!SHOW_PRICE_WITHOUT_VAT!!! Show prices without VAT
-!!!FROM!!! From
+!!!FROM!!! From:
 !!!TULIPS!!! 10 Tulips
 !!!ROSES!!! 10 Roses
 !!!AUTUMN_BOUQUET!!! Autumn bouquet
@@ -36,7 +40,7 @@
 
 #Consultation
 !!!CONSULTATION!!! Consultation
-!!!MINUTES!!! 30 Minutes
+!!!MINUTES!!! 250kr / 30 Minutes
 !!!CONSULTATION_DESCRIPTION!!! During a 30-minute consultation, you’ll receive personal advice from our florists. Together we’ll go through your wishes, colours, shapes, and the feeling you want to convey. Contact us and we’ll arrange a time with one of our florists.
 
 #Flowergram
