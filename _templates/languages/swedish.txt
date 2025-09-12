@@ -41,7 +41,7 @@
 #Consultation
 !!!CONSULTATION!!! Konsultation
 !!!MINUTES!!! 250kr / 30 minuter
-!!!CONSULTATION_DESCRIPTION!!! Under en 30-minuters konsultation får du personlig rådgivning av våra florister. Vi går tillsammans igenom dina önskemål, färger, former och känslan du vill förmedla. Kontakta oss så fixar vi en tid med en av våra florister.
+!!!CONSULTATION_DESCRIPTION!!! Under en 30-minuters konsultation får du personlig rådgivning av vår florist. Vi går tillsammans igenom dina önskemål, färger, former och känslan du vill förmedla. Kontakta oss så fixar vi en tid med vår florist.
 
 #Flowergram
 !!!FLOWERGRAM!!! Blommogram
