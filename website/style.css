@@ -84,7 +84,7 @@ a.title {
     flex-direction: column;
 }
 
-.dropButton {
+.dropDownLabel {
     width: 30px;
     height: 30px;
     margin-left: auto;
@@ -95,8 +95,12 @@ a.title {
     box-shadow: var(--colorDark) 2px 2px 4px;
 }
 
-.dropButton:hover {
+.dropDownLabel:hover {
     box-shadow: none;
+}
+
+.dropButton {
+    display: none;
 }
 
 .dropDownMenu {
@@ -126,9 +130,9 @@ a.title {
     width: 20px;
     height: 2px;
     background-color: var(--colorLight);
-    margin-top: 5px;
+    margin-top: 6px;
     margin-bottom: 5px;
-    margin-left: -1px;
+    margin-left: 5px;
 }
 
 .allServices {
@@ -396,7 +400,7 @@ footer a {
         right: 20px;
     }
 
-    .dropButton {
+    .dropDownLabel {
         width: 20px;
         height: 20px;
     }
@@ -405,7 +409,7 @@ footer a {
         width: 12px;
         margin-top: 3px;
         margin-bottom: 3px;
-        margin-left: -2px;
+        margin-left: 4px;
     }
 
     .postalCodeInput {
