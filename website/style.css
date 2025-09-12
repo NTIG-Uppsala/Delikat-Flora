@@ -327,8 +327,8 @@ footer a {
     font-family: Swirl;
 }
 
-/* following is used at screen widths below 1350px */
-@media screen and (max-width: 1350px) {
+/* following is used at screen widths below 1400px */
+@media screen and (max-width: 1400px) {
 
     header .textLogo {
         display: none;
@@ -352,6 +352,7 @@ footer a {
     }
 }
 
+/* following is used at screen widths below 910px */
 @media screen and (max-width: 910px) {
     
     header {
