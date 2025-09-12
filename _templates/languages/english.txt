@@ -1,0 +1,50 @@
+#Module Templates
+
+#Header
+!!!PRODUCTS!!! <a href="products_english.html" class="products textSmall textLight fontInter">Products</a>
+!!!CONSULTATION!!! <a href="consultation_english.html" class="consultation textSmall textLight fontInter">Consultation</a>
+!!!FLOWERGRAM!!! <a href="flowergram_english.html" class="flowergram textSmall textLight fontInter">Flowergram</a>
+
+#Footer
+!!!DAY!!! Day
+!!!OPENING_HOURS!!! Opening hours
+!!!MONDAY!!! Monday
+!!!TUESDAY!!! Tuesday
+!!!WEDNESDAY!!! Wednesday
+!!!THURSDAY!!! Thursday
+!!!FRIDAY!!! Friday
+!!!SATURDAY!!! Saturday
+!!!SUNDAY!!! Sunday
+!!!CLOSED!!! Closed
+!!!ABOUT_US_LINK!!! <a href="about_us_english.html">About us</a>
+!!!CONTACT_INFORMATION!!! Contact information
+
+#Page Templates
+
+#Index
+!!!WELCOME!!! Welcome to Delikat Flora 
+
+#Products
+!!!SHOW_PRICE_WITHOUT_VAT!!! Show prices without VAT
+!!!FROM!!! From
+!!!TULIPS!!! 10 Tulips
+!!!ROSES!!! 10 Roses
+!!!AUTUMN_BOUQUET!!! Autumn bouquet
+!!!FUNERAL_WREATH!!! Funeral wreath
+!!!WEDDING_BOUQUET!!! Wedding bouquet
+!!!SUMMER_BOUQUET!!! Summer bouquet
+
+#Consultation
+!!!CONSULTATION!!! Consultation
+!!!MINUTES!!! 30 Minutes
+!!!CONSULTATION_DESCRIPTION!!! During a 30-minute consultation, you’ll receive personal advice from our florists. Together we’ll go through your wishes, colours, shapes, and the feeling you want to convey. Contact us and we’ll arrange a time with one of our florists.
+
+#Flowergram
+!!!FLOWERGRAM!!! Flowergram
+!!!SEND_FLOWERS!!! Send flower bouquets with our flower delivery service.
+!!!FLOWERGRAM_DESCRIPTION!!! With our flower delivery service, you can easily surprise someone with beautiful flowers delivered right to their door. Choose a bouquet, write a personal message, and we’ll take care of the rest. Perfect for birthdays, holidays, or everyday joy.
+
+#About Us
+!!!OWNER!!! Owner
+!!!HORTONOMA!!! Hortonoma
+!!!FLORIST!!! Florist

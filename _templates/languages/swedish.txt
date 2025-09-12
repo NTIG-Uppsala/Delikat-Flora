@@ -1,0 +1,50 @@
+#Module Templates
+
+#Header
+!!!PRODUCTS_LINK!!! <a href="products.html" class="products textSmall textLight fontInter">Produkter</a>
+!!!CONSULTATION_LINK!!! <a href="consultation.html" class="consultation textSmall textLight fontInter">Konsultation</a>
+!!!FLOWERGRAM_LINK!!! <a href="flowergram.html" class="flowergram textSmall textLight fontInter">Blommogram</a>
+
+#Footer
+!!!DAY!!! Dag
+!!!OPENING_HOURS!!! Öppettider
+!!!MONDAY!!! Måndag
+!!!TUESDAY!!! Tisdag
+!!!WEDNESDAY!!! Onsdag
+!!!THURSDAY!!! Torsdag
+!!!FRIDAY!!! Fredag
+!!!SATURDAY!!! Lördag
+!!!SUNDAY!!! Söndag
+!!!CLOSED!!! Stängt
+!!!ABOUT_US_LINK!!! <a href="about_us.html">Om oss</a>
+!!!CONTACT_INFORMATION!!! Kontaktinformation
+
+#Page Templates
+
+#Index
+!!!WELCOME!!! Välkommen till Delikat Flora!
+
+#Products
+!!!SHOW_PRICE_WITHOUT_VAT!!! Visa priser utan moms
+!!!FROM!!! Från
+!!!TULIPS!!! 10 Tulpaner
+!!!ROSES!!! 10 Rosor
+!!!AUTUMN_BOUQUET!!! Höstbukett
+!!!FUNERAL_WREATH!!! Begravningskrans
+!!!WEDDING_BOUQUET!!! Bröllopsbukett
+!!!SUMMER_BOUQUET!!! Sommarbukett
+
+#Consultation
+!!!CONSULTATION!!! Konsultation
+!!!MINUTES!!! 30 minuter
+!!!CONSULTATION_DESCRIPTION!!! Under en 30-minuters konsultation får du personlig rådgivning av våra florister. Vi går tillsammans igenom dina önskemål, färger, former och känslan du vill förmedla. Kontakta oss så fixar vi en tid med en av våra florister.
+
+#Flowergram
+!!!FLOWERGRAM!!! Blommogram
+!!!SEND_FLOWERS!!! Skicka blombuketter med vår blommogramtjänst
+!!!FLOWERGRAM_DESCRIPTION!!! Med vår blommogram-tjänst kan du enkelt överraska någon med vackra blommor, levererade direkt till dörren. Välj bukett, skriv en personlig hälsning, så sköter vi resten. Perfekt för födelsedagar, högtider eller vardagsglädje.
+
+#About Us
+!!!OWNER!!! Ägare
+!!!HORTONOMA!!! Hortonom
+!!!FLORIST!!! Florist
