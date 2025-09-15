@@ -3,17 +3,17 @@ import re
 
 # List of language templates
 languageTemplateList = [
-    ["_templates/languages/swedish.txt", ""],
-    ["_templates/languages/english.txt", "_english"],
+    "_templates/languages/swedish.txt",
+    "_templates/languages/english.txt",
 ] 
 
 # List of page templates
 pageTemplateList = [
-    ["_templates/pages/index.html", "index"],
-    ["_templates/pages/about_us.html", "about_us"],
-    ["_templates/pages/consultation.html", "consultation"],
-    ["_templates/pages/products.html", "products"],
-    ["_templates/pages/flowergram.html", "flowergram"],
+    ["_templates/pages/index.html", "index.html", "index_english.html"],
+    ["_templates/pages/about_us.html", "about_us.html", "about_us_english.html"],
+    ["_templates/pages/consultation.html", "consultation.html", "consultation_english.html"],
+    ["_templates/pages/products.html", "products.html", "products_english.html"],
+    ["_templates/pages/flowergram.html", "flowergram.html", "flowergram_english.html"],
     ]
 
 # List of module templates
@@ -43,17 +43,19 @@ for pageTemplate in pageTemplateList:
                 page = page.replace(moduleTemplate[1], module)
         pageList.append(page)
 
+languageIndex = 0
+
 for languageTemplate in languageTemplateList: 
+    languageIndex += 1
     pageNumber = 0
 
     for page in pageList:
         
         # Sets the output file depending on both pageTemplate and languageTemplate
-        currentPage = pageTemplateList[pageNumber][1]
-        outputFile = os.path.join(outputFolder, f"{currentPage}{languageTemplate[1]}.html")
+        outputFile = os.path.join(outputFolder, pageTemplateList[pageNumber][languageIndex])
         pageNumber +=1
     
-        with open(languageTemplate[0], encoding="utf-8") as l:
+        with open(languageTemplate, encoding="utf-8") as l:
 
             for count, line in enumerate(l):
                 
@@ -73,11 +75,8 @@ for languageTemplate in languageTemplateList:
                     # Splits the line into two separate strings where the first one contains 
                     # the replace keyword and the second contains the main content
                     lineInfo = line.split(" ", 1)
-                    replaceKeyword = lineInfo[0]
-                    lineContent = lineInfo[1].split("\n")[0]
-                    if re.findall("^!!!LANGUAGE_LINK", lineInfo[0]) != []:
-                        lineContent = f"{currentPage}{lineContent}"
-                    page = page.replace(replaceKeyword, lineContent)
+                    lineContent = lineInfo[1].split("\n")
+                    page = page.replace(lineInfo[0], lineContent[0])
 
             # Create new complete file
             with open(outputFile, "w", encoding="utf-8") as f:

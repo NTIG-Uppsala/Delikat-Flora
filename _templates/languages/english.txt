@@ -7,6 +7,8 @@
 !!!ABOUT_US_TITLE!!! About us
 
 #Header
+!!!LANGUAGE_LINK_SWEDISH!!! .html
+!!!LANGUAGE_LINK_ENGLISH!!! _english.html
 !!!INDEX_LINK!!! index_english.html
 !!!PRODUCTS_LINK!!! products_english.html
 !!!CONSULTATION_LINK!!! consultation_english.html

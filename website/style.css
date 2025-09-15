@@ -293,8 +293,6 @@ footer a {
     background-color: var(--colorLight);
 }
 
-
-
 .openingHoursTable td:first-of-type,
 .openingHoursTable th:first-of-type {
     text-align: left;

@@ -25,6 +25,7 @@ function postalCodeCheck() {
             POSTAL_CODE_OUTPUT.textContent = "This is not a valid postal code. Please try again";
             return;
         }
+        
         let match = postalCodeArray.find(entry => entry[0] === enteredCode);
         if (match) { // if match is found
             POSTAL_CODE_OUTPUT.textContent = "Yes, we can deliver to this postal code! The price for your delivery is " + match[1];
