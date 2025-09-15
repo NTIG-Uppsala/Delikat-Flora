@@ -1,5 +1,11 @@
 #Module Templates
 
+#Page Titles 
+!!!PRODUCTS_TITLE!!! Våra produkter
+!!!CONSULTATION_TITLE!!! Konsultation
+!!!FLOWERGRAM_TITLE!!! Blommogram
+!!!ABOUT_US_TITLE!!! Om oss
+
 #Header
 !!!INDEX_LINK!!! index.html
 !!!PRODUCTS_LINK!!! products.html

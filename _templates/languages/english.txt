@@ -1,5 +1,11 @@
 #Module Templates
 
+#Page Titles 
+!!!PRODUCTS_TITLE!!! Our products
+!!!CONSULTATION_TITLE!!! Consultation
+!!!FLOWERGRAM_TITLE!!! Flowergram
+!!!ABOUT_US_TITLE!!! About us
+
 #Header
 !!!INDEX_LINK!!! index_english.html
 !!!PRODUCTS_LINK!!! products_english.html
