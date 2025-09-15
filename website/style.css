@@ -88,6 +88,7 @@ a.title {
     margin-bottom: 15px;
     margin-top: -15px;
     width: max-content;
+    z-index: 105;
 }
 
 .dropDown {
@@ -110,6 +111,7 @@ a.title {
 
 .dropDownLabel:hover {
     box-shadow: none;
+    cursor: pointer;
 }
 
 .dropDownLabel img {
@@ -238,7 +240,6 @@ main {
     width: 250px;
     height: 25px;
     margin-top: 10px;
-    margin-bottom: 5px;
 }
 
 .confirmButton {
@@ -251,14 +252,13 @@ main {
 .confirmButton:hover {
     background-color: var(--colorGreen2);
     transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .staffMember p {
     line-height: 2ch;
     margin: 0;
 }
-
-
 
 .priceTag {
     display: flex;

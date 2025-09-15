@@ -50,6 +50,7 @@ for languageTemplate in languageTemplateList:
     pageNumber = 0
 
     for page in pageList:
+        
         # Sets the output file depending on both pageTemplate and languageTemplate
         outputFile = os.path.join(outputFolder, pageTemplateList[pageNumber][languageIndex])
         pageNumber +=1
@@ -57,11 +58,13 @@ for languageTemplate in languageTemplateList:
         with open(languageTemplate, encoding="utf-8") as l:
 
             for count, line in enumerate(l):
+                
                 # Checks if the line contains a hashtag and decides if it's a comment or not
                 if re.findall("^#", line) == []:
                     isNotIgnored = True
                 else:
                     isNotIgnored = False
+                    
                 # Checks if the line contains nothing at all and decides if it's empty or not
                 if re.findall("^$", line) == []:
                     isNotEmpty = True
