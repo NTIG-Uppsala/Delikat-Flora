@@ -7,3 +7,9 @@
 
 - Live Preview
 
+## Auto formatting setting
+- Formatter for css: CSS Language Features 
+    - Preserve New Lines off
+    - Space around Selector seperator on
+- Formatter for html: HTML Language Features
+

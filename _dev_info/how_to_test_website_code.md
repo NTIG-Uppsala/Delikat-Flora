@@ -1,7 +1,7 @@
 # How to test website code
 
 1. Open cmd
-2. Change directory to the repository directory (cd documents/github/muppet-code)
+2. Change directory to the repository directory (cd documents/github/Delikat-Flora)
 4. Enter following: py -m http.server
 5. Run tests
 6. Make sure tests fail
