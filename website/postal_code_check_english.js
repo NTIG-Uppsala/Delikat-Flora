@@ -1,3 +1,11 @@
+const POSTAL_INPUT = document.querySelector(".postalCodeInput")
+
+POSTAL_INPUT.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        postalCodeCheck()
+    }
+})
+
 function postalCodeCheck() {
     const POSTAL_CODE_INPUT = document.querySelector(".postalCodeInput")
     const POSTAL_CODE_OUTPUT = document.querySelector(".postalCodeOutput")
