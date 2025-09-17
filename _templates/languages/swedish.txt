@@ -18,7 +18,6 @@
 !!!FLOWERGRAM!!! Blommogram
 
 #Footer
-!!!DAY!!! Dag
 !!!OPENING_HOURS!!! Öppettider
 !!!MONDAY!!! Måndag
 !!!TUESDAY!!! Tisdag
