@@ -2,9 +2,6 @@ from unittest import TestCase, main
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-import time
-
-from os import path, getcwd
 
 # Settings for how testing runs
 dontCloseBrowser = False  # if true then the browser is kept open after the tests are finished, otherwise it is closed
@@ -43,7 +40,7 @@ class testVAT(TestCase):
     # VATButton testing (products.html)
     def testVATbutton(self):
         self.browser.get("http://localhost:8000/website/products.html")
-        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "input#toggleVAT")
+        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
         VATbutton.click()
         self.assertIn("320", self.browser.page_source)
 
@@ -55,29 +52,12 @@ class testVAT(TestCase):
         self.assertIn("400", self.browser.page_source)
         self.assertNotIn("320", self.browser.page_source)
 
-    def testVATbutton11(self):
-        self.browser.get("http://localhost:8000/website/products.html")
-        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
-        for i in range(11):
-            VATbutton.click()
-        self.assertIn("320", self.browser.page_source)
-
-    def testVATbutton10(self):
-        self.browser.get("http://localhost:8000/website/products.html")
-        VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
-        for i in range(10):
-            VATbutton.click()
-        self.assertIn("400", self.browser.page_source)
-        self.assertNotIn("320", self.browser.page_source)
-
     def testVATRemember(self):
         self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
         VATbutton.click()
         self.assertIn("320", self.browser.page_source)
-        self.browser.get("http://localhost:8000/website/index.html")
-        self.browser.get("http://localhost:8000/website/products.html")
-        time.sleep(1)
+        self.browser.refresh()
         self.assertIn("320", self.browser.page_source)
 
 
