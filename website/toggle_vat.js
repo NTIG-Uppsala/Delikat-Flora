@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+function toggleVAT() {
 
 
     const VAT_CHECKBOX = document.getElementById("toggleVAT");
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const VAT_RATE = 0.25;
 
-    // sets an attribute to the original price of every seprate product
+    // sets an attribute to the original price of every separate product
     PRICE_SPANS.forEach(span => {
         let price = parseFloat(span.textContent.trim());
         if (!isNaN(price)) {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // is run everytime the vatcheckbox is checked/unchecked
-    VAT_CHECKBOX.addEventListener("change", function(){
+    VAT_CHECKBOX.addEventListener("change", function () {
         PRICE_SPANS.forEach(span => {
             let originalPrice = parseFloat(span.dataset.originalPrice);
             if (!isNaN(originalPrice)) {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     span.textContent = priceWithoutVAT;
                     document.cookie = "1";
                 }
-                
+
                 else {
                     span.textContent = originalPrice;
                     document.cookie = "0";
@@ -44,4 +44,4 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
     })
-})
+}

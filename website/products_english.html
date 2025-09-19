@@ -51,84 +51,7 @@
                 </label>
             </div>
             <div class="productsPage">
-                <div class="product">
-                    <img src="images/tulips_10pack.jpg" alt="">
-                    <div class="productDescription">
-                        10 Tulips
-                    </div>
-                    <div class="priceTag">
-                        <div>
-                            <span>100</span> sek
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/roses_10pack.jpg" alt="">
-                    <div class="productDescription">
-                        10 Roses
-                    </div>
-                    <div class="priceTag">
-                        <div>
-                            <span>150</span> sek
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/autumn_bouquet.jpg" alt="">
-                    <div class="productDescription">
-                        Autumn Bouquet
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            From:
-                        </div>
-                        <div>
-                            <span>400</span> sek
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/funeral_wreath.jpg" alt="">
-                    <div class="productDescription">
-                        Funeral Wreath
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            From:
-                        </div>
-                        <div>
-                            <span>800</span> sek
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/wedding_bouquet.jpg" alt="">
-                    <div class="productDescription">
-                        Wedding Bouquet
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            From:
-                        </div>
-                        <div>
-                            <span>1200</span> sek
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/summer_bouquet.jpg" alt="">
-                    <div class="productDescription">
-                        Summer Bouquet
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            From:
-                        </div>
-                        <div>
-                            <span>200</span> sek
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
         <footer class="textSmall textLight fontInter">
@@ -227,6 +150,11 @@
 </footer>
     </main>
     <script src="toggle_vat.js"></script>
+    <script type="module">
+        import { createProducts } from "../supabase/products.js";
+        createProducts("en");
+        toggleVAT();
+    </script>
     <script src="drop_down_button.js"></script>
 
 </body>

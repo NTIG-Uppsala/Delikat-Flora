@@ -1,4 +1,5 @@
 #Module Templates
+!!!LANGUAGE!!! sv
 
 #Page Titles 
 !!!PRODUCTS_TITLE!!! Våra produkter
@@ -38,14 +39,6 @@
 
 #Products
 !!!SHOW_PRICE_WITHOUT_VAT!!! Visa priser utan moms
-!!!FROM!!! Från:
-!!!TULIPS!!! 10 Tulpaner
-!!!ROSES!!! 10 Rosor
-!!!AUTUMN_BOUQUET!!! Höstbukett
-!!!FUNERAL_WREATH!!! Begravningskrans
-!!!WEDDING_BOUQUET!!! Bröllopsbukett
-!!!SUMMER_BOUQUET!!! Sommarbukett
-!!!PRICE_UNIT!!! kr
 
 #Consultation
 !!!CONSULTATION!!! Konsultation

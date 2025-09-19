@@ -23,7 +23,6 @@ function postalCodeCheck() {
 
 
     let enteredCode = POSTAL_CODE_INPUT.value.replace(/\s/g, ""); // Sets enteredCode to POSTAL_CODE_INPUT but removes all spaces
-    POSTAL_CODE_INPUT.value = "";
 
     if (enteredCode == "") {
         POSTAL_CODE_OUTPUT.textContent = "Enter a postal code in the box";

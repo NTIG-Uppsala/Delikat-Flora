@@ -1,4 +1,5 @@
 #Module Templates
+!!!LANGUAGE!!! en
 
 #Page Titles 
 !!!PRODUCTS_TITLE!!! Our Products
@@ -38,14 +39,6 @@
 
 #Products
 !!!SHOW_PRICE_WITHOUT_VAT!!! Show prices without VAT
-!!!FROM!!! From:
-!!!TULIPS!!! 10 Tulips
-!!!ROSES!!! 10 Roses
-!!!AUTUMN_BOUQUET!!! Autumn Bouquet
-!!!FUNERAL_WREATH!!! Funeral Wreath
-!!!WEDDING_BOUQUET!!! Wedding Bouquet
-!!!SUMMER_BOUQUET!!! Summer Bouquet
-!!!PRICE_UNIT!!! sek
 
 #Consultation
 !!!CONSULTATION!!! Consultation
