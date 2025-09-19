@@ -1,9 +1,9 @@
 import { fetchProducts } from './fetch.js';
 
-const array = await fetchProducts();
+const ARRAY = await fetchProducts();
 
 function createProducts(lang) {
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < ARRAY.length; i++) {
         // Create product elements
         const PRODUCT_DIV = document.createElement('div');
         const PRODUCT_IMAGE = document.createElement('img');
@@ -12,7 +12,7 @@ function createProducts(lang) {
         const PRODUCT_PRICE = document.createElement('span');
 
         // If the product is a min price product, add "From:" / "Från:" before the price
-        if (array[i].is_min_price) {
+        if (ARRAY[i].is_min_price) {
             const PRODUCT_MIN_PRICE = document.createElement('div');
             PRODUCT_MIN_PRICE.className = 'textGreyish';
             if (lang === 'en') {
@@ -22,7 +22,7 @@ function createProducts(lang) {
             }
             PRODUCT_PRICE_TAG.appendChild(PRODUCT_MIN_PRICE);
         }
-        
+
         // Assigns classes 
         PRODUCT_DIV.className = 'product';
         PRODUCT_NAME.className = 'productDescription';
@@ -30,16 +30,16 @@ function createProducts(lang) {
 
         // If page in English or Swedish, set product name and currency unit accordingly
         if (lang === 'en') {
-            PRODUCT_NAME.textContent = array[i].product_name_eng;
+            PRODUCT_NAME.textContent = ARRAY[i].product_name_eng;
             var unit = document.createTextNode("sek");
         } else {
-            PRODUCT_NAME.textContent = array[i].product_name;
+            PRODUCT_NAME.textContent = ARRAY[i].product_name;
             var unit = document.createTextNode("kr");
         }
 
         // Assigns product price and image
-        PRODUCT_PRICE.textContent = array[i].product_price;
-        PRODUCT_IMAGE.src = array[i].product_image;
+        PRODUCT_PRICE.textContent = ARRAY[i].product_price;
+        PRODUCT_IMAGE.src = ARRAY[i].product_image;
 
         // Appends elements to the DOM
         PRODUCT_DIV.appendChild(PRODUCT_IMAGE);

@@ -26,6 +26,7 @@ async function fetchFlowerDelivery(selection = '*') {
         console.error('Error fetching data:', error)
     } else {
         console.log('Postal Codes:', data)
+        return data
     }
 }
 
