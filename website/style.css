@@ -191,14 +191,11 @@ main {
 }
 
 .noscriptMessage {
-    /* display: flex;
-    flex-direction: column; */
     margin: 5px 0px;
 }
 
 .noscriptMessageWarning {
     color: var(--colorDarkRed);
-    /* font-weight: bold; */
 }
 
 .welcomeMessage {
