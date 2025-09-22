@@ -36,6 +36,9 @@
 
 #Index
 !!!WELCOME!!! Välkommen till Delikat Flora!
+!!!NOSCRIPT_WARNING!!! Du har inte javascript aktiverat i din webbläsare.
+!!!NOSCRIPT_MESSAGE!!! Kontakta oss för mer information om våra produkter och tjänster.
+!!!PHONE!!! Tel:
 
 #Products
 !!!SHOW_PRICE_WITHOUT_VAT!!! Visa priser utan moms

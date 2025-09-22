@@ -36,6 +36,9 @@
 
 #Index
 !!!WELCOME!!! Welcome to Delikat Flora 
+!!!NOSCRIPT_WARNING!!! Javascript is disabled on your browser.
+!!!NOSCRIPT_MESSAGE!!! Please contact us for more information about our products and services.
+!!!PHONE!!! Phone:
 
 #Products
 !!!SHOW_PRICE_WITHOUT_VAT!!! Show prices without VAT
@@ -54,5 +57,5 @@
 
 #About Us
 !!!OWNER!!! Owner
-!!!HORTONOMA!!! Hortonoma
+!!!HORTONOMA!!! Hortologist
 !!!FLORIST!!! Florist

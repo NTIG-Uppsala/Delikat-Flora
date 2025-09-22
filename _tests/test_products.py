@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 import time
 
 # Settings for how testing runs
-dontCloseBrowser = True  # if true then the browser is kept open after the tests are finished, otherwise it is closed
+dontCloseBrowser = False  # if true then the browser is kept open after the tests are finished, otherwise it is closed
 hideWindow = not (dontCloseBrowser)  # displays the browser while the tests are running
 
 
