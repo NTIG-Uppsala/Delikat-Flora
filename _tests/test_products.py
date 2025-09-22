@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 import time
 
 # Settings for how testing runs
-dontCloseBrowser = False  # if true then the browser is kept open after the tests are finished, otherwise it is closed
+dontCloseBrowser = True  # if true then the browser is kept open after the tests are finished, otherwise it is closed
 hideWindow = not (dontCloseBrowser)  # displays the browser while the tests are running
 
 
@@ -22,7 +22,7 @@ class testVAT(TestCase):
             chr_options.add_argument("--headless")
 
         # Wait for elements to appear at most 2 seconds before throwing an exception
-        chr_options.timeouts = {'implicit': 2000}
+        chr_options.timeouts = {"implicit": 2000}
 
         cls.browser = webdriver.Chrome(options=chr_options)
 
@@ -45,14 +45,14 @@ class testVAT(TestCase):
     def testVATbutton(self):
         self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
-        self.browser.find_element(By.CSS_SELECTOR, ".priceTag") # wait for prices to load
+        self.browser.find_element(By.CSS_SELECTOR, ".priceTag")  # wait for prices to load
         VATbutton.click()
         self.assertIn("320", self.browser.page_source)
 
     def testVATbuttonTwice(self):
         self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
-        self.browser.find_element(By.CSS_SELECTOR, ".priceTag") # wait for prices to load
+        self.browser.find_element(By.CSS_SELECTOR, ".priceTag")  # wait for prices to load
         VATbutton.click()
         VATbutton.click()
         self.assertIn("400", self.browser.page_source)
@@ -61,11 +61,11 @@ class testVAT(TestCase):
     def testVATRemember(self):
         self.browser.get("http://localhost:8000/website/products.html")
         VATbutton = self.browser.find_element(By.CSS_SELECTOR, "#toggleVAT")
-        self.browser.find_element(By.CSS_SELECTOR, ".priceTag") # wait for prices to load
+        self.browser.find_element(By.CSS_SELECTOR, ".priceTag")  # wait for prices to load
         VATbutton.click()
         self.assertIn("320", self.browser.page_source)
         self.browser.refresh()
-        self.browser.find_element(By.CSS_SELECTOR, ".priceTag") # wait for prices to load
+        self.browser.find_element(By.CSS_SELECTOR, ".priceTag")  # wait for prices to load
         self.assertIn("320", self.browser.page_source)
 
 
