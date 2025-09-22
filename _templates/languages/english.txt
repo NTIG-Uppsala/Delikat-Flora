@@ -1,4 +1,5 @@
 #Module Templates
+!!!LANGUAGE!!! en
 
 #Page Titles 
 !!!PRODUCTS_TITLE!!! Our Products
@@ -35,17 +36,12 @@
 
 #Index
 !!!WELCOME!!! Welcome to Delikat Flora 
+!!!NOSCRIPT_WARNING!!! Javascript is disabled on your browser.
+!!!NOSCRIPT_MESSAGE!!! Please contact us for more information about our products and services.
+!!!PHONE!!! Phone:
 
 #Products
 !!!SHOW_PRICE_WITHOUT_VAT!!! Show prices without VAT
-!!!FROM!!! From:
-!!!TULIPS!!! 10 Tulips
-!!!ROSES!!! 10 Roses
-!!!AUTUMN_BOUQUET!!! Autumn Bouquet
-!!!FUNERAL_WREATH!!! Funeral Wreath
-!!!WEDDING_BOUQUET!!! Wedding Bouquet
-!!!SUMMER_BOUQUET!!! Summer Bouquet
-!!!PRICE_UNIT!!! sek
 
 #Consultation
 !!!CONSULTATION!!! Consultation
@@ -58,9 +54,8 @@
 !!!POSTAL_CODE!!! Postal code
 !!!CHECK_POSTAL_CODE!!! Check postal code
 !!!FLOWERGRAM_DESCRIPTION!!! With our flower delivery service, you can easily surprise someone with beautiful flowers delivered right to their door. Choose a bouquet, write a personal message, and we’ll take care of the rest. Perfect for birthdays, holidays, or everyday joy.
-!!!CHECK_POSTAL_CODE_JS!!! postal_code_check_english.js
 
 #About Us
 !!!OWNER!!! Owner
-!!!HORTONOMA!!! Hortonoma
+!!!HORTICULTURIST!!! Horticulturist
 !!!FLORIST!!! Florist

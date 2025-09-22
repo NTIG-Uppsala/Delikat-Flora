@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="!!!LANGUAGE!!!">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>!!!FLOWERGRAM_TITLE!!!</title>
     <link rel="stylesheet" href="style.css">
+    <noscript>
+        <style>
+            .dropDown,
+            header .textLogo,
+            .servicesPage {
+                display: none;
+            }
+
+            .welcomeMessage {
+                margin-top: -20px;
+            }
+        </style>
+    </noscript>
 </head>
 
 <body>
@@ -21,19 +34,35 @@
                     <div class="sendFlowersText textMediumSmall fontProza">
                         !!!SEND_FLOWERS!!!
                     </div>
-                    <input type="text" class="postalCodeInput textSmall fontInter" placeholder="!!!POSTAL_CODE!!!: XXX XX">
-                    <div class="postalCodeOutput textSmall fontInter"> 
+                    <input type="text" class="postalCodeInput textSmall fontInter"
+                        placeholder="!!!POSTAL_CODE!!!: XXX XX">
+                    <div class="postalCodeOutput textSmall fontInter">
                     </div>
-                    <input onclick="postalCodeCheck()" type="button" class="confirmButton textSmall fontInter" value="!!!CHECK_POSTAL_CODE!!!">
+                    <input onclick="postalCodeCheck()" type="button" class="confirmButton textSmall fontInter"
+                        value="!!!CHECK_POSTAL_CODE!!!">
                     <div class="serviceDescription textSmall fontInter">
                         !!!FLOWERGRAM_DESCRIPTION!!!
                     </div>
                 </div>
             </div>
+            <noscript>
+                <div class="noscriptContainer">
+                    <div class="fontInter noscriptMessage noscriptMessageWarning">
+                        !!!NOSCRIPT_WARNING!!!
+                    </div>
+                    <div class="fontInter noscriptMessage">
+                        !!!NOSCRIPT_MESSAGE!!!
+                    </div>
+                    <div class="fontInter noscriptMessage">
+                        Tel: <a href="tel:+46630555555" class="textDark">0630 555 555</a><br>
+                        Mail: <a href="mailto:info@github.pages.io" class="textDark">info@github.pages.io</a>
+                    </div>
+                </div>
+            </noscript>
         </div>
         !!!FOOTER!!!
     </main>
-    <script src="!!!CHECK_POSTAL_CODE_JS!!!"></script>
+    <script type="module" src="./supabase/flower_delivery.js"></script>
     !!!JS!!!
 </body>
 

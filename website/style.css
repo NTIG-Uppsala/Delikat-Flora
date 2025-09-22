@@ -28,6 +28,7 @@
     --colorDark: #272020;
     --colorGrey: #8C8C8C;
     --colorDarkGreen: #144723;
+    --colorDarkRed: #c00101;
 }
 
 a:hover {
@@ -169,6 +170,40 @@ main {
     padding-top: 110px;
 }
 
+.centerInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+
+.noscriptContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border: #272020 2px solid;
+    margin: 10px 20px 20px 20px;
+    border-radius: 10px;
+}
+
+.noscriptMessage {
+    margin: 5px 0px;
+}
+
+.noscriptMessageWarning {
+    color: var(--colorDarkRed);
+}
+
+.welcomeMessage {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
 .sortingOptions {
     display: flex;
     flex-wrap: wrap;
@@ -181,12 +216,6 @@ main {
 
 .vatCheckbox {
     scale: 1.6;
-}
-
-.welcomeMessage {
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 20px;
 }
 
 .productsPage,
@@ -262,7 +291,7 @@ main {
 
 .priceTag {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 footer {

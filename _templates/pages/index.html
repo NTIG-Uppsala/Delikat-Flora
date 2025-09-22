@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="!!!LANGUAGE!!!">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delikat Flora</title>
     <link rel="stylesheet" href="style.css">
+    <noscript>
+        <style>
+            .allServices,
+            .dropDown,
+            header .textLogo {
+                display: none;
+            }
+
+            .welcomeMessage {
+                margin-top: -20px;
+            }
+
+            @media screen and (max-width: 900px) {
+                .welcomeMessage {
+                    margin-top: 0px;
+                }
+            }
+        </style>
+    </noscript>
 </head>
 
 <body>
@@ -15,6 +34,20 @@
             <div class="welcomeMessage textLarge textDark fontLabrada">
                 !!!WELCOME!!!
             </div>
+            <noscript>
+                <div class="noscriptContainer">
+                    <div class="fontInter noscriptMessage noscriptMessageWarning">
+                        !!!NOSCRIPT_WARNING!!!
+                    </div>
+                    <div class="fontInter noscriptMessage">
+                        !!!NOSCRIPT_MESSAGE!!!
+                    </div>
+                    <div class="fontInter noscriptMessage">
+                        !!!PHONE!!! <a href="tel:+46630555555" class="textDark">0630 555 555</a><br>
+                        Mail: <a href="mailto:info@github.pages.io" class="textDark">info@github.pages.io</a>
+                    </div>
+                </div>
+            </noscript>
         </div>
         !!!FOOTER!!!
     </main>

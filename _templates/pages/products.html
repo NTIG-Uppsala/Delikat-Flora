@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="!!!LANGUAGE!!!">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>!!!PRODUCTS_TITLE!!!</title>
     <link rel="stylesheet" href="style.css">
+    <noscript>
+        <style>
+            .dropDown,
+            header .textLogo,
+            .sortingOptions,
+            .productsPage {
+                display: none;
+            }
+
+            .welcomeMessage {
+                margin-top: -20px;
+            }
+        </style>
+    </noscript>
 </head>
 
 <body>
@@ -19,89 +33,31 @@
                 </label>
             </div>
             <div class="productsPage">
-                <div class="product">
-                    <img src="images/tulips_10pack.jpg" alt="">
-                    <div class="productDescription">
-                        !!!TULIPS!!!
-                    </div>
-                    <div class="priceTag">
-                        <div>
-                            <span>100</span> !!!PRICE_UNIT!!!
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/roses_10pack.jpg" alt="">
-                    <div class="productDescription">
-                        !!!ROSES!!!
-                    </div>
-                    <div class="priceTag">
-                        <div>
-                            <span>150</span> !!!PRICE_UNIT!!!
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/autumn_bouquet.jpg" alt="">
-                    <div class="productDescription">
-                        !!!AUTUMN_BOUQUET!!!
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            !!!FROM!!!
-                        </div>
-                        <div>
-                            <span>400</span> !!!PRICE_UNIT!!!
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/funeral_wreath.jpg" alt="">
-                    <div class="productDescription">
-                        !!!FUNERAL_WREATH!!!
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            !!!FROM!!!
-                        </div>
-                        <div>
-                            <span>800</span> !!!PRICE_UNIT!!!
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/wedding_bouquet.jpg" alt="">
-                    <div class="productDescription">
-                        !!!WEDDING_BOUQUET!!!
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            !!!FROM!!!
-                        </div>
-                        <div>
-                            <span>1200</span> !!!PRICE_UNIT!!!
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/summer_bouquet.jpg" alt="">
-                    <div class="productDescription">
-                        !!!SUMMER_BOUQUET!!!
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            !!!FROM!!!
-                        </div>
-                        <div>
-                            <span>200</span> !!!PRICE_UNIT!!!
-                        </div>
-                    </div>
-                </div>
+
             </div>
+            <noscript>
+                <div class="noscriptContainer">
+                    <div class="fontInter noscriptMessage noscriptMessageWarning">
+                        !!!NOSCRIPT_WARNING!!!
+                    </div>
+                    <div class="fontInter noscriptMessage">
+                        !!!NOSCRIPT_MESSAGE!!!
+                    </div>
+                    <div class="fontInter noscriptMessage">
+                        Tel: <a href="tel:+46630555555" class="textDark">0630 555 555</a><br>
+                        Mail: <a href="mailto:info@github.pages.io" class="textDark">info@github.pages.io</a>
+                    </div>
+                </div>
+            </noscript>
         </div>
         !!!FOOTER!!!
     </main>
     <script src="toggle_vat.js"></script>
+    <script type="module">
+        import { createProducts } from "./supabase/products.js";
+        createProducts("!!!LANGUAGE!!!");
+        toggleVAT();
+    </script>
     !!!JS!!!
 </body>
 

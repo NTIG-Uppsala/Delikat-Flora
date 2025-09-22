@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Products</title>
     <link rel="stylesheet" href="style.css">
+    <noscript>
+        <style>
+            .dropDown,
+            header .textLogo,
+            .sortingOptions,
+            .productsPage {
+                display: none;
+            }
+
+            .welcomeMessage {
+                margin-top: -20px;
+            }
+        </style>
+    </noscript>
 </head>
 
 <body>
@@ -51,85 +65,22 @@
                 </label>
             </div>
             <div class="productsPage">
-                <div class="product">
-                    <img src="images/tulips_10pack.jpg" alt="">
-                    <div class="productDescription">
-                        10 Tulips
-                    </div>
-                    <div class="priceTag">
-                        <div>
-                            <span>100</span> sek
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/roses_10pack.jpg" alt="">
-                    <div class="productDescription">
-                        10 Roses
-                    </div>
-                    <div class="priceTag">
-                        <div>
-                            <span>150</span> sek
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/autumn_bouquet.jpg" alt="">
-                    <div class="productDescription">
-                        Autumn Bouquet
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            From:
-                        </div>
-                        <div>
-                            <span>400</span> sek
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/funeral_wreath.jpg" alt="">
-                    <div class="productDescription">
-                        Funeral Wreath
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            From:
-                        </div>
-                        <div>
-                            <span>800</span> sek
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/wedding_bouquet.jpg" alt="">
-                    <div class="productDescription">
-                        Wedding Bouquet
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            From:
-                        </div>
-                        <div>
-                            <span>1200</span> sek
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="images/summer_bouquet.jpg" alt="">
-                    <div class="productDescription">
-                        Summer Bouquet
-                    </div>
-                    <div class="priceTag">
-                        <div class="textGreyish">
-                            From:
-                        </div>
-                        <div>
-                            <span>200</span> sek
-                        </div>
-                    </div>
-                </div>
+
             </div>
+            <noscript>
+                <div class="noscriptContainer">
+                    <div class="fontInter noscriptMessage noscriptMessageWarning">
+                        Javascript is disabled on your browser.
+                    </div>
+                    <div class="fontInter noscriptMessage">
+                        Please contact us for more information about our products and services.
+                    </div>
+                    <div class="fontInter noscriptMessage">
+                        Tel: <a href="tel:+46630555555" class="textDark">0630 555 555</a><br>
+                        Mail: <a href="mailto:info@github.pages.io" class="textDark">info@github.pages.io</a>
+                    </div>
+                </div>
+            </noscript>
         </div>
         <footer class="textSmall textLight fontInter">
     <div class="openingHoursInfo">
@@ -227,6 +178,11 @@
 </footer>
     </main>
     <script src="toggle_vat.js"></script>
+    <script type="module">
+        import { createProducts } from "./supabase/products.js";
+        createProducts("en");
+        toggleVAT();
+    </script>
     <script src="drop_down_button.js"></script>
 
 </body>

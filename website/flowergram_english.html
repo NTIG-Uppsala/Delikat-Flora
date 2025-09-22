@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flowergram</title>
     <link rel="stylesheet" href="style.css">
+    <noscript>
+        <style>
+            .dropDown,
+            header .textLogo,
+            .servicesPage {
+                display: none;
+            }
+
+            .welcomeMessage {
+                margin-top: -20px;
+            }
+        </style>
+    </noscript>
 </head>
 
 <body>
@@ -53,15 +66,31 @@
                     <div class="sendFlowersText textMediumSmall fontProza">
                         Send flower bouquets with our flower delivery service.
                     </div>
-                    <input type="text" class="postalCodeInput textSmall fontInter" placeholder="Postal code: XXX XX">
-                    <div class="postalCodeOutput textSmall fontInter"> 
+                    <input type="text" class="postalCodeInput textSmall fontInter"
+                        placeholder="Postal code: XXX XX">
+                    <div class="postalCodeOutput textSmall fontInter">
                     </div>
-                    <input onclick="postalCodeCheck()" type="button" class="confirmButton textSmall fontInter" value="Check postal code">
+                    <input onclick="postalCodeCheck()" type="button" class="confirmButton textSmall fontInter"
+                        value="Check postal code">
                     <div class="serviceDescription textSmall fontInter">
                         With our flower delivery service, you can easily surprise someone with beautiful flowers delivered right to their door. Choose a bouquet, write a personal message, and we’ll take care of the rest. Perfect for birthdays, holidays, or everyday joy.
                     </div>
                 </div>
             </div>
+            <noscript>
+                <div class="noscriptContainer">
+                    <div class="fontInter noscriptMessage noscriptMessageWarning">
+                        Javascript is disabled on your browser.
+                    </div>
+                    <div class="fontInter noscriptMessage">
+                        Please contact us for more information about our products and services.
+                    </div>
+                    <div class="fontInter noscriptMessage">
+                        Tel: <a href="tel:+46630555555" class="textDark">0630 555 555</a><br>
+                        Mail: <a href="mailto:info@github.pages.io" class="textDark">info@github.pages.io</a>
+                    </div>
+                </div>
+            </noscript>
         </div>
         <footer class="textSmall textLight fontInter">
     <div class="openingHoursInfo">
@@ -158,7 +187,7 @@
     </div>
 </footer>
     </main>
-    <script src="postal_code_check_english.js"></script>
+    <script type="module" src="./supabase/flower_delivery.js"></script>
     <script src="drop_down_button.js"></script>
 
 </body>

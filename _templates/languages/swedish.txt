@@ -1,4 +1,5 @@
 #Module Templates
+!!!LANGUAGE!!! sv
 
 #Page Titles 
 !!!PRODUCTS_TITLE!!! Våra produkter
@@ -35,17 +36,12 @@
 
 #Index
 !!!WELCOME!!! Välkommen till Delikat Flora!
+!!!NOSCRIPT_WARNING!!! Du har inte javascript aktiverat i din webbläsare.
+!!!NOSCRIPT_MESSAGE!!! Kontakta oss för mer information om våra produkter och tjänster.
+!!!PHONE!!! Tel:
 
 #Products
 !!!SHOW_PRICE_WITHOUT_VAT!!! Visa priser utan moms
-!!!FROM!!! Från:
-!!!TULIPS!!! 10 Tulpaner
-!!!ROSES!!! 10 Rosor
-!!!AUTUMN_BOUQUET!!! Höstbukett
-!!!FUNERAL_WREATH!!! Begravningskrans
-!!!WEDDING_BOUQUET!!! Bröllopsbukett
-!!!SUMMER_BOUQUET!!! Sommarbukett
-!!!PRICE_UNIT!!! kr
 
 #Consultation
 !!!CONSULTATION!!! Konsultation
@@ -58,9 +54,8 @@
 !!!POSTAL_CODE!!! Postnummer
 !!!CHECK_POSTAL_CODE!!! Kolla postnummer
 !!!FLOWERGRAM_DESCRIPTION!!! Med vår blommogramtjänst kan du enkelt överraska någon med vackra blommor, levererade direkt till dörren. Välj bukett, skriv en personlig hälsning, så sköter vi resten. Perfekt för födelsedagar, högtider eller vardagsglädje.
-!!!CHECK_POSTAL_CODE_JS!!! postal_code_check_swedish.js
 
 #About Us
 !!!OWNER!!! Ägare
-!!!HORTONOMA!!! Hortonom
+!!!HORTICULTURIST!!! Hortonom
 !!!FLORIST!!! Florist
