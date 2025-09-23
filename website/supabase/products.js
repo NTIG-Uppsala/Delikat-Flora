@@ -31,7 +31,7 @@ function createProducts(lang) {
         // If page in English or Swedish, set product name and currency unit accordingly
         if (lang === 'en') {
             PRODUCT_NAME.textContent = ARRAY[i].product_name_eng;
-            var unit = document.createTextNode("sek");
+            var unit = document.createTextNode("SEK");
         } else {
             PRODUCT_NAME.textContent = ARRAY[i].product_name;
             var unit = document.createTextNode("kr");
