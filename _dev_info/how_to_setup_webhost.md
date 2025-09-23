@@ -17,7 +17,9 @@
 15. Type rm index to remove the autocreated index file in html
 16. Install git by typing apt-get install git-all
 17. Update git by typing apt-get update
-18. Use git clone to clone repository by typing git clone https://github.com/NTIG-Uppsala/Delikat-Flora .
+18. Use git clone to clone repository by typing git clone https://github.com/NTIG-Uppsala/Delikat-Flora
+19. Copy the file "config.example.js" and rename it to "config.js"
+20. Enter the database url and database api key in "config.js"
 
 # How to setup webhost on delikatdev.ntig.dev
 
@@ -39,3 +41,5 @@
 16. Install git by typing apt-get install git-all
 17. Update git by typing apt-get update
 18. Use git clone to clone repository by typing git clone https://github.com/NTIG-Uppsala/Delikat-Flora .
+19. Copy the file "config.example.js" and rename it to "config.js"
+20. Enter the database url and database api key in "config.js"

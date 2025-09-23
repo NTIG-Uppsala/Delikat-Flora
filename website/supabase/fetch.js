@@ -1,7 +1,7 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-const supabaseUrl = 'https://hotzrgakccdxkxyqacrh.supabase.co'
-const supabaseKey = 'sb_publishable_Ll_VWVuxC2LeRga4iKBm9w_yEyA_oTI'
+const supabaseUrl = window._env_.DATABASE_URL
+const supabaseKey = window._env_.DATABASE_ANON_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 async function fetchProducts(selection = '*') {
