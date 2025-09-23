@@ -20,11 +20,12 @@ if hideWindow:
 browser = webdriver.Chrome(options=chr_options)
 
 # Make screenshots of all pages in various resolutions
-resolutionList = [  # [width, height]
-    [1920, 1080],
-    [768, 1024],
-    [2560, 1440],
-    [3840, 2160],
+deviceInfoList = [  # [width, height, emulate mobile]
+    [320, 600, True],
+    [768, 1024, True],
+    [1920, 1080, False],
+    [2560, 1440, False],
+    [3840, 2160, False],
 ]
 fileList = os.listdir("website/")  # get a list of all files in the website folder
 pageList = []
@@ -37,9 +38,16 @@ for file in fileList:
 # loop through all pages and take a screenshot in every resolution in resolutionList
 os.makedirs("_tests/screenshots", exist_ok=True)  # create a screenshot folder if it does not exist
 for page in pageList:
-    for resolution in resolutionList:
+    for deviceInfo in deviceInfoList:
         browser.get("http://localhost:8000/website/" + page)
-        browser.set_window_rect(0, 0, resolution[0], resolution[1])
+        # set the resolution and whether the browser should emulate a mobile device.
+        emulationMetrics = {
+            "width": deviceInfo[0],
+            "height": deviceInfo[1],
+            "mobile": deviceInfo[2],
+            "deviceScaleFactor": 1,
+        }
+        browser.execute_cdp_cmd("Emulation.setDeviceMetricsOverride", emulationMetrics)
         time.sleep(0.1)
         pageRect = browser.execute_cdp_cmd("Page.getLayoutMetrics", {})
         # configure settings to take a screenshot of the whole page
@@ -48,12 +56,12 @@ for page in pageList:
             "fromSurface": True,
             "clip": {
                 "width": pageRect["contentSize"]["width"],
-                "height": max(pageRect["contentSize"]["height"], resolution[1]),
+                "height": max(pageRect["contentSize"]["height"], deviceInfo[1]),
                 "x": 0,
                 "y": 0,
                 "scale": 1,
             },
         }
         base64png = browser.execute_cdp_cmd("Page.captureScreenshot", screenshotConfig)  # take the screenshot
-        with open(f"_tests/screenshots/{page}_{resolution}.png", "wb") as img:
+        with open(f"_tests/screenshots/{page}_{deviceInfo[0]}x{deviceInfo[1]}.png", "wb") as img:
             img.write(base64.urlsafe_b64decode(base64png["data"]))  # save the screenshot as a png in the screenshot folder
