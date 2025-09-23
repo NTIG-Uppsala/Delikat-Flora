@@ -241,6 +241,10 @@ main {
     align-items: center;
 }
 
+.postalCodeOutput {
+    transition-duration: 0.2s;
+}
+
 .service {
     width: 400px;
 }
