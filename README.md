@@ -13,8 +13,9 @@
 - [How To Test Website Code](_dev_info/how_to_test_website_code.md)
 - [How To Update Website Code](_dev_info/how_to_update_website_code.md)
 - [How To Update Website From CMD](_dev_info/how_to_update_website_from_CMD.md)
-- [Programming_Languages](_dev_info/programming_languages.md)
+- [Programming Languages](_dev_info/programming_languages.md)
 - [How To Connect To Databases](_dev_info/how_to_connect_to_databases.md)
+- [Database Schema](_dev_info/database_schema.md)
   
 ## Licenses
 
