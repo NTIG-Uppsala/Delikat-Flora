@@ -40,7 +40,7 @@ class testPostalCode(TestCase):
     # HERE THE TESTS BEGINS
     # VATButton testing (products.html)
     def testPostalCodeCorrect(self):
-        self.browser.get("http://localhost:8000/website/flowergram.html")
+        self.browser.get("http://localhost:8000/website/flower_delivery.html")
         inputBox = self.browser.find_element(By.CSS_SELECTOR, ".postalCodeInput")
         confirmButton = self.browser.find_element(By.CSS_SELECTOR, ".confirmButton")
         inputBox.send_keys("981 38")
@@ -49,7 +49,7 @@ class testPostalCode(TestCase):
         self.assertNotIn("Tyvärr, vi levererar inte till detta postnummer", self.browser.page_source)
 
     def testPostalCodeNotCorrect(self):
-        self.browser.get("http://localhost:8000/website/flowergram.html")
+        self.browser.get("http://localhost:8000/website/flower_delivery.html")
         inputBox = self.browser.find_element(By.CSS_SELECTOR, ".postalCodeInput")
         confirmButton = self.browser.find_element(By.CSS_SELECTOR, ".confirmButton")
         inputBox.send_keys("989 31")
@@ -58,7 +58,7 @@ class testPostalCode(TestCase):
         self.assertNotIn("Ja, detta postnummer kan vi leverera till! Priset för din leverans är", self.browser.page_source)
 
     def testPostalCodeCorrectWithoutSpace(self):
-        self.browser.get("http://localhost:8000/website/flowergram.html")
+        self.browser.get("http://localhost:8000/website/flower_delivery.html")
         inputBox = self.browser.find_element(By.CSS_SELECTOR, ".postalCodeInput")
         confirmButton = self.browser.find_element(By.CSS_SELECTOR, ".confirmButton")
         inputBox.send_keys("98138")
@@ -67,7 +67,7 @@ class testPostalCode(TestCase):
         self.assertNotIn("Tyvärr, vi levererar inte till detta postnummer", self.browser.page_source)
 
     def testPostalCodeNonValid(self):
-        self.browser.get("http://localhost:8000/website/flowergram.html")
+        self.browser.get("http://localhost:8000/website/flower_delivery.html")
         inputBox = self.browser.find_element(By.CSS_SELECTOR, ".postalCodeInput")
         confirmButton = self.browser.find_element(By.CSS_SELECTOR, ".confirmButton")
         inputBox.send_keys("aidwjdopawjdpoawjdpojwapdjw")
@@ -76,7 +76,7 @@ class testPostalCode(TestCase):
         self.assertNotIn("Ja, detta postnummer kan vi leverera till! Priset för din leverans är", self.browser.page_source)
 
     def testPostalCodeIncorrectThenCorrect(self):
-        self.browser.get("http://localhost:8000/website/flowergram.html")
+        self.browser.get("http://localhost:8000/website/flower_delivery.html")
         inputBox = self.browser.find_element(By.CSS_SELECTOR, ".postalCodeInput")
         confirmButton = self.browser.find_element(By.CSS_SELECTOR, ".confirmButton")
         inputBox.clear()
@@ -91,7 +91,7 @@ class testPostalCode(TestCase):
         self.assertNotIn("Tyvärr, vi levererar inte till detta postnummer", self.browser.page_source)
 
     def testPostalCodeNoInput(self):
-        self.browser.get("http://localhost:8000/website/flowergram.html")
+        self.browser.get("http://localhost:8000/website/flower_delivery.html")
         confirmButton = self.browser.find_element(By.CSS_SELECTOR, ".confirmButton")
         confirmButton.click()
         self.assertIn("Skriv in ett postnummer i rutan", self.browser.page_source)
