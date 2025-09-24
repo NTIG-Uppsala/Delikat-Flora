@@ -1,27 +1,35 @@
 import os
 import re
 
-# List of language templates
-languageTemplateList = [
-    ["_templates/languages/swedish.txt", ""],
-    ["_templates/languages/english.txt", "_english"],
-]
+pathLanguages = "_templates/languages"
+pathPages = "_templates/pages"
+pathModules = "_templates/modules"
 
-# List of page templates
-pageTemplateList = [
-    ["_templates/pages/index.html", "index"],
-    ["_templates/pages/about_us.html", "about_us"],
-    ["_templates/pages/consultation.html", "consultation"],
-    ["_templates/pages/products.html", "products"],
-    ["_templates/pages/flowergram.html", "flowergram"],
-]
+# Finds all language templates in the languages folder
+languageTemplateList = os.listdir(pathLanguages)
 
-# List of module templates
-moduleTemplateList = [
-    ["_templates/modules/footer.html", "!!!FOOTER!!!"],
-    ["_templates/modules/header.html", "!!!HEADER!!!"],
-    ["_templates/modules/global_js.html", "!!!JS!!!"],
-]
+# Makes each language template its own list
+for lang in range(len(languageTemplateList)):
+    languageTemplateList[lang] = [languageTemplateList[lang]]
+
+# Adds "_language" suffix to all languages except swedish
+for lang in range(len(languageTemplateList)):
+    if languageTemplateList[lang][0] == "swedish.txt":
+        languageTemplateList[lang].append("")
+        continue
+    else:
+        languageTemplateList[lang].append(f"_{languageTemplateList[lang][0].replace(".txt", "")}")
+
+# Finds all page templates in the pages folder
+pageTemplateList = os.listdir(pathPages)
+
+# Finds all module templates in the modules folder
+moduleTemplateList = os.listdir(pathModules)
+
+# Adds the full path and the template keyword to each module template
+for module in range(len(moduleTemplateList)):
+    moduleTemplateList[module] = [os.path.join(pathModules, moduleTemplateList[module]), f"!!!{moduleTemplateList[module].replace(".html", "").upper()}!!!"]
+
 
 pageList = []
 
@@ -29,7 +37,7 @@ outputFolder = "website"
 
 for pageTemplate in pageTemplateList:
 
-    with open(pageTemplate[0], encoding="utf-8") as p:
+    with open(os.path.join(pathPages, f"{pageTemplate}"), encoding="utf-8") as p:
         # Read page template
         page = p.read()
 
@@ -49,11 +57,11 @@ for languageTemplate in languageTemplateList:
     for page in pageList:
 
         # Sets the output file depending on both pageTemplate and languageTemplate
-        currentPage = pageTemplateList[pageNumber][1]
+        currentPage = pageTemplateList[pageNumber].replace(".html", "")
         outputFile = os.path.join(outputFolder, f"{currentPage}{languageTemplate[1]}.html")
         pageNumber += 1
 
-        with open(languageTemplate[0], encoding="utf-8") as l:
+        with open(os.path.join(pathLanguages, languageTemplate[0]), encoding="utf-8") as l:
 
             for count, line in enumerate(l):
 
