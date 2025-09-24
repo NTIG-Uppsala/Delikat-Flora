@@ -17,6 +17,7 @@
 !!!PRODUCTS!!! Produkter
 !!!CONSULTATION!!! Konsultation
 !!!FLOWERGRAM!!! Blommogram
+!!!FLAG_LINK!!! ./images/swedish_flag.jpg
 
 #Footer
 !!!OPENING_HOURS!!! Öppettider

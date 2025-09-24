@@ -1,33 +1,33 @@
 <header>
-        <div class="languageSelection">
-            <a href="!!!LANGUAGE_LINK_SWEDISH!!!">
-                <img src="images/swedish_flag.jpg" alt="Swedish">
-            </a>
-            <a href="!!!LANGUAGE_LINK_ENGLISH!!!">
-                <img src="images/british_flag.jpg" alt="English">
-            </a>
+    <div class="languageSelection">
+        <button onclick="flagDropDown()" class="flagDropDown" style="background-image: url(!!!FLAG_LINK!!!);"></button>
+        <div class="flagDropDownMenu">
+            <a href="!!!LANGUAGE_LINK_SWEDISH!!!"><img src="./images/swedish_flag.jpg" alt="Swedish"></a>
+            <a href="!!!LANGUAGE_LINK_ENGLISH!!!"><img src="./images/british_flag.jpg" alt="English"></a>
         </div>
-        <a href="!!!INDEX_LINK!!!" class="title textLarge textLight fontLabrada">
-            DELIKAT FLORA
-        </a>
-        <div class="logo textMediumLarge textLogo">
-            F
+    </div>
+
+    <a href="!!!INDEX_LINK!!!" class="title textLarge textLight fontLabrada">
+        DELIKAT FLORA
+    </a>
+    <div class="logo textMediumLarge textLogo">
+        F
+    </div>
+    <div class="dropDown">
+        <label class="dropDownLabel">
+            <img src="images/burger_menu.jpg" alt="">
+            <button onclick="onDropDownButtonClick()" class="dropButton"></button>
+        </label>
+        <div class="dropDownMenu">
+            <a href="!!!PRODUCTS_LINK!!!" class="products textMediumSmall textLight fontInter">!!!PRODUCTS!!!</a>
+            <a href="!!!CONSULTATION_LINK!!!" class="products textMediumSmall textLight fontInter">!!!CONSULTATION!!!</a>
+            <a href="!!!FLOWERGRAM_LINK!!!" class="products textMediumSmall textLight fontInter">!!!FLOWERGRAM!!!</a>
         </div>
-        <div class="dropDown">
-            <label class="dropDownLabel">
-                <img src="images/burger_menu.jpg" alt="">
-                <button onclick="onDropDownButtonClick()" class="dropButton"></button>
-            </label>
-            <div class="dropDownMenu">
-                <a href="!!!PRODUCTS_LINK!!!" class="products textMediumSmall textLight fontInter">!!!PRODUCTS!!!</a>
-                <a href="!!!CONSULTATION_LINK!!!" class="products textMediumSmall textLight fontInter">!!!CONSULTATION!!!</a>
-                <a href="!!!FLOWERGRAM_LINK!!!" class="products textMediumSmall textLight fontInter">!!!FLOWERGRAM!!!</a>
-            </div>
-        </div>
-        
-        <div class="allServices">
-            <a href="!!!PRODUCTS_LINK!!!" class="products textMedium textDark fontProza fontBold">!!!PRODUCTS!!!</a>
-            <a href="!!!CONSULTATION_LINK!!!" class="products textMedium textDark fontProza fontBold">!!!CONSULTATION!!!</a>
-            <a href="!!!FLOWERGRAM_LINK!!!" class="products textMedium textDark fontProza fontBold">!!!FLOWERGRAM!!!</a>
-        </div>
-    </header>
+    </div>
+
+    <div class="allServices">
+        <a href="!!!PRODUCTS_LINK!!!" class="products textMedium textDark fontProza fontBold">!!!PRODUCTS!!!</a>
+        <a href="!!!CONSULTATION_LINK!!!" class="products textMedium textDark fontProza fontBold">!!!CONSULTATION!!!</a>
+        <a href="!!!FLOWERGRAM_LINK!!!" class="products textMedium textDark fontProza fontBold">!!!FLOWERGRAM!!!</a>
+    </div>
+</header>

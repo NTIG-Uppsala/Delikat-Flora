@@ -11,38 +11,38 @@
 
 <body>
     <header>
-        <div class="languageSelection">
-            <a href="consultation.html">
-                <img src="images/swedish_flag.jpg" alt="Swedish">
-            </a>
-            <a href="consultation_english.html">
-                <img src="images/british_flag.jpg" alt="English">
-            </a>
+    <div class="languageSelection">
+        <button onclick="flagDropDown()" class="flagDropDown" style="background-image: url(./images/swedish_flag.jpg);"></button>
+        <div class="flagDropDownMenu">
+            <a href="consultation.html"><img src="./images/swedish_flag.jpg" alt="Swedish"></a>
+            <a href="consultation_english.html"><img src="./images/british_flag.jpg" alt="English"></a>
         </div>
-        <a href="index.html" class="title textLarge textLight fontLabrada">
-            DELIKAT FLORA
-        </a>
-        <div class="logo textMediumLarge textLogo">
-            F
+    </div>
+
+    <a href="index.html" class="title textLarge textLight fontLabrada">
+        DELIKAT FLORA
+    </a>
+    <div class="logo textMediumLarge textLogo">
+        F
+    </div>
+    <div class="dropDown">
+        <label class="dropDownLabel">
+            <img src="images/burger_menu.jpg" alt="">
+            <button onclick="onDropDownButtonClick()" class="dropButton"></button>
+        </label>
+        <div class="dropDownMenu">
+            <a href="products.html" class="products textMediumSmall textLight fontInter">Produkter</a>
+            <a href="consultation.html" class="products textMediumSmall textLight fontInter">Konsultation</a>
+            <a href="flowergram.html" class="products textMediumSmall textLight fontInter">Blommogram</a>
         </div>
-        <div class="dropDown">
-            <label class="dropDownLabel">
-                <img src="images/burger_menu.jpg" alt="">
-                <button onclick="onDropDownButtonClick()" class="dropButton"></button>
-            </label>
-            <div class="dropDownMenu">
-                <a href="products.html" class="products textMediumSmall textLight fontInter">Produkter</a>
-                <a href="consultation.html" class="products textMediumSmall textLight fontInter">Konsultation</a>
-                <a href="flowergram.html" class="products textMediumSmall textLight fontInter">Blommogram</a>
-            </div>
-        </div>
-        
-        <div class="allServices">
-            <a href="products.html" class="products textMedium textDark fontProza fontBold">Produkter</a>
-            <a href="consultation.html" class="products textMedium textDark fontProza fontBold">Konsultation</a>
-            <a href="flowergram.html" class="products textMedium textDark fontProza fontBold">Blommogram</a>
-        </div>
-    </header>
+    </div>
+
+    <div class="allServices">
+        <a href="products.html" class="products textMedium textDark fontProza fontBold">Produkter</a>
+        <a href="consultation.html" class="products textMedium textDark fontProza fontBold">Konsultation</a>
+        <a href="flowergram.html" class="products textMedium textDark fontProza fontBold">Blommogram</a>
+    </div>
+</header>
     <main>
         <div class="centerInfo textSmall fontInter">
             <div class="servicesPage">
