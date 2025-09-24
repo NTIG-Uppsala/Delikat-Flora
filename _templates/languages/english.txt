@@ -4,7 +4,7 @@
 #Page Titles 
 !!!PRODUCTS_TITLE!!! Our Products
 !!!CONSULTATION_TITLE!!! Consultation
-!!!FLOWERGRAM_TITLE!!! Flowergram
+!!!FLOWER_DELIVERY_TITLE!!! Send Flowers
 !!!ABOUT_US_TITLE!!! About Us
 
 #Header
@@ -13,10 +13,10 @@
 !!!INDEX_LINK!!! index_english.html
 !!!PRODUCTS_LINK!!! products_english.html
 !!!CONSULTATION_LINK!!! consultation_english.html
-!!!FLOWERGRAM_LINK!!! flowergram_english.html
+!!!FLOWER_DELIVERY_LINK!!! flower_delivery_english.html
 !!!PRODUCTS!!! Products
 !!!CONSULTATION!!! Consultation
-!!!FLOWERGRAM!!! Flowergram
+!!!FLOWER_DELIVERY!!! Send Flowers
 !!!FLAG_LINK!!! ./images/british_flag.jpg
 
 
@@ -51,11 +51,11 @@
 !!!CONSULTATION_DESCRIPTION!!! During a 30-minute consultation, you’ll receive personal advice from our florist. Together we’ll go through your wishes, colours and the feeling you want to convey. Contact us and we’ll arrange a time with our florist.
 
 #Flowergram
-!!!FLOWERGRAM!!! Flowergram
+!!!FLOWER_DELIVERY!!! Send Flowers
 !!!SEND_FLOWERS!!! Send flower bouquets with our flower delivery service.
 !!!POSTAL_CODE!!! Postal code
 !!!CHECK_POSTAL_CODE!!! Check postal code
-!!!FLOWERGRAM_DESCRIPTION!!! With our flower delivery service, you can easily surprise someone with beautiful flowers delivered right to their door. Choose a bouquet, write a personal message, and we’ll take care of the rest. Perfect for birthdays, holidays, or everyday joy.
+!!!FLOWER_DELIVERY_DESCRIPTION!!! With our flower delivery service, you can easily surprise someone with beautiful flowers delivered right to their door. Choose a bouquet, write a personal message, and we’ll take care of the rest. Perfect for birthdays, holidays, or everyday joy.
 
 #About Us
 !!!OWNER!!! Owner
