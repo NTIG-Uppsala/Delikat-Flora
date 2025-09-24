@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="da">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delikat Flora</title>
+    <title>Send blomster</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <noscript>
         <style>
-            .allServices,
             .dropDown,
-            header .textLogo {
+            header .textLogo,
+            .servicesPage {
                 display: none;
             }
 
             .welcomeMessage {
                 margin-top: -20px;
-            }
-
-            @media screen and (max-width: 900px) {
-                .welcomeMessage {
-                    margin-top: 0px;
-                }
             }
         </style>
     </noscript>
@@ -31,15 +25,15 @@
 <body>
     <header>
     <div class="languageSelection">
-        <button onclick="flagDropDown()" class="flagDropDown" style="background-image: url(./images/swedish_flag.jpg);"></button>
+        <button onclick="flagDropDown()" class="flagDropDown" style="background-image: url(./images/danish_flag.jpg);"></button>
         <div class="flagDropDownMenu">
-            <a href="index.html"><img src="./images/swedish_flag.jpg" alt="Swedish"></a>
-            <a href="index_english.html"><img src="./images/british_flag.jpg" alt="English"></a>
-            <a href="index_danish.html"><img src="./images/danish_flag.jpg" alt="Danish"></a>
+            <a href="flower_delivery.html"><img src="./images/swedish_flag.jpg" alt="Swedish"></a>
+            <a href="flower_delivery_english.html"><img src="./images/british_flag.jpg" alt="English"></a>
+            <a href="flower_delivery_danish.html"><img src="./images/danish_flag.jpg" alt="Danish"></a>
         </div>
     </div>
 
-    <a href="index.html" class="title textLarge textLight fontLabrada">
+    <a href="index_danish.html" class="title textLarge textLight fontLabrada">
         DELIKAT FLORA
     </a>
     <div class="logo textMediumLarge textLogo">
@@ -51,30 +45,46 @@
             <button onclick="onDropDownButtonClick()" class="dropButton"></button>
         </label>
         <div class="dropDownMenu">
-            <a href="products.html" class="products textMediumSmall textLight fontInter">Produkter</a>
-            <a href="consultation.html" class="products textMediumSmall textLight fontInter">Konsultation</a>
-            <a href="flower_delivery.html" class="products textMediumSmall textLight fontInter">Blommogram</a>
+            <a href="products_danish.html" class="products textMediumSmall textLight fontInter">Produkter</a>
+            <a href="consultation_danish.html" class="products textMediumSmall textLight fontInter">Konsultation</a>
+            <a href="flower_delivery_danish.html" class="products textMediumSmall textLight fontInter">Send blomster</a>
         </div>
     </div>
 
     <div class="allServices">
-        <a href="products.html" class="products textMedium textDark fontProza fontBold">Produkter</a>
-        <a href="consultation.html" class="products textMedium textDark fontProza fontBold">Konsultation</a>
-        <a href="flower_delivery.html" class="products textMedium textDark fontProza fontBold">Blommogram</a>
+        <a href="products_danish.html" class="products textMedium textDark fontProza fontBold">Produkter</a>
+        <a href="consultation_danish.html" class="products textMedium textDark fontProza fontBold">Konsultation</a>
+        <a href="flower_delivery_danish.html" class="products textMedium textDark fontProza fontBold">Send blomster</a>
     </div>
 </header>
     <main>
         <div class="centerInfo textSmall fontInter">
-            <div class="welcomeMessage textLarge textDark fontLabrada">
-                Välkommen till Delikat Flora!
+            <div class="servicesPage">
+                <div class="service">
+                    <div class="serviceName textMedium fontProza fontBold">
+                        Send blomster
+                    </div>
+                    <img src="images/flower_delivery.jpg" alt="">
+                    <div class="sendFlowersText textMediumSmall fontProza">
+                        Send blomsterbuketter med vores blomsterleveringsservice
+                    </div>
+                    <input type="text" class="postalCodeInput textSmall fontInter"
+                        placeholder="Postnummer: XXX XX">
+                    <div class="postalCodeOutput textSmall fontInter">
+                    </div>
+                    <input type="button" class="confirmButton textSmall fontInter" value="Tjek postnummer">
+                    <div class="serviceDescription textSmall fontInter">
+                        Med vores blomsterleveringsservice kan du nemt overraske nogen med smukke blomster leveret direkte til døren. Vælg en buket, skriv en personlig besked, og så klarer vi resten. Perfekt til fødselsdage, højtider eller hverdagsglæder.
+                    </div>
+                </div>
             </div>
             <noscript>
                 <div class="noscriptContainer">
                     <div class="fontInter noscriptMessage noscriptMessageWarning">
-                        Du har inte javascript aktiverat i din webbläsare.
+                        Du har ikke javascript aktiveret i din browser.
                     </div>
                     <div class="fontInter noscriptMessage">
-                        Kontakta oss för mer information om våra produkter och tjänster.
+                        Kontakt os for mere information om vores produkter og tjenester.
                     </div>
                     <div class="fontInter noscriptMessage">
                         Tel: <a href="tel:+46630555555" class="textDark">0630 555 555</a><br>
@@ -86,7 +96,7 @@
         <footer class="textSmall textLight fontInter">
     <div class="openingHoursInfo">
         <div class="textMedium fontProza fontBold">
-            Öppettider
+            Åbningstider
         </div>
         <table class="openingHoursTable">
             <tbody>
@@ -100,7 +110,7 @@
                 </tr>
                 <tr>
                     <td>
-                        Tisdag
+                        Tirsdag
                     </td>
                     <td>
                         10-16
@@ -132,7 +142,7 @@
                 </tr>
                 <tr>
                     <td>
-                        Lördag
+                        Lørdag
                     </td>
                     <td>
                         12-15
@@ -140,10 +150,10 @@
                 </tr>
                 <tr>
                     <td>
-                        Söndag
+                        Søndag
                     </td>
                     <td>
-                        STÄNGT
+                        LUKKET
                     </td>
                 </tr>
             </tbody>
@@ -154,12 +164,12 @@
         <div class="textMedium fontProza fontBold">
             Delikat Flora
         </div>
-        <a href="about_us.html">Om oss</a>
+        <a href="about_us_danish.html">Om os</a>
     </div>
     <div class="divider"></div>
     <div class="contactInfo">
         <div class="textMedium fontProza fontBold">
-            Kontaktinformation
+            Kontaktoplysninger
         </div>
         <p>
             <a href="tel:+46630555555">0630 555 555</a>
@@ -178,6 +188,7 @@
     </div>
 </footer>
     </main>
+    <script type="module" src="./supabase/flower_delivery.js"></script>
     <script src="drop_down_button.js"></script>
 <script src="config.js"></script>
 </body>
