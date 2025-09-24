@@ -9,7 +9,7 @@ dontCloseBrowser = False  # if true then the browser is kept open after the test
 hideWindow = not (dontCloseBrowser)  # displays the browser while the tests are running
 
 
-class testVAT(TestCase):
+class testPostalCode(TestCase):
     # setUpClass is run BEFORE the FIRST test
     @classmethod
     def setUpClass(cls):
