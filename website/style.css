@@ -66,13 +66,53 @@ header .textLogo {
     display: flex;
     gap: 5px;
     position: absolute;
-    margin-left: -5px;
-    margin-top: -15px;
+    flex-direction: column;
+    padding: 0;
 }
 
 .languageSelection img {
-    width: 40px;
+    width: 50px;
     border-radius: 5px;
+}
+
+.flagDropDown {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    text-align: left;
+    min-height: 30px;
+    min-width: 50px;
+    max-width: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.flagDropDown:hover {
+    cursor: pointer;
+}
+
+.flagDropDownMenu {
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorGreen2);
+    outline: 1px solid var(--colorDark);
+    margin-top: 5px;
+    margin-right: -8px;
+    gap: 5px;
+    border-radius: 5%;
+}
+
+.flagDropDownMenu.show {
+    max-height: max-content;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 10px;
 }
 
 a.title {
@@ -426,12 +466,11 @@ footer a {
     }
 
     .languageSelection {
-        flex-direction: column;
         margin-left: 5px;
         gap: none;
     }
 
-    .languageSelection img {
+    .flagDropDown img {
         width: 30px;
     }
 
@@ -459,6 +498,10 @@ footer a {
     main,
     footer {
         width: 100%;
+    }
+
+    .languageSelection {
+        margin-left: 20px;
     }
 
     .productsPage img,
@@ -490,6 +533,16 @@ footer a {
 
     .dropDownLabel img {
         width: 20px;
+    }
+
+    .languageSelection {
+        margin-left: 10px;
+    }
+
+    .flagDropDown {
+        min-height: 24px;
+        min-width: 40px;
+        max-width: 40px;
     }
 
     .smallDivider {

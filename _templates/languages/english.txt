@@ -17,6 +17,8 @@
 !!!PRODUCTS!!! Products
 !!!CONSULTATION!!! Consultation
 !!!FLOWERGRAM!!! Flowergram
+!!!FLAG_LINK!!! ./images/british_flag.jpg
+
 
 #Footer
 !!!OPENING_HOURS!!! Opening hours
