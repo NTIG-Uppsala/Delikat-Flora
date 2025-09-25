@@ -1,5 +1,6 @@
 #Module Templates
 !!!LANGUAGE!!! sv
+!!!LANGUAGE_ID!!! 
 
 #Page Titles 
 !!!PRODUCTS_TITLE!!! Våra produkter
@@ -44,6 +45,9 @@
 
 #Products
 !!!SHOW_PRICE_WITHOUT_VAT!!! Visa priser utan moms
+!!!FROM!!! Från
+!!!CURRENCY_UNIT!!! kr
+!!!PRODUCT_NAME!!! product_name
 
 #Consultation
 !!!CONSULTATION!!! Konsultation
@@ -55,6 +59,10 @@
 !!!SEND_FLOWERS!!! Skicka blombuketter med vår blommogramtjänst
 !!!POSTAL_CODE!!! Postnummer
 !!!CHECK_POSTAL_CODE!!! Kolla postnummer
+!!!ENTER_POSTAL_CODE!!! Skriv in ett postnummer i rutan
+!!!INVALID_POSTAL_CODE!!! Detta är inte ett giltigt postnummer. Försök igen
+!!!ACCEPTED_POSTAL_CODE!!! Ja, detta postnummer kan vi leverera till! Priset för din leverans är 
+!!!REJECTED_POSTAL_CODE!!! Tyvärr, vi levererar inte till detta postnummer
 !!!FLOWER_DELIVERY_DESCRIPTION!!! Med vår blommogramtjänst kan du enkelt överraska någon med vackra blommor, levererade direkt till dörren. Välj bukett, skriv en personlig hälsning, så sköter vi resten. Perfekt för födelsedagar, högtider eller vardagsglädje.
 
 #About Us

@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>!!!FLOWER_DELIVERY_TITLE!!!</title>
+    <title>!!!PRODUCTS_TITLE!!!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <noscript>
         <style>
             .dropDown,
             header .textLogo,
-            .servicesPage {
+            .sortingOptions,
+            .productsPage {
                 display: none;
             }
 
@@ -26,24 +27,14 @@
     !!!HEADER!!!
     <main>
         <div class="centerInfo textSmall fontInter">
-            <div class="servicesPage">
-                <div class="service">
-                    <div class="serviceName textMedium fontProza fontBold">
-                        !!!FLOWER_DELIVERY!!!
-                    </div>
-                    <img src="images/flower_delivery.jpg" alt="">
-                    <div class="sendFlowersText textMediumSmall fontProza">
-                        !!!SEND_FLOWERS!!!
-                    </div>
-                    <input type="text" class="postalCodeInput textSmall fontInter"
-                        placeholder="!!!POSTAL_CODE!!!: XXX XX">
-                    <div class="postalCodeOutput textSmall fontInter">
-                    </div>
-                    <input type="button" class="confirmButton textSmall fontInter" value="!!!CHECK_POSTAL_CODE!!!">
-                    <div class="serviceDescription textSmall fontInter">
-                        !!!FLOWER_DELIVERY_DESCRIPTION!!!
-                    </div>
-                </div>
+            <div class="sortingOptions">
+                <label class="vatButton textExtraSmall">
+                    !!!SHOW_PRICE_WITHOUT_VAT!!!
+                    <input type="checkbox" class="vatCheckbox" id="toggleVAT">
+                </label>
+            </div>
+            <div class="productsPage">
+
             </div>
             <noscript>
                 <div class="noscriptContainer">
@@ -62,7 +53,12 @@
         </div>
         !!!FOOTER!!!
     </main>
-    <script type="module" src="./supabase/flower_delivery.js"></script>
+    <script src="toggle_vat.js"></script>
+    <script type="module">
+        import { createProducts } from "./products!!!LANGUAGE_ID!!!.js";
+        createProducts();
+        toggleVAT();
+    </script>
     !!!GLOBAL_JS!!!
 </body>
 

@@ -2,7 +2,7 @@ import os
 import re
 
 pathLanguages = "_templates/languages"
-pathPages = "_templates/pages"
+pathSources = "_templates/source_files"
 pathModules = "_templates/modules"
 
 # Finds all language templates in the languages folder
@@ -20,46 +20,44 @@ for lang in range(len(languageTemplateList)):
     else:
         languageTemplateList[lang].append(f"_{languageTemplateList[lang][0].replace(".txt", "")}")
 
-# Finds all page templates in the pages folder
-pageTemplateList = os.listdir(pathPages)
+# Finds all templates in the source_files folder
+templateList = os.listdir(pathSources)
 
-# Finds all module templates in the modules folder
-moduleTemplateList = os.listdir(pathModules)
+# Finds all modules in the modules folder
+moduleList = os.listdir(pathModules)
 
-# Adds the full path and the template keyword to each module template
-for module in range(len(moduleTemplateList)):
-    moduleTemplateList[module] = [os.path.join(pathModules, moduleTemplateList[module]), f"!!!{moduleTemplateList[module].replace(".html", "").upper()}!!!"]
+# Adds the full path and the template keyword to each module
+for module in range(len(moduleList)):
+    moduleList[module] = [os.path.join(pathModules, moduleList[module]), f"!!!{moduleList[module].replace(".html", "").upper()}!!!"]
 
 
-pageList = []
+fileList = []
 
 outputFolder = "website"
 
-for pageTemplate in pageTemplateList:
+for template in templateList:
 
-    with open(os.path.join(pathPages, f"{pageTemplate}"), encoding="utf-8") as p:
-        # Read page template
-        page = p.read()
+    with open(os.path.join(pathSources, f"{template}"), encoding="utf-8") as t:
+        # Read template
+        file = t.read()
 
-        for moduleTemplate in moduleTemplateList:
+        for module in moduleList:
 
-            with open(moduleTemplate[0], encoding="utf-8") as m:
-                # Read module template
-                module = m.read()
+            with open(module[0], encoding="utf-8") as m:
+                # Read module
+                moduleContent = m.read()
 
-                # Replace module template call with module
-                page = page.replace(moduleTemplate[1], module)
-        pageList.append(page)
+                # Replace module call with module
+                file = file.replace(module[1], moduleContent)
+        fileList.append(file)
 
 for languageTemplate in languageTemplateList:
-    pageNumber = 0
+    for fileNumber in range(len(fileList)):
 
-    for page in pageList:
-
-        # Sets the output file depending on both pageTemplate and languageTemplate
-        currentPage = pageTemplateList[pageNumber].replace(".html", "")
-        outputFile = os.path.join(outputFolder, f"{currentPage}{languageTemplate[1]}.html")
-        pageNumber += 1
+        # Sets the output file depending on both template and languageTemplate
+        file = fileList[fileNumber]
+        currentFile = templateList[fileNumber].split(".")[0]
+        outputFile = os.path.join(outputFolder, f"{currentFile}{languageTemplate[1]}.{templateList[fileNumber].split(".")[-1]}")
 
         with open(os.path.join(pathLanguages, languageTemplate[0]), encoding="utf-8") as l:
 
@@ -84,9 +82,9 @@ for languageTemplate in languageTemplateList:
                     replaceKeyword = lineInfo[0]
                     lineContent = lineInfo[1].split("\n")[0]
                     if re.findall("^!!!LANGUAGE_LINK", lineInfo[0]) != []:
-                        lineContent = f"{currentPage}{lineContent}"
-                    page = page.replace(replaceKeyword, lineContent)
+                        lineContent = f"{currentFile}{lineContent}"
+                    file = file.replace(replaceKeyword, lineContent)
 
             # Create new complete file
             with open(outputFile, "w", encoding="utf-8") as f:
-                f.write(page)
+                f.write(file)

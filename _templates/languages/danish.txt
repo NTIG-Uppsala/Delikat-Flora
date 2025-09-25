@@ -1,5 +1,6 @@
 #Module Templates
 !!!LANGUAGE!!! da
+!!!LANGUAGE_ID!!! _danish
 
 #Page Titles 
 !!!PRODUCTS_TITLE!!! Vores produkter
@@ -44,6 +45,9 @@
 
 #Products
 !!!SHOW_PRICE_WITHOUT_VAT!!! Vis priser uden moms
+!!!FROM!!! Fra
+!!!CURRENCY_UNIT!!! SEK
+!!!PRODUCT_NAME!!! product_name_dan
 
 #Consultation
 !!!CONSULTATION!!! Konsultation
@@ -55,6 +59,10 @@
 !!!SEND_FLOWERS!!! Send blomsterbuketter med vores blomsterleveringsservice
 !!!POSTAL_CODE!!! Postnummer
 !!!CHECK_POSTAL_CODE!!! Tjek postnummer
+!!!ENTER_POSTAL_CODE!!! Indtast et postnummer i feltet
+!!!INVALID_POSTAL_CODE!!! Dette er ikke et gyldigt postnummer. Prøv igen.
+!!!ACCEPTED_POSTAL_CODE!!! Ja, vi kan levere til dette postnummer! Prisen for din levering er 
+!!!REJECTED_POSTAL_CODE!!! Vi leverer desværre ikke til dette postnummer
 !!!FLOWER_DELIVERY_DESCRIPTION!!! Med vores blomsterleveringsservice kan du nemt overraske nogen med smukke blomster leveret direkte til døren. Vælg en buket, skriv en personlig besked, og så klarer vi resten. Perfekt til fødselsdage, højtider eller hverdagsglæder.
 
 #About Us

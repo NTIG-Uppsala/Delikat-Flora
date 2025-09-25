@@ -47,15 +47,18 @@
         </label>
         <div class="dropDownMenu">
             <a href="products.html" class="products textMediumSmall textLight fontInter">Produkter</a>
-            <a href="consultation.html" class="products textMediumSmall textLight fontInter">Konsultation</a>
-            <a href="flower_delivery.html" class="products textMediumSmall textLight fontInter">Blommogram</a>
+            <a href="consultation.html"
+                class="products textMediumSmall textLight fontInter">Konsultation</a>
+            <a href="flower_delivery.html"
+                class="products textMediumSmall textLight fontInter">Blommogram</a>
         </div>
     </div>
 
     <div class="allServices">
         <a href="products.html" class="products textMedium textDark fontProza fontBold">Produkter</a>
         <a href="consultation.html" class="products textMedium textDark fontProza fontBold">Konsultation</a>
-        <a href="flower_delivery.html" class="products textMedium textDark fontProza fontBold">Blommogram</a>
+        <a href="flower_delivery.html"
+            class="products textMedium textDark fontProza fontBold">Blommogram</a>
     </div>
 </header>
     <main>
@@ -181,8 +184,8 @@
     </main>
     <script src="toggle_vat.js"></script>
     <script type="module">
-        import { createProducts } from "./supabase/products.js";
-        createProducts("sv");
+        import { createProducts } from "./products.js";
+        createProducts();
         toggleVAT();
     </script>
     <script src="drop_down_button.js"></script>
