@@ -16,6 +16,7 @@
 - [Programming Languages](_dev_info/programming_languages.md)
 - [How To Connect To Databases](_dev_info/how_to_connect_to_databases.md)
 - [Database Schema](_dev_info/database_schema.md)
+- [How To Add A Language](_dev_info/how_to_add_a_language.md)
   
 ## Licenses
 

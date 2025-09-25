@@ -9,10 +9,6 @@
 !!!ABOUT_US_TITLE!!! About Us
 
 #Header
-!!!INDEX_LINK!!! index_english.html
-!!!PRODUCTS_LINK!!! products_english.html
-!!!CONSULTATION_LINK!!! consultation_english.html
-!!!FLOWER_DELIVERY_LINK!!! flower_delivery_english.html
 !!!PRODUCTS!!! Products
 !!!CONSULTATION!!! Consultation
 !!!FLOWER_DELIVERY!!! Send Flowers
@@ -28,7 +24,6 @@
 !!!SATURDAY!!! Saturday
 !!!SUNDAY!!! Sunday
 !!!CLOSED!!! CLOSED
-!!!ABOUT_US_LINK!!! about_us_english.html
 !!!ABOUT_US!!! About us
 !!!CONTACT_INFORMATION!!! Contact information
 
@@ -44,6 +39,7 @@
 !!!SHOW_PRICE_WITHOUT_VAT!!! Show prices without VAT
 !!!FROM!!! From
 !!!CURRENCY_UNIT!!! SEK
+#name of databse column:
 !!!PRODUCT_NAME!!! product_name_eng
 
 #Consultation

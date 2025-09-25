@@ -9,10 +9,6 @@
 !!!ABOUT_US_TITLE!!! Om os
 
 #Header
-!!!INDEX_LINK!!! index_danish.html
-!!!PRODUCTS_LINK!!! products_danish.html
-!!!CONSULTATION_LINK!!! consultation_danish.html
-!!!FLOWER_DELIVERY_LINK!!! flower_delivery_danish.html
 !!!PRODUCTS!!! Produkter
 !!!CONSULTATION!!! Konsultation
 !!!FLOWER_DELIVERY!!! Send blomster
@@ -28,7 +24,6 @@
 !!!SATURDAY!!! Lørdag
 !!!SUNDAY!!! Søndag
 !!!CLOSED!!! LUKKET
-!!!ABOUT_US_LINK!!! about_us_danish.html
 !!!ABOUT_US!!! Om os
 !!!CONTACT_INFORMATION!!! Kontaktoplysninger
 
@@ -44,6 +39,7 @@
 !!!SHOW_PRICE_WITHOUT_VAT!!! Vis priser uden moms
 !!!FROM!!! Fra
 !!!CURRENCY_UNIT!!! SEK
+#name of database column:
 !!!PRODUCT_NAME!!! product_name_dan
 
 #Consultation

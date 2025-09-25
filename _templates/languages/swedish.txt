@@ -9,10 +9,6 @@
 !!!ABOUT_US_TITLE!!! Om oss
 
 #Header
-!!!INDEX_LINK!!! index.html
-!!!PRODUCTS_LINK!!! products.html
-!!!CONSULTATION_LINK!!! consultation.html
-!!!FLOWER_DELIVERY_LINK!!! flower_delivery.html
 !!!PRODUCTS!!! Produkter
 !!!CONSULTATION!!! Konsultation
 !!!FLOWER_DELIVERY!!! Blommogram
@@ -28,7 +24,6 @@
 !!!SATURDAY!!! Lördag
 !!!SUNDAY!!! Söndag
 !!!CLOSED!!! STÄNGT
-!!!ABOUT_US_LINK!!! about_us.html
 !!!ABOUT_US!!! Om oss
 !!!CONTACT_INFORMATION!!! Kontaktinformation
 
@@ -44,6 +39,7 @@
 !!!SHOW_PRICE_WITHOUT_VAT!!! Visa priser utan moms
 !!!FROM!!! Från
 !!!CURRENCY_UNIT!!! kr
+#name of database column:
 !!!PRODUCT_NAME!!! product_name
 
 #Consultation
