@@ -9,9 +9,6 @@
 !!!ABOUT_US_TITLE!!! Om os
 
 #Header
-!!!LANGUAGE_LINK_SWEDISH!!! .html
-!!!LANGUAGE_LINK_ENGLISH!!! _english.html
-!!!LANGUAGE_LINK_DANISH!!! _danish.html
 !!!INDEX_LINK!!! index_danish.html
 !!!PRODUCTS_LINK!!! products_danish.html
 !!!CONSULTATION_LINK!!! consultation_danish.html
@@ -19,7 +16,7 @@
 !!!PRODUCTS!!! Produkter
 !!!CONSULTATION!!! Konsultation
 !!!FLOWER_DELIVERY!!! Send blomster
-!!!FLAG_LINK!!! ./images/danish_flag.jpg
+!!!FLAG_LINK!!! ./images/danish.jpg
 
 #Footer
 !!!OPENING_HOURS!!! Åbningstider

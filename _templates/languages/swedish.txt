@@ -9,9 +9,6 @@
 !!!ABOUT_US_TITLE!!! Om oss
 
 #Header
-!!!LANGUAGE_LINK_SWEDISH!!! .html
-!!!LANGUAGE_LINK_ENGLISH!!! _english.html
-!!!LANGUAGE_LINK_DANISH!!! _danish.html
 !!!INDEX_LINK!!! index.html
 !!!PRODUCTS_LINK!!! products.html
 !!!CONSULTATION_LINK!!! consultation.html
@@ -19,7 +16,7 @@
 !!!PRODUCTS!!! Produkter
 !!!CONSULTATION!!! Konsultation
 !!!FLOWER_DELIVERY!!! Blommogram
-!!!FLAG_LINK!!! ./images/swedish_flag.jpg
+!!!FLAG_LINK!!! ./images/swedish.jpg
 
 #Footer
 !!!OPENING_HOURS!!! Öppettider

@@ -81,9 +81,13 @@ for languageTemplate in languageTemplateList:
                     lineInfo = line.split(" ", 1)
                     replaceKeyword = lineInfo[0]
                     lineContent = lineInfo[1].split("\n")[0]
-                    if re.findall("^!!!LANGUAGE_LINK", lineInfo[0]) != []:
-                        lineContent = f"{currentFile}{lineContent}"
                     file = file.replace(replaceKeyword, lineContent)
+
+            if "!!!LANGUAGE_ALTERNATIVES!!!" in file:
+                # Add the flag icon in the language selection
+                for language in languageTemplateList:
+                    file = file.replace("!!!LANGUAGE_ALTERNATIVES!!!", f"<a href='{currentFile}{language[1]}.html'><img src='./images/{language[0].replace("txt", "jpg")}' alt='{language[0].replace(".txt", "")}'></a> \n!!!LANGUAGE_ALTERNATIVES!!!")
+                file = file.replace("!!!LANGUAGE_ALTERNATIVES!!!", "")
 
             # Create new complete file
             with open(outputFile, "w", encoding="utf-8") as f:

@@ -9,9 +9,6 @@
 !!!ABOUT_US_TITLE!!! About Us
 
 #Header
-!!!LANGUAGE_LINK_SWEDISH!!! .html
-!!!LANGUAGE_LINK_ENGLISH!!! _english.html
-!!!LANGUAGE_LINK_DANISH!!! _danish.html
 !!!INDEX_LINK!!! index_english.html
 !!!PRODUCTS_LINK!!! products_english.html
 !!!CONSULTATION_LINK!!! consultation_english.html
@@ -19,7 +16,7 @@
 !!!PRODUCTS!!! Products
 !!!CONSULTATION!!! Consultation
 !!!FLOWER_DELIVERY!!! Send Flowers
-!!!FLAG_LINK!!! ./images/british_flag.jpg
+!!!FLAG_LINK!!! ./images/english.jpg
 
 #Footer
 !!!OPENING_HOURS!!! Opening hours
