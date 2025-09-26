@@ -1,5 +1,3 @@
-import { fetchFlowerDelivery } from './fetch.js';
-
 const ARRAY = await fetchFlowerDelivery(); // fetch data from the database
 
 // create the user interface
@@ -58,6 +56,3 @@ function postalCodeCheck() {
 function isInvalidPostalCode(postalCode) {
     return /[a-zA-Z]/.test(postalCode) || !/^\d{5}$/.test(postalCode);
 }
-
-
-export { postalCodeCheck };

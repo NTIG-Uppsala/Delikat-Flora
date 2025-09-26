@@ -1,32 +1,29 @@
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
-
 const supabaseUrl = window._env_.DATABASE_URL
 const supabaseKey = window._env_.DATABASE_ANON_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
 
 async function fetchProducts(selection = '*') {
-    const { data, error } = await supabase
-        .from('products')
-        .select(selection)
-        .order('id', { ascending: true })
+    // fetch the data from the database
+    let response = await fetch(supabaseUrl + '/rest/v1/products?select=' + selection, {
+        headers: {
+            'apikey': supabaseKey,
+        }
+    })
+    // convert the response to a sorted JSON-object
+    let data = await response.json()
+    data.sort((a, b) => a.id - b.id)
 
-    if (error) {
-        console.error('Error fetching data:', error)
-    } else {
-        return data
-    }
+    return data
 }
 
 async function fetchFlowerDelivery(selection = '*') {
-    const { data, error } = await supabase
-        .from('flower_delivery')
-        .select(selection)
+    let response = await fetch(supabaseUrl + '/rest/v1/flower_delivery?select=' + selection, {
+        headers: {
+            'apikey': supabaseKey,
+        }
+    })
+    // convert the response to a sorted JSON-object
+    let data = await response.json()
+    data.sort((a, b) => a.id - b.id)
 
-    if (error) {
-        console.error('Error fetching data:', error)
-    } else {
-        return data
-    }
+    return data
 }
-
-export { fetchProducts, fetchFlowerDelivery }

@@ -1,5 +1,3 @@
-import { fetchFlowerDelivery } from './fetch.js';
-
 const ARRAY = await fetchFlowerDelivery(); // fetch data from the database
 
 // create the user interface
@@ -20,10 +18,6 @@ CONFIRM_BUTTON.className = "confirmButton textSmall fontInter";
 CONFIRM_BUTTON.setAttribute("type", "button");
 CONFIRM_BUTTON.setAttribute("value", "Tjek postnummer");
 INTERFACE_CONTAINER.appendChild(CONFIRM_BUTTON);
-// const POSTAL_CODE_INPUT = document.querySelector(".postalCodeInput")
-// const CONFIRM_BUTTON = document.querySelector(".confirmButton")
-// const POSTAL_CODE_OUTPUT = document.querySelector(".postalCodeOutput")
-
 
 POSTAL_CODE_INPUT.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
@@ -31,6 +25,7 @@ POSTAL_CODE_INPUT.addEventListener("keypress", (event) => {
     }
 });
 CONFIRM_BUTTON.addEventListener("click", postalCodeCheck);
+
 
 function postalCodeCheck() {
     POSTAL_CODE_OUTPUT.style.opacity = "0";
@@ -61,6 +56,3 @@ function postalCodeCheck() {
 function isInvalidPostalCode(postalCode) {
     return /[a-zA-Z]/.test(postalCode) || !/^\d{5}$/.test(postalCode);
 }
-
-
-export { postalCodeCheck };
