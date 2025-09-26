@@ -21,6 +21,9 @@ class testPostalCode(TestCase):
         if hideWindow:
             chr_options.add_argument("--headless")
 
+        # Wait for elements to appear at most 2 seconds before throwing an exception
+        chr_options.timeouts = {"implicit": 2000}
+
         cls.browser = webdriver.Chrome(options=chr_options)
 
     # tearDownClass is run AFTER the LAST test

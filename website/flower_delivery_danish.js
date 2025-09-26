@@ -1,23 +1,42 @@
 import { fetchFlowerDelivery } from './fetch.js';
 
-const ARRAY = await fetchFlowerDelivery()
-const POSTAL_INPUT = document.querySelector(".postalCodeInput")
-const CONFIRM_BUTTON = document.querySelector(".confirmButton")
-const POSTAL_CODE_OUTPUT = document.querySelector(".postalCodeOutput")
+const ARRAY = await fetchFlowerDelivery(); // fetch data from the database
+
+// create the user interface
+const INTERFACE_CONTAINER = document.getElementById("postalCodeChecker");
+
+const POSTAL_CODE_INPUT = document.createElement("INPUT");
+POSTAL_CODE_INPUT.className = "postalCodeInput textSmall fontInter";
+POSTAL_CODE_INPUT.setAttribute("type", "text");
+POSTAL_CODE_INPUT.setAttribute("placeholder", "Postnummer: XXX XX");
+INTERFACE_CONTAINER.appendChild(POSTAL_CODE_INPUT);
+
+const POSTAL_CODE_OUTPUT = document.createElement("DIV");
+POSTAL_CODE_OUTPUT.className = "postalCodeOutput textSmall fontInter";
+INTERFACE_CONTAINER.appendChild(POSTAL_CODE_OUTPUT);
+
+const CONFIRM_BUTTON = document.createElement("INPUT");
+CONFIRM_BUTTON.className = "confirmButton textSmall fontInter";
+CONFIRM_BUTTON.setAttribute("type", "button");
+CONFIRM_BUTTON.setAttribute("value", "Tjek postnummer");
+INTERFACE_CONTAINER.appendChild(CONFIRM_BUTTON);
+// const POSTAL_CODE_INPUT = document.querySelector(".postalCodeInput")
+// const CONFIRM_BUTTON = document.querySelector(".confirmButton")
+// const POSTAL_CODE_OUTPUT = document.querySelector(".postalCodeOutput")
 
 
-POSTAL_INPUT.addEventListener("keypress", (event) => {
+POSTAL_CODE_INPUT.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
-        postalCodeCheck()
+        postalCodeCheck();
     }
-})
-CONFIRM_BUTTON.addEventListener("click", postalCodeCheck)
+});
+CONFIRM_BUTTON.addEventListener("click", postalCodeCheck);
 
 function postalCodeCheck() {
-    POSTAL_CODE_OUTPUT.style.opacity = "0"
-    setTimeout(() => { POSTAL_CODE_OUTPUT.style.opacity = "1" }, 200)
+    POSTAL_CODE_OUTPUT.style.opacity = "0";
+    setTimeout(() => { POSTAL_CODE_OUTPUT.style.opacity = "1" }, 200);
 
-    let enteredCode = POSTAL_INPUT.value.replace(/\s/g, ""); // Sets enteredCode to POSTAL_CODE_INPUT but removes all spaces
+    let enteredCode = POSTAL_CODE_INPUT.value.replace(/\s/g, ""); // Sets enteredCode to POSTAL_CODE_INPUT but removes all spaces
 
     if (enteredCode == "") {
         POSTAL_CODE_OUTPUT.textContent = "Indtast et postnummer i feltet";
