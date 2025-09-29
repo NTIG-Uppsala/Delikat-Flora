@@ -338,6 +338,11 @@ main {
     gap: 5px;
 }
 
+.discounted {
+    text-decoration: line-through;
+    color: var(--colorGrey);
+}
+
 footer {
     display: flex;
     flex-wrap: wrap;
