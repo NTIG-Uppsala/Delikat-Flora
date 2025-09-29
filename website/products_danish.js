@@ -24,6 +24,7 @@ async function createProducts(date) {
         PRODUCT_DIV.className = 'product'
         PRODUCT_NAME.className = 'productDescription'
         PRODUCT_PRICE_TAG.className = 'priceTag'
+        CUT_PRICE_TAG.className = 'priceTag'
 
         // Set product name and currency unit 
         PRODUCT_NAME.textContent = ARRAY[i]["product_name_dan"]
