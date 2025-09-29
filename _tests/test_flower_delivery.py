@@ -99,6 +99,16 @@ class testPostalCode(TestCase):
         confirmButton.click()
         self.assertIn("Skriv in ett postnummer i rutan", self.browser.page_source)
         self.assertNotIn("Ja, detta postnummer kan vi leverera till! Priset för din leverans är", self.browser.page_source)
+    
+    def testPostalCodeLanguages(self):
+        self.browser.get("http://localhost:8000/website/flower_delivery.html")
+        self.assertIn("Skicka blombuketter med vår blommogramtjänst", self.browser.page_source)
+        self.browser.find_element(By.CSS_SELECTOR, ".flagDropDown").click()
+        self.browser.find_element(By.CSS_SELECTOR, "[alt='english']").click()
+        self.assertIn("Send flower bouquets with our flower delivery service", self.browser.page_source)
+        self.browser.find_element(By.CSS_SELECTOR, ".flagDropDown").click()
+        self.browser.find_element(By.CSS_SELECTOR, "[alt='danish']").click()
+        self.assertIn("Send blomsterbuketter med vores blomsterleveringsservice", self.browser.page_source)
 
 
 # this bit is here so that the tests run if the file is run as a regular python program

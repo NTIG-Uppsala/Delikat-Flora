@@ -2,9 +2,6 @@ from unittest import TestCase, main
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-import time
-import datetime
-
 
 # Settings for how testing runs
 dontCloseBrowser = False  # if true then the browser is kept open after the tests are finished, otherwise it is closed
@@ -69,6 +66,19 @@ class testVAT(TestCase):
         self.browser.refresh()
         self.browser.find_element(By.CSS_SELECTOR, ".priceTag")  # wait for prices to load
         self.assertIn("320", self.browser.page_source)
+    
+    def testProductNamesLanguages(self):
+        self.browser.get("http://localhost:8000/website/products_danish.html")
+        self.browser.find_element(By.CSS_SELECTOR, ".product")  # wait for products to load
+        self.assertIn("Tulipaner", self.browser.page_source)
+        self.browser.find_element(By.CSS_SELECTOR, ".flagDropDown").click()
+        self.browser.find_element(By.CSS_SELECTOR, "[alt='english']").click()
+        self.browser.find_element(By.CSS_SELECTOR, ".product")  # wait for products to load     
+        self.assertIn("Tulips", self.browser.page_source)
+        self.browser.find_element(By.CSS_SELECTOR, ".flagDropDown").click()
+        self.browser.find_element(By.CSS_SELECTOR, "[alt='swedish']").click()
+        self.browser.find_element(By.CSS_SELECTOR, ".product")  # wait for products to load
+        self.assertIn("Tulpaner", self.browser.page_source)
 
 
 class testCut(TestCase):
@@ -112,7 +122,7 @@ class testCut(TestCase):
         styles = discountedPrice.value_of_css_property("text-decoration")
         styles = styles.split(" ", 1)
         self.assertIn("line-through", styles)
-        self.assertIn("rgb(128, 128, 128)", styles)
+        self.assertIn("rgb(140, 140, 140)", styles)
 
 
 # this bit is here so that the tests run if the file is run as a regular python program
