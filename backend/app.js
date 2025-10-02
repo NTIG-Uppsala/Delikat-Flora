@@ -57,7 +57,7 @@ app.get('/admin/logout', (req, res) => {
 
 // **Protected admin page**
 app.get('/admin', requireLogin, (req, res) => {
-    res.sendFile(__dirname + '/admin.html');
+    res.render('admin');
 });
 
 app.listen(PORT, () => {

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminpanel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="new">
+        <form action="/admin/addproduct" method="post">
+            <div class="title">
+                Ny produkt
+            </div>
+            <input required type="file" accept="image/*" id="imgInput" name="productImage" onchange="const file = document.getElementById('imgInput').files[0]
+            if (file){document.getElementById('newProductImg').src = window.URL.createObjectURL(file)}">
+            <label for="imgInput"> <img id="newProductImg" src="temp_img.png" alt="Din bild">
+            </label>
+
+            <input required type="text" placeholder="Produktnamn" name="productName">
+            <div class="price">
+                <input required type="number" class="basePrice" placeholder="Pris" name="productPrice">
+                <div>kr</div>
+                <input type="checkbox" name="isMinPrice">
+                <div>Är ett grund pris</div>
+            </div>
+            <div class="discounts">
+                <div>
+                    Rabattdagar
+                </div>
+                <div>
+                    (Lämna blankt för ingen rabattdag)
+                </div>
+                <div>
+                    <div>
+                        <input type="checkbox" name="dayOfDiscount" value="1"> Måndag
+                    </div>
+                    <div>
+                        <input type="checkbox" name="dayOfDiscount" value="2"> Tisdag
+                    </div>
+                    <div>
+                        <input type="checkbox" name="dayOfDiscount" value="3"> Onsdag
+                    </div>
+                    <div>
+                        <input type="checkbox" name="dayOfDiscount" value="4"> Torsdag
+                    </div>
+                    <div>
+                        <input type="checkbox" name="dayOfDiscount" value="5"> Fredag
+                    </div>
+                    <div>
+                        <input type="checkbox" name="dayOfDiscount" value="6"> Lördag
+                    </div>
+                    <div>
+                        <input type="checkbox" name="dayOfDiscount" value="0"> Söndag
+                    </div>
+                </div>
+                <input type="number" class="discountPrice" placeholder="Nedsat Pris" name="discountPrice">
+            </div>
+            <input required type="text" placeholder="Produktnamn Eng" name="productNameEng">
+            <input required type="text" placeholder="Produktnamn Dan" name="productNameDan">
+            <button type="submit">Lägg till produkt</button>
+
+        </form>
+        <form action="">
+            <div>
+                Nytt postnummer
+            </div>
+            <input required type="number" placeholder="Postnummer: XXXXX">
+            <input required type="number" placeholder="Leveransavgift">
+            <button type="submit">Lägg till postnummer</button>
+        </form>
+    </div>
+    <div class="edit">
+
+    </div>
+</body>
+
+</html>
