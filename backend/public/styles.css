@@ -26,3 +26,8 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
+
+input{
+    margin: 8px 0;
+    box-sizing: border-box;
+}
