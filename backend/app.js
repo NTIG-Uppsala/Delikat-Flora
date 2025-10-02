@@ -16,7 +16,7 @@ app.set('views', __dirname + '/template');
 
 // Session setup
 app.use(session({
-    secret: "secret-key",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: { maxAge: 1000 * 60 * 60 } // 1 hour
