@@ -3,6 +3,18 @@ import session from 'express-session'
 import { createClient } from '@supabase/supabase-js'
 import dotenv from 'dotenv'
 dotenv.config();
+import { decode } from 'base64-arraybuffer';
+import multer from 'multer'
+const storage = multer.memoryStorage()
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, './uploads')
+//     },
+//     filename: function (req, file, cb) {
+//         cb(null, file.originalname)
+//     }
+// })
+const upload = multer({ storage: storage })
 const app = express();
 const PORT = 8080;
 
@@ -68,7 +80,16 @@ async function fetchProducts() {
     return data;
 }
 
-async function addproduct(productData) {
+async function addproduct(productData, imgFile) {
+    const { imgData, imgError } = await SUPABASE
+        .storage
+        .from('product_images')
+        .upload(imgFile.originalname, decode(imgFile.buffer.toString('base64')), {
+            cacheControl: '3600',
+            upsert: false,
+            contentType: imgFile.mimetype
+        })
+    productData.product_image = process.env.SUPABASE_URL + '/storage/v1/object/public/product_images/' + imgFile.originalname
     if (productData.discount_price == '') { productData.discount_price = null }
     if (typeof productData.day_of_discount == 'string') { productData.day_of_discount = [productData.day_of_discount] }
     const { data, error } = await SUPABASE
@@ -78,7 +99,16 @@ async function addproduct(productData) {
 }
 
 async function removeproduct(productId) {
-    eriksson8
+    const { data } = await SUPABASE
+        .from('products')
+        .select('product_image')
+        .eq('id', productId)
+    const filePath = data[0].product_image
+    const file = filePath.split('/')[filePath.split('/').length - 1]
+    const { error: imgError } = await SUPABASE
+        .storage
+        .from('product_images')
+        .remove(file)
     const { error } = await SUPABASE
         .from('products')
         .delete()
@@ -90,12 +120,10 @@ async function editprodcut(productData) {
     if (typeof productData.day_of_discount == 'string') { productData.day_of_discount = [productData.day_of_discount] }
     if (!productData.day_of_discount) { productData.day_of_discount = null }
     if (!productData.is_min_price) { productData.is_min_price = false }
-    console.log(productData)
     const { data, error } = await SUPABASE
         .from('products')
         .update(productData)
         .eq('id', productData.id)
-    console.log(error)
 }
 
 // **Protected admin page**
@@ -107,8 +135,8 @@ app.get('/admin/edit', requireLogin, async (req, res) => {
     res.render('edit', { products: await fetchProducts(), id: req.query.id });
 });
 
-app.post('/admin/addproduct', requireLogin, async (req, res) => {
-    await addproduct(req.body)
+app.post('/admin/addproduct', requireLogin, upload.single('product_image'), async (req, res) => {
+    await addproduct(req.body, req.file)
     res.redirect('/admin')
 })
 
