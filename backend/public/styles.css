@@ -35,16 +35,17 @@ body {
 .new > form {
     display: flex;
     flex-direction: column;
-    background-color: whitesmoke;
     border: 1px black solid;
     height: fit-content;
-    padding: 10px 10px 20px 10px;
 }
 
 form {
     margin: 10px;
     display: flex;
     flex-direction: column;
+    padding: 10px 10px 20px 10px;
+    height: fit-content;
+    background-color: whitesmoke;
 }
 
 form > * {
@@ -55,6 +56,7 @@ form > * {
     width: 250px;
     height: 250px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 input[type=file] {
@@ -97,4 +99,37 @@ input::-webkit-inner-spin-button {
 .discountDay {
     display: flex;
     flex-direction: column;
+}
+
+.edit {
+    border: 1px black solid;
+    height: fit-content;
+    padding: 10px;
+}
+
+.edit > form {
+    display: flex;
+    flex-direction: column;
+    border: 1px black solid;
+    height: fit-content;
+}
+
+.productList {
+    display: flex;
+}
+
+.editProduct {
+    border: 1px black solid;
+    padding: 10px 10px 20px 10px;
+}
+
+#productImg {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type=button] {
+    width: 100%;
 }

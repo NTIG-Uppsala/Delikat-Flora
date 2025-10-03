@@ -1,18 +1,20 @@
-const express = require('express');
-const session = require('express-session');
-const dotenv = require('dotenv');
+import express from 'express'
+import session from 'express-session'
+import { createClient } from '@supabase/supabase-js'
+import dotenv from 'dotenv'
 dotenv.config();
 const app = express();
 const PORT = 8080;
+
 
 // Middleware to parse POST form data
 app.use(express.urlencoded());
 
 // Serve static files 
-app.use('/admin', express.static(__dirname + '/public'));
+app.use('/admin', express.static('./public'));
 
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/template');
+app.set('views', './template');
 
 // Session setup
 app.use(session({
@@ -55,10 +57,70 @@ app.get('/admin/logout', (req, res) => {
     });
 });
 
+// Link page to database
+const SUPABASE = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_API_KEY);
+
+async function fetchProducts() {
+    let { data, error } = await SUPABASE
+        .from('products')
+        .select('*')
+        .order('id')
+    return data;
+}
+
+async function addproduct(productData) {
+    if (productData.discount_price == '') { productData.discount_price = null }
+    if (typeof productData.day_of_discount == 'string') { productData.day_of_discount = [productData.day_of_discount] }
+    const { data, error } = await SUPABASE
+        .from('products')
+        .insert(productData)
+        .select()
+}
+
+async function removeproduct(productId) {
+    eriksson8
+    const { error } = await SUPABASE
+        .from('products')
+        .delete()
+        .eq('id', productId)
+}
+
+async function editprodcut(productData) {
+    if (productData.discount_price == '') { productData.discount_price = null }
+    if (typeof productData.day_of_discount == 'string') { productData.day_of_discount = [productData.day_of_discount] }
+    if (!productData.day_of_discount) { productData.day_of_discount = null }
+    if (!productData.is_min_price) { productData.is_min_price = false }
+    console.log(productData)
+    const { data, error } = await SUPABASE
+        .from('products')
+        .update(productData)
+        .eq('id', productData.id)
+    console.log(error)
+}
+
 // **Protected admin page**
-app.get('/admin', requireLogin, (req, res) => {
-    res.render('admin');
+app.get('/admin', requireLogin, async (req, res) => {
+    res.render('admin', { products: await fetchProducts() });
 });
+
+app.get('/admin/edit', requireLogin, async (req, res) => {
+    res.render('edit', { products: await fetchProducts(), id: req.query.id });
+});
+
+app.post('/admin/addproduct', requireLogin, async (req, res) => {
+    await addproduct(req.body)
+    res.redirect('/admin')
+})
+
+app.get('/admin/remove', requireLogin, async (req, res) => {
+    await removeproduct(req.query.id)
+    res.redirect('/admin')
+})
+
+app.post('/admin/editproduct', requireLogin, async (req, res) => {
+    await editprodcut(req.body)
+    res.redirect('/admin')
+})
 
 app.listen(PORT, () => {
     console.log("Server listening on PORT", PORT);

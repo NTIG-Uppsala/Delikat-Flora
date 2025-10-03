@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <% const product=products.find(product=>product.id == id)%>
+
+        <form action="/admin/editproduct" method="post" class="editProduct">
+            <input type="hidden" name="id" value="<%= product.id %>">
+            <input type="file" accept="image/*" id="imgInput" name="product_image" value="<%= product.product_image %>" onchange="const file = document.getElementById('imgInput').files[0]
+            if (file){document.getElementById('productImg').src = window.URL.createObjectURL(file)}">
+            <label for="imgInput"> <img id="productImg" src="<%= product.product_image %>" alt="Din bild">
+            </label>
+
+            <input required type="text" placeholder="Produktnamn" name="product_name" value="<%= product.product_name %>">
+            <div class="price">
+                <input required id="basePrice" type="number" class="basePrice" placeholder="Pris" name="product_price" value="<%= product.product_price %>">
+                <div> <label for="basePrice">kr</label></div>
+                <input type="checkbox" id="is_min_price" name="is_min_price" <%=product.is_min_price ? 'checked' : '' %>>
+                <div> <label for="is_min_price">Är ett lägsta pris</label></div>
+            </div>
+            <div class="discounts">
+                <div>
+                    Rabattdagar
+                </div>
+                <div>
+                    (Lämna blankt för ingen rabattdag)
+                </div>
+                <% if(product.day_of_discount==null){product.day_of_discount=[]} %>
+                    <div>
+                        <div>
+                            <input type="checkbox" id="monday" name="day_of_discount" value="1" <%=product.day_of_discount.includes('1') ? 'checked' : '' %>>
+                            <label for="monday">Måndag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="tuesday" name="day_of_discount" value="2" <%=product.day_of_discount.includes('2') ? 'checked' : '' %>>
+                            <label for="tuesday">Tisdag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="wednesday" name="day_of_discount" value="3" <%=product.day_of_discount.includes('3') ? 'checked' : '' %>>
+                            <label for="wednesday">Onsdag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="thursday" name="day_of_discount" value="4" <%=product.day_of_discount.includes('4') ? 'checked' : '' %>>
+                            <label for="thursday">Torsdag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="friday" name="day_of_discount" value="5" <%=product.day_of_discount.includes('5') ? 'checked' : '' %>>
+                            <label for="friday">Fredag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="saturday" name="day_of_discount" value="6" <%=product.day_of_discount.includes('6') ? 'checked' : '' %>>
+                            <label for="saturday">Lördag</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="sunday" name="day_of_discount" value="0" <%=product.day_of_discount.includes('0') ? 'checked' : '' %>>
+                            <label for="sunday">Söndag</label>
+                        </div>
+                    </div>
+                    <input type="number" class="discountPrice" placeholder="Nedsat Pris" name="discount_price" value="<%= product.discount_price %>">
+            </div>
+            <input required type="text" placeholder="Produktnamn Eng" name="product_name_eng" value="<%= product.product_name_eng %>">
+            <input required type="text" placeholder="Produktnamn Dan" name="product_name_dan" value="<%= product.product_name_dan %>">
+            <button type="submit">Spara Ändringar</button>
+            <a href="/admin"> <input type="button" value="Avbryt"></a>
+        </form>
+</body>
+
+</html>

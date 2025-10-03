@@ -14,17 +14,17 @@
             <div class="title">
                 Ny produkt
             </div>
-            <input required type="file" accept="image/*" id="imgInput" name="productImage" onchange="const file = document.getElementById('imgInput').files[0]
-            if (file){document.getElementById('newProductImg').src = window.URL.createObjectURL(file)}">
-            <label for="imgInput"> <img id="newProductImg" src="temp_img.png" alt="Din bild">
+            <input required type="file" accept="image/*" id="newImgInput" name="product_image" onchange="const newFile = document.getElementById('newImgInput').files[0]
+            if (newFile){document.getElementById('newProductImg').src = window.URL.createObjectURL(newFile)}">
+            <label for="newImgInput"> <img id="newProductImg" src="temp_img.png" alt="Din bild">
             </label>
 
-            <input required type="text" placeholder="Produktnamn" name="productName">
+            <input required type="text" placeholder="Produktnamn" name="product_name">
             <div class="price">
-                <input required type="number" class="basePrice" placeholder="Pris" name="productPrice">
-                <div>kr</div>
-                <input type="checkbox" name="isMinPrice">
-                <div>Är ett grund pris</div>
+                <input required id="basePrice" type="number" class="basePrice" placeholder="Pris" name="product_price">
+                <div><label for="basePrice">kr</label></div>
+                <input id="minPrice" type="checkbox" name="is_min_price">
+                <div><label for="minPrice">Är ett lägsta pris</label></div>
             </div>
             <div class="discounts">
                 <div>
@@ -35,35 +35,42 @@
                 </div>
                 <div>
                     <div>
-                        <input type="checkbox" name="dayOfDiscount" value="1"> Måndag
+                        <input type="checkbox" id="monday" name="day_of_discount" value="1">
+                        <label for="monday">Måndag</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="dayOfDiscount" value="2"> Tisdag
+                        <input type="checkbox" id="tuesday" name="day_of_discount" value="2">
+                        <label for="tuesday">Tisdag</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="dayOfDiscount" value="3"> Onsdag
+                        <input type="checkbox" id="wednesday" name="day_of_discount" value="3">
+                        <label for="wednesday">Onsdag</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="dayOfDiscount" value="4"> Torsdag
+                        <input type="checkbox" id="thursday" name="day_of_discount" value="4">
+                        <label for="thursday">Torsdag</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="dayOfDiscount" value="5"> Fredag
+                        <input type="checkbox" id="friday" name="day_of_discount" value="5">
+                        <label for="friday">Fredag</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="dayOfDiscount" value="6"> Lördag
+                        <input type="checkbox" id="saturday" name="day_of_discount" value="6">
+                        <label for="saturday">Lördag</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="dayOfDiscount" value="0"> Söndag
+                        <input type="checkbox" id="sunday" name="day_of_discount" value="0">
+                        <label for="sunday">Söndag</label>
                     </div>
                 </div>
-                <input type="number" class="discountPrice" placeholder="Nedsat Pris" name="discountPrice">
+                <input type="number" class="discountPrice" placeholder="Nedsat Pris" name="discount_price">
             </div>
-            <input required type="text" placeholder="Produktnamn Eng" name="productNameEng">
-            <input required type="text" placeholder="Produktnamn Dan" name="productNameDan">
+            <input required type="text" placeholder="Produktnamn Eng" name="product_name_eng">
+            <input required type="text" placeholder="Produktnamn Dan" name="product_name_dan">
             <button type="submit">Lägg till produkt</button>
 
         </form>
-        <form action="">
+        <form action="/admin/addPostCode" method="post">
             <div>
                 Nytt postnummer
             </div>
@@ -72,9 +79,86 @@
             <button type="submit">Lägg till postnummer</button>
         </form>
     </div>
-    <div class="edit">
 
+
+
+    <div class="edit">
+        <div class="title">
+            Redigera produkt
+        </div>
+        <div class=productList>
+
+            <% products.forEach(product=> { %>
+                <form action="/admin/edit" method="get" class="editProduct">
+                    <input type="hidden" name="id" value="<%= product.id %>">
+                    <input required type="file" accept="image/*" id="imgInput" name="productImage" disabled value="<%= product.product_image %>" onchange="const file = document.getElementById('imgInput').files[0]
+            if (file){document.getElementById('productImg').src = window.URL.createObjectURL(file)}">
+                    <label for="imgInput"> <img id="productImg" src="<%= product.product_image %>" alt="Din bild">
+                    </label>
+
+                    <input required type="text" placeholder="Produktnamn" name="productName" disabled value="<%= product.product_name %>">
+                    <div class="price">
+                        <input required type="number" class="basePrice" placeholder="Pris" name="productPrice" disabled value="<%= product.product_price %>">
+                        <div>kr</div>
+                        <input type="checkbox" name="isMinPrice" disabled <%=product.is_min_price ? 'checked' : '' %>>
+                        <div>Är ett lägsta pris</div>
+                    </div>
+                    <div class="discounts">
+                        <div>
+                            Rabattdagar
+                        </div>
+                        <div>
+                            (Lämna blankt för ingen rabattdag)
+                        </div>
+                        <% if(product.day_of_discount==null){product.day_of_discount=[]} %>
+                            <div>
+                                <div>
+                                    <input type="checkbox" name="dayOfDiscount" value="1" disabled <%=product.day_of_discount.includes('1') ? 'checked' : '' %>> Måndag
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="dayOfDiscount" value="2" disabled <%=product.day_of_discount.includes('2') ? 'checked' : '' %>> Tisdag
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="dayOfDiscount" value="3" disabled <%=product.day_of_discount.includes('3') ? 'checked' : '' %>> Onsdag
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="dayOfDiscount" value="4" disabled <%=product.day_of_discount.includes('4') ? 'checked' : '' %>> Torsdag
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="dayOfDiscount" value="5" disabled <%=product.day_of_discount.includes('5') ? 'checked' : '' %>> Fredag
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="dayOfDiscount" value="6" disabled <%=product.day_of_discount.includes('6') ? 'checked' : '' %>> Lördag
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="dayOfDiscount" value="0" disabled <%=product.day_of_discount.includes('0') ? 'checked' : '' %>> Söndag
+                                </div>
+                            </div>
+                            <input type="number" class="discountPrice" placeholder="Nedsat Pris" name="discountPrice" disabled value="<%= product.discount_price %>">
+                    </div>
+                    <input required type="text" placeholder="Produktnamn Eng" name="productNameEng" disabled value="<%= product.product_name_eng %>">
+                    <input required type="text" placeholder="Produktnamn Dan" name="productNameDan" disabled value="<%= product.product_name_dan %>">
+                    <button type="submit">Redigera</button>
+                    <a href="/admin/remove?id=<%= product.id %>"><input type="button" value="Ta bort"></a>
+
+                </form>
+
+                <% }); %>
+        </div>
+
+        <form action="">
+            <div>
+                Redigera postnummer
+            </div>
+            <input required type="number" placeholder="Postnummer: XXXXX">
+            <input required type="number" placeholder="Leveransavgift">
+            <button type="submit">Lägg till postnummer</button>
+        </form>
     </div>
+
+
+
+
 </body>
 
 </html>
