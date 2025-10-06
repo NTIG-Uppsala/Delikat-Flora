@@ -78,6 +78,7 @@
             <input required type="number" placeholder="Leveransavgift" name="postal_price">
             <button type="submit">Lägg till postnummer</button>
         </form>
+        <a href="/admin/logout"><button class="logoutButton"><b>Logga ut</b></button></a>
     </div>
 
 
@@ -144,7 +145,7 @@
                                         <%=product.day_of_discount.includes('0') ? 'checked' : '' %>> Söndag
                                 </div>
                             </div>
-                            <input type="number" class="discountPrice" placeholder="Nedsat Pris" name="discountPrice"
+                            <input type="number" class="discountPrice" placeholder="Nedsatt Pris" name="discountPrice"
                                 disabled value="<%= product.discount_price %>">
                     </div>
                     <input required type="text" placeholder="Produktnamn Eng" name="productNameEng" disabled

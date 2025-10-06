@@ -140,3 +140,8 @@ input::-webkit-inner-spin-button {
 input[type=button] {
     width: 100%;
 }
+
+.logoutButton {
+    margin: 0 10px;
+    font-size: 2em;
+}
