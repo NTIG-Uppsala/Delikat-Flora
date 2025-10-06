@@ -140,9 +140,38 @@ async function editprodcut(productData, imgFile) {
         .eq('id', productData.id)
 }
 
+async function fetchPostalCodes() {
+    let { data, error } = await SUPABASE
+        .from('flower_delivery')
+        .select('*')
+        .order('id')
+    return data;
+}
+
+async function addpostalcode(postalData) {
+    const { data, error } = await SUPABASE
+        .from('flower_delivery')
+        .insert(postalData)
+        .select()
+}
+
+async function removepostalcode(postalCodeId) {
+    const { error } = await SUPABASE
+        .from('flower_delivery')
+        .delete()
+        .eq('id', postalCodeId)
+}
+
+async function editpostalcode(postalData) {
+    const { data, error } = await SUPABASE
+        .from('flower_delivery')
+        .update(postalData)
+        .eq('id', postalData.id)
+}
+
 // **Protected admin page**
 app.get('/admin', requireLogin, async (req, res) => {
-    res.render('admin', { products: await fetchProducts() });
+    res.render('admin', { products: await fetchProducts(), postalCodes: await fetchPostalCodes() });
 });
 
 app.get('/admin/edit', requireLogin, async (req, res) => {
@@ -161,6 +190,25 @@ app.get('/admin/remove', requireLogin, async (req, res) => {
 
 app.post('/admin/editproduct', requireLogin, upload.single('product_image'), async (req, res) => {
     await editprodcut(req.body, req.file)
+    res.redirect('/admin')
+})
+
+app.post('/admin/addpostalcode', requireLogin, async (req, res) => {
+    await addpostalcode(req.body)
+    res.redirect('/admin')
+})
+
+app.get('/admin/removepostalcode', requireLogin, async (req, res) => {
+    await removepostalcode(req.query.id)
+    res.redirect('/admin')
+})
+
+app.get('/admin/editpostalcode', requireLogin, async (req, res) => {
+    res.render('editpostalcode', { postalCodes: await fetchPostalCodes(), id: req.query.id })
+})
+
+app.post('/admin/editpostalcode', requireLogin, async (req, res) => {
+    await editpostalcode(req.body)
     res.redirect('/admin')
 })
 

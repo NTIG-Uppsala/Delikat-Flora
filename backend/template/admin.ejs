@@ -70,12 +70,12 @@
             <button type="submit">Lägg till produkt</button>
 
         </form>
-        <form action="/admin/addPostCode" method="post">
+        <form action="/admin/addpostalcode" method="post">
             <div>
                 Nytt postnummer
             </div>
-            <input required type="number" placeholder="Postnummer: XXXXX">
-            <input required type="number" placeholder="Leveransavgift">
+            <input required type="number" placeholder="Postnummer: XXXXX" name="postal_code">
+            <input required type="number" placeholder="Leveransavgift" name="postal_price">
             <button type="submit">Lägg till postnummer</button>
         </form>
     </div>
@@ -84,7 +84,7 @@
 
     <div class="edit">
         <div class="title">
-            Redigera produkt
+            Redigera produkter
         </div>
         <div class=productList>
 
@@ -158,20 +158,25 @@
 
                 <% }); %>
         </div>
+        <div class="title">
+            Redigera postnummer
+        </div>
+        <div class="postalCodeList">
+            <% postalCodes.forEach(postalCode=> { %>
+                <form action="/admin/editpostalcode" method="get">
+                    <input type="hidden" name="id" value="<%= postalCode.id %>">
+                    <input disabled type="number" placeholder="Postnummer: XXXXX" value="<%= postalCode.postal_code %>">
+                    <div class="price">
+                        <input disabled type="number" placeholder="Leveransavgift"
+                            value="<%= postalCode.postal_price %>">kr
+                    </div>
+                    <button type="submit">Redigera</button>
+                    <a href="/admin/removepostalcode?id=<%= postalCode.id %>"><input type="button" value="Ta bort"></a>
+                </form>
+                <% }); %>
 
-        <form action="">
-            <div>
-                Redigera postnummer
-            </div>
-            <input required type="number" placeholder="Postnummer: XXXXX">
-            <input required type="number" placeholder="Leveransavgift">
-            <button type="submit">Lägg till postnummer</button>
-        </form>
+        </div>
     </div>
-
-
-
-
 </body>
 
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminpanel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <% const postalCode=postalCodes.find(postalCode=>postalCode.id == id)%>
+        <form action="/admin/editpostalcode" method="post" class="edit">
+            <input type="hidden" name="id" value="<%= postalCode.id %>">
+            <input type="number" placeholder="Postnummer: XXXXX" name="postal_code"
+                value="<%= postalCode.postal_code %>">
+            <div class="price">
+                <input type="number" placeholder="Leveransavgift" name="postal_price"
+                    value="<%= postalCode.postal_price %>">kr
+            </div>
+            <button type="submit">Spara Ändringar</button>
+            <a href="/admin"> <input type="button" value="Avbryt"></a>
+        </form>
+</body>
+
+</html>
