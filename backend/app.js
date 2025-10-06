@@ -6,14 +6,6 @@ dotenv.config();
 import { decode } from 'base64-arraybuffer';
 import multer from 'multer'
 const storage = multer.memoryStorage()
-// const storage = multer.diskStorage({
-//     destination: function (req, file, cb) {
-//         cb(null, './uploads')
-//     },
-//     filename: function (req, file, cb) {
-//         cb(null, file.originalname)
-//     }
-// })
 const upload = multer({ storage: storage })
 const app = express();
 const PORT = 8080;
@@ -80,7 +72,7 @@ async function fetchProducts() {
     return data;
 }
 
-async function addproduct(productData, imgFile) {
+async function addproductimage(imgFile) {
     const { imgData, imgError } = await SUPABASE
         .storage
         .from('product_images')
@@ -89,37 +81,59 @@ async function addproduct(productData, imgFile) {
             upsert: false,
             contentType: imgFile.mimetype
         })
-    productData.product_image = process.env.SUPABASE_URL + '/storage/v1/object/public/product_images/' + imgFile.originalname
+    return process.env.SUPABASE_URL + '/storage/v1/object/public/product_images/' + imgFile.originalname
+}
+
+async function addproduct(productData, imgFile) {
+    // Upload the product image and retrieve its public url
+    productData.product_image = await addproductimage(imgFile)
+    // Make sure all data to be sent to the database is in the expected format
     if (productData.discount_price == '') { productData.discount_price = null }
     if (typeof productData.day_of_discount == 'string') { productData.day_of_discount = [productData.day_of_discount] }
+    // Insert the data in the database
     const { data, error } = await SUPABASE
         .from('products')
         .insert(productData)
         .select()
 }
 
-async function removeproduct(productId) {
+async function removeproductimage(productId) {
+    // Retrieve the name of the product image from the product id 
     const { data } = await SUPABASE
         .from('products')
         .select('product_image')
         .eq('id', productId)
     const filePath = data[0].product_image
     const file = filePath.split('/')[filePath.split('/').length - 1]
+    // Remove the image from storage
     const { error: imgError } = await SUPABASE
         .storage
         .from('product_images')
         .remove(file)
+}
+
+async function removeproduct(productId) {
+    // Remove the product image from storage
+    await removeproductimage(productId)
+    // Delete the row of the product from the database 
     const { error } = await SUPABASE
         .from('products')
         .delete()
         .eq('id', productId)
 }
 
-async function editprodcut(productData) {
+async function editprodcut(productData, imgFile) {
+    // Remove the current product image and add the new if there is a new image chosen for the product
+    if (imgFile) {
+        await removeproductimage(productData.id)
+        productData.product_image = await addproductimage(imgFile)
+    }
+    // Make sure all data to be sent to the database is in the expected format
     if (productData.discount_price == '') { productData.discount_price = null }
     if (typeof productData.day_of_discount == 'string') { productData.day_of_discount = [productData.day_of_discount] }
     if (!productData.day_of_discount) { productData.day_of_discount = null }
     if (!productData.is_min_price) { productData.is_min_price = false }
+    // Update the row of the product in the database
     const { data, error } = await SUPABASE
         .from('products')
         .update(productData)
@@ -145,8 +159,8 @@ app.get('/admin/remove', requireLogin, async (req, res) => {
     res.redirect('/admin')
 })
 
-app.post('/admin/editproduct', requireLogin, async (req, res) => {
-    await editprodcut(req.body)
+app.post('/admin/editproduct', requireLogin, upload.single('product_image'), async (req, res) => {
+    await editprodcut(req.body, req.file)
     res.redirect('/admin')
 })
 
